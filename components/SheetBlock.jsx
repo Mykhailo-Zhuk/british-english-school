@@ -29,11 +29,9 @@ const SheetBlock = () => {
         <ul className="flex flex-col space-y-2 mt-16">
           {listOfLinks.map((elem, index) => {
             return (
-              <Link href={`/${elem.path}`}>
-                <li
-                  key={index}
-                  className="text-xl text-muted-foreground hover:bg-slate-200 p-2 rounded-lg">
-                  {elem.title}
+              <Link key={index} href={`/${elem?.path}`}>
+                <li className="text-xl text-muted-foreground hover:bg-slate-200 p-2 rounded-lg">
+                  {elem?.title}
                 </li>
               </Link>
             );

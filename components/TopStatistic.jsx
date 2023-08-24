@@ -11,11 +11,11 @@ const TopStatistic = () => {
   return (
     <div className="statistic-gradient w-full py-4">
       <div className="max-w-[1320px] mx-auto h-36 flex space-x-2">
-        {statistics.map((elem) => {
+        {statistics?.map((elem, index) => {
           return (
-            <div className="flex flex-col justify-center w-1/4">
-              <h2 className="text-4xl text-indigo-400">{elem.label}</h2>
-              <p className="text-xl">{elem.title}</p>
+            <div key={index} className="flex flex-col justify-center w-1/4">
+              <h2 className="text-4xl text-indigo-400">{elem?.label}</h2>
+              <p className="text-xl">{elem?.title}</p>
             </div>
           );
         })}
