@@ -9,7 +9,7 @@ const statistics = [
 
 const TopStatistic = () => {
   return (
-    <div className="statistic-gradient w-full py-4">
+    <section className="statistic-gradient w-full py-4 mb-20">
       <div className="max-w-[1320px] mx-auto h-36 flex space-x-2">
         {statistics?.map((elem, index) => {
           return (
@@ -20,7 +20,7 @@ const TopStatistic = () => {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };
 

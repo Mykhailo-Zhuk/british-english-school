@@ -70,6 +70,14 @@
   .statistic-gradient {
     background: linear-gradient(202deg, #eff5fe 0%, #fcf5f7 100%);
   }
+
+  .how-to-sign {
+    background: linear-gradient(239deg, #dfeafd 0%, #fbebef 100%);
+  }
+
+  .how-to-sign-card {
+    background: linear-gradient(256deg, #dfeafd 0%, #fbebef 100%);
+  }
 }
 
 @layer base {

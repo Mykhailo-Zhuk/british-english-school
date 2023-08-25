@@ -1,10 +1,10 @@
 'use client';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
-import { CourseCombobox } from './index';
+import { CourseCombobox } from '../index';
 
 const TopChooseGroup = () => {
   return (
-    <div className="topChooseCourse w-full py-20">
+    <section className="topChooseCourse w-full py-20">
       <div className="max-w-[1320px] mx-auto flex">
         <div className="w-1/2 flex flex-col space-y-14">
           <div className="w-[140px] h-[70px] bg-indigo-100"></div>
@@ -15,7 +15,7 @@ const TopChooseGroup = () => {
           <AspectRatio ratio={16 / 9} className="bg-indigo-100"></AspectRatio>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
