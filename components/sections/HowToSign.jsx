@@ -43,7 +43,9 @@ const HowToSign = () => {
           <div className="flex flex-wrap w-2/3 items-center justify-center">
             {context.map((elem) => {
               return (
-                <div className="w-[416px] h-[244px] px-6 pt-6 pb-10 bg-white rounded-lg lg:odd:mr-6 my-3 flex flex-col space-y-2">
+                <div
+                  key={elem.id}
+                  className="w-[416px] h-[244px] px-6 pt-6 pb-10 bg-white rounded-lg lg:odd:mr-6 my-3 flex flex-col space-y-2">
                   <div className="flex space-x-2 justify-start max-h-16 h-full">
                     <div className="w-16 h-16 rounded-full how-to-sign-card  border-[7px] border-transparent flex justify-center items-center">
                       <div className="bg-[#FAF4F8] w-12 h-12 text-black text-2xl flex justify-center items-center rounded-full">
