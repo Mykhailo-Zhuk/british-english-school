@@ -1,5 +1,3 @@
-import React from 'react';
-
 const statistics = [
   { label: '4000+', title: 'студентів за навчальний рік' },
   { label: '70+', title: 'сертифікованих викладачів' },

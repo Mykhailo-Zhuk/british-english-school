@@ -78,6 +78,29 @@
   .how-to-sign-card {
     background: linear-gradient(256deg, #dfeafd 0%, #fbebef 100%);
   }
+
+  .teachers-skills-border {
+    background: linear-gradient(228deg, #dfeafd 0%, #fbebef 100%);
+  }
+
+  .contacts-gradient {
+    background: linear-gradient(234deg, #dfeafd 0%, #fbebef 100%);
+  }
+
+  /* Customize the track style */
+  .react-custom-scrollbars-track {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .react-custom-scrollbars-track-horizontal {
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 6px;
+    border-radius: 3px;
+  }
+
+  .react-custom-scrollbars-track-horizontal:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
 }
 
 @layer base {

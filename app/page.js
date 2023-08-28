@@ -1,10 +1,17 @@
 import {
   CourseCards,
+  FormatOfLearning,
   GroupForm,
   Header,
+  HowTakePlace,
   HowToSign,
+  OurTeachers,
+  TestActionRow,
   TopChooseGroup,
   TopStatistic,
+  Testimonials,
+  WhyIsBest,
+  Contacts,
 } from '@/components/index.js';
 
 export default function Home() {
@@ -33,6 +40,27 @@ export default function Home() {
 
       {/* Group form */}
       <GroupForm />
+
+      {/* Format of learning  */}
+      <FormatOfLearning />
+
+      {/* How the learning take place */}
+      <HowTakePlace />
+
+      {/* List of Teachers */}
+      <OurTeachers />
+
+      {/* Test action row*/}
+      <TestActionRow />
+
+      {/* Test action row*/}
+      <WhyIsBest />
+
+      {/* Testimonials */}
+      <Testimonials />
+
+      {/* Contacts */}
+      <Contacts />
     </main>
   );
 }

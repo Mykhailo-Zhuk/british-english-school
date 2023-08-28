@@ -12,7 +12,9 @@ const TopChooseGroup = () => {
           <CourseCombobox />
         </div>
         <div className="w-1/2">
-          <AspectRatio ratio={16 / 9} className="bg-indigo-100"></AspectRatio>
+          <AspectRatio ratio={16 / 9} className="bg-indigo-100">
+            Video
+          </AspectRatio>
         </div>
       </div>
     </section>

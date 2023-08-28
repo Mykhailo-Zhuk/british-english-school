@@ -2,7 +2,9 @@
 
 import React from 'react';
 import { Button } from '../ui/button';
+import { ScrollArea } from '@/components/ui/scroll-area';
 import { CardItem } from '../index';
+import { ScrollAreaScrollbar } from '@radix-ui/react-scroll-area';
 
 const CourseCards = ({ title, link }) => {
   return (
@@ -11,11 +13,14 @@ const CourseCards = ({ title, link }) => {
         <p className="text-xl">Англійська для {title}</p>
         <Button variant="secondary">Всі курси для {link} &#707;</Button>
       </div>
-      <div className="flex space-x-5 flex-nowrap overflow-x-auto">
-        {Array.from({ length: 6 }, (_, i) => i + 1).map((id) => {
-          return <CardItem key={id} />;
-        })}
-      </div>
+      <ScrollArea className="h-[480px] w-full rounded-md border">
+        <div className="flex space-x-5 my-3 flex-nowrap">
+          {Array.from({ length: 6 }, (_, i) => i + 1).map((id) => {
+            return <CardItem key={id} />;
+          })}
+        </div>
+        <ScrollAreaScrollbar orientation="horizontal" />
+      </ScrollArea>
     </section>
   );
 };

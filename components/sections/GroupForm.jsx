@@ -1,5 +1,6 @@
 import React from 'react';
-import { InputForm } from '../';
+import { InputForm } from '../index';
+import { AspectRatio } from '../ui/aspect-ratio';
 
 const GroupForm = () => {
   return (
@@ -11,7 +12,11 @@ const GroupForm = () => {
             <InputForm />
           </div>
         </div>
-        <div className="w-1/2 bg-indigo-100 rounded-lg"></div>
+        <div className="w-1/2">
+          <AspectRatio ratio={16 / 13} className="bg-indigo-100 rounded-lg">
+            Photo
+          </AspectRatio>
+        </div>
       </div>
     </section>
   );
