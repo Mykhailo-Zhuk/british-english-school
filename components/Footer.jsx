@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { Fragment } from 'react';
 import icons from '@/public/icons';
 import { Separator } from './ui/separator';
 import { Button } from './ui/button';
@@ -64,9 +66,11 @@ const Footer = () => {
             <h2 className="text-base">Студенту</h2>
             {students.map((item, index) => {
               return (
-                <Link key={index} href={item.link} className="text-white text-left text-sm">
-                  {item.label}
-                </Link>
+                <Fragment key={index}>
+                  <Link href={item.link} className="text-white text-left text-sm">
+                    {item.label}
+                  </Link>
+                </Fragment>
               );
             })}
           </div>
@@ -74,9 +78,11 @@ const Footer = () => {
             <h2 className="text-base">Наш освітній центр</h2>
             {center.map((item, index) => {
               return (
-                <Link key={index} href={item.link} className="text-white text-left text-sm">
-                  {item.label}
-                </Link>
+                <Fragment key={index}>
+                  <Link href={item.link} className="text-white text-left text-sm">
+                    {item.label}
+                  </Link>
+                </Fragment>
               );
             })}
           </div>
@@ -84,9 +90,11 @@ const Footer = () => {
             <h2 className="text-base">Курси англійської мови</h2>
             {courses.map((item, index) => {
               return (
-                <Link key={index} href={item.link} className="text-white text-left text-sm">
-                  {item.label}
-                </Link>
+                <Fragment key={index}>
+                  <Link href={item.link} className="text-white text-left text-sm">
+                    {item.label}
+                  </Link>
+                </Fragment>
               );
             })}
           </div>
@@ -101,9 +109,11 @@ const Footer = () => {
             <div className="flex space-x-4">
               {contacts.social.map((item, index) => {
                 return (
-                  <a key={index} href={item.link}>
-                    <Image src={item.icon} alt={item.alt} width={30} height={30} />
-                  </a>
+                  <Fragment key={index}>
+                    <a href={item.link}>
+                      <Image src={item.icon} alt={item.alt} width={30} height={30} />
+                    </a>
+                  </Fragment>
                 );
               })}
             </div>
