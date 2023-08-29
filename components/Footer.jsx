@@ -101,8 +101,8 @@ const Footer = () => {
             <div className="flex space-x-4">
               {contacts.social.map((item, index) => {
                 return (
-                  <a href={item.link}>
-                    <Image key={index} src={item.icon} alt={item.alt} width={30} height={30} />
+                  <a key={index} href={item.link}>
+                    <Image src={item.icon} alt={item.alt} width={30} height={30} />
                   </a>
                 );
               })}
