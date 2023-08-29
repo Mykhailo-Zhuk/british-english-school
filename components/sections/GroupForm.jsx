@@ -13,7 +13,7 @@ const GroupForm = () => {
           </div>
         </div>
         <div className="w-1/2">
-          <AspectRatio ratio={16 / 13} className="bg-indigo-100 rounded-lg">
+          <AspectRatio ratio={16 / 16} className="bg-indigo-100 rounded-lg">
             Photo
           </AspectRatio>
         </div>

@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { InputForm } from '../index';
 import icons from '@/public/icons';

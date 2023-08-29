@@ -87,6 +87,14 @@
     background: linear-gradient(234deg, #dfeafd 0%, #fbebef 100%);
   }
 
+  .subscribe-action {
+    background: linear-gradient(54deg, #cf5657 0%, #8b3d70 100%);
+  }
+
+  .subscribe-action-btn {
+    background: linear-gradient(75deg, #ee7b40 0%, #cf5657 100%);
+  }
+
   /* Customize the track style */
   .react-custom-scrollbars-track {
     background-color: rgba(0, 0, 0, 0.1);

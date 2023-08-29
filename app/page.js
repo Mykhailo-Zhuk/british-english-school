@@ -12,6 +12,9 @@ import {
   Testimonials,
   WhyIsBest,
   Contacts,
+  Blog,
+  SubscribeAction,
+  Footer,
 } from '@/components/index.js';
 
 export default function Home() {
@@ -61,6 +64,15 @@ export default function Home() {
 
       {/* Contacts */}
       <Contacts />
+
+      {/* Blog */}
+      <Blog />
+
+      {/* Subscribe action row */}
+      <SubscribeAction />
+
+      {/* Footer */}
+      <Footer />
     </main>
   );
 }
