@@ -30,7 +30,7 @@ const SheetBlock = () => {
           {listOfLinks.map((elem, index) => {
             return (
               <Link key={index} href={`/${elem?.path}`}>
-                <li className="text-xl text-muted-foreground hover:bg-slate-200 p-2 rounded-lg">
+                <li className="text-xl text-muted-foreground hover:bg-accent p-2 rounded-lg">
                   {elem?.title}
                 </li>
               </Link>

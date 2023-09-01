@@ -2,6 +2,7 @@
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Navigation, SheetBlock } from './index';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Header = () => {
   return (
@@ -17,7 +18,10 @@ const Header = () => {
         </h3>
       </div>
       <Navigation />
-      <SheetBlock />
+      <div className="flex space-x-2 items-center">
+        <LanguageSwitcher />
+        <SheetBlock />
+      </div>
     </header>
   );
 };

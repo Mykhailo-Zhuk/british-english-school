@@ -16,7 +16,7 @@ const list = [
 const HowTakePlace = () => {
   return (
     <section className="bg-[#F8F8FA] w-full">
-      <div className="pt-20 max-w-[1320px] mx-auto flex flex-col space-y-14">
+      <div className="py-20 max-w-[1320px] mx-auto flex flex-col space-y-14">
         <h1 className="text-left text-3xl">Як проходять заняття в нашій школі англійської мови</h1>
         <div className="flex space-x-6">
           <ul className="w-1/2 flex flex-col space-y-4">

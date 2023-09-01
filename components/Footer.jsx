@@ -67,7 +67,9 @@ const Footer = () => {
             {students.map((item, index) => {
               return (
                 <Fragment key={index}>
-                  <Link href={item.link} className="text-white text-left text-sm">
+                  <Link
+                    href={item.link}
+                    className="text-white text-left text-sm p-1 hover:bg-gray-500 rounded-sm">
                     {item.label}
                   </Link>
                 </Fragment>
@@ -79,7 +81,9 @@ const Footer = () => {
             {center.map((item, index) => {
               return (
                 <Fragment key={index}>
-                  <Link href={item.link} className="text-white text-left text-sm">
+                  <Link
+                    href={item.link}
+                    className="text-white text-left text-sm p-1 hover:bg-gray-500 rounded-sm">
                     {item.label}
                   </Link>
                 </Fragment>
@@ -91,7 +95,9 @@ const Footer = () => {
             {courses.map((item, index) => {
               return (
                 <Fragment key={index}>
-                  <Link href={item.link} className="text-white text-left text-sm">
+                  <Link
+                    href={item.link}
+                    className="text-white text-left text-sm p-1 hover:bg-gray-500 rounded-sm">
                     {item.label}
                   </Link>
                 </Fragment>
@@ -100,9 +106,9 @@ const Footer = () => {
           </div>
           <div className="flex flex-col space-y-4 w-3/12">
             <h2 className="text-base">Контакти</h2>
-            <p className="text-sm">{contacts.address}</p>
+            <p className="text-sm p-1 hover:bg-gray-500 rounded-sm">{contacts.address}</p>
             <Button variant="link">
-              <a href="#" className="text-white">
+              <a href="#" className="text-white p-1 hover:bg-gray-500 rounded-sm">
                 Показати на Google Maps
               </a>
             </Button>
@@ -110,7 +116,7 @@ const Footer = () => {
               {contacts.social.map((item, index) => {
                 return (
                   <Fragment key={index}>
-                    <a href={item.link}>
+                    <a href={item.link} className="cursor-pointer">
                       <Image src={item.icon} alt={item.alt} width={30} height={30} />
                     </a>
                   </Fragment>
@@ -120,7 +126,9 @@ const Footer = () => {
             <p className="text-base">Наші Telegram-канали</p>
             {contacts.telagramChannels.map((item, index) => {
               return (
-                <p key={index} className="text-base inline-flex items-center">
+                <p
+                  key={index}
+                  className="text-base inline-flex items-center cursor-pointer p-1 hover:bg-gray-500 rounded-sm">
                   <span className="mx-2">
                     <Image src={icons.telegram2} alt="telegram" width={20} height={20} />
                   </span>

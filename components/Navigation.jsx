@@ -13,45 +13,72 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
+import icons from '@/public/icons';
+import Image from 'next/image';
 
-const components = [
-  {
-    title: 'Alert Dialog',
-    href: '#',
-    description:
-      'A modal dialog that interrupts the user with important content and expects a response.',
+const components = {
+  students: [
+    { label: 'Правила центру', link: '#' },
+    { label: 'Договір навчання', link: '#' },
+    { label: 'Знайти сертифікат', link: '#' },
+    { label: 'Знижки', link: '#' },
+    { label: 'Кабінет', link: '#' },
+    { label: 'Мапа сайту', link: '#' },
+  ],
+  center: [
+    { label: 'Про компанію', link: '#' },
+    { label: 'Організація навчання', link: '#' },
+    { label: 'Контактні дані', link: '#' },
+    { label: 'Наша команда', link: '#' },
+    { label: 'Новини', link: '#' },
+    { label: 'Блог', link: '#' },
+    { label: 'Тест на рівень англійської', link: '#' },
+    { label: 'Іспити Cambridge English', link: '#' },
+    { label: 'Вакансії', link: '#' },
+  ],
+  courses: [
+    { label: 'Всі курси', link: '#' },
+    { label: 'Англійська для дорослих', link: '#' },
+    { label: 'Для підлітків 13–17 років', link: '#' },
+    { label: 'Для дітей 6–12 років', link: '#' },
+    { label: 'Розмовні клуби', link: '#' },
+    { label: 'Онлайн курси англійської', link: '#' },
+    { label: 'Англійська для компаній', link: '#' },
+  ],
+  contacts: {
+    address:
+      'Київ, 01054, Україна, вул. Ярославів Вал, 13/2-Б, офіс 39. Найближча станція метро — Золоті Ворота',
+    mapLink: '#',
+    email: 'example@gmail.com',
+    messengers: [
+      {
+        title: 'Viber',
+        icon: icons.viber1,
+        href: 'viber://chat?number=+1234567890',
+      },
+      {
+        title: 'Telegram',
+        icon: icons.telegram1,
+        href: 'tg://resolve?domain=username',
+      },
+      {
+        title: 'Messenger',
+        icon: icons.messenger1,
+        href: 'fb-messenger://user-thread/1234567890',
+      },
+    ],
+    phoneNumbers: [
+      '+380 (44) 580 33 00',
+      '+380 (44) 580 33 00',
+      '+380 (44) 580 33 00',
+      '+380 (44) 580 33 00',
+    ],
   },
-  {
-    title: 'Hover Card',
-    href: '/docs/primitives/hover-card',
-    description: 'For sighted users to preview content available behind a link.',
-  },
-  {
-    title: 'Progress',
-    href: '/docs/primitives/progress',
-    description:
-      'Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.',
-  },
-  {
-    title: 'Scroll-area',
-    href: '/docs/primitives/scroll-area',
-    description: 'Visually or semantically separates content.',
-  },
-  {
-    title: 'Tabs',
-    href: '/docs/primitives/tabs',
-    description:
-      'A set of layered sections of content—known as tab panels—that are displayed one at a time.',
-  },
-  {
-    title: 'Tooltip',
-    href: '/docs/primitives/tooltip',
-    description:
-      'A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.',
-  },
-];
+};
 
 const Navigation = () => {
+  const { students, contacts, center, courses } = components;
+
   return (
     <NavigationMenu>
       <NavigationMenuList>
@@ -86,13 +113,45 @@ const Navigation = () => {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Звʼязатись з нами</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {components.map((component) => (
-                <ListItem key={component.title} title={component.title} href={component.href}>
-                  {component.description}
+            <div className="grid gap-3 p-4 w-[600px] md:grid-cols-3 lg:w-[800px]">
+              <ul>
+                <ListItem href={contacts.mapLink} title="Адреса" label={contacts.address}>
+                  {contacts.address}
                 </ListItem>
-              ))}
-            </ul>
+                <ListItem href={`mailto:${contacts.email}`} title="Email">
+                  {contacts.email}
+                </ListItem>
+              </ul>
+              <ul>
+                <p className="text-sm font-medium leading-none">Телефони</p>
+                {contacts.phoneNumbers.map((item, index) => {
+                  return (
+                    <ListItem key={index} href={`tel:${item}`}>
+                      {item}
+                    </ListItem>
+                  );
+                })}
+              </ul>
+              <ul>
+                <p className="text-sm font-medium leading-none">Напишіть нам</p>
+                {contacts.messengers.map((item, index) => {
+                  return (
+                    <ListItem key={index} href={item.href}>
+                      <p className="inline-flex items-center">
+                        <Image
+                          src={item.icon}
+                          alt="social"
+                          width={20}
+                          height={20}
+                          className="pr-4 w-full"
+                        />
+                        {item.title}
+                      </p>
+                    </ListItem>
+                  );
+                })}
+              </ul>
+            </div>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
@@ -107,7 +166,7 @@ const Navigation = () => {
   );
 };
 
-const ListItem = React.forwardRef(({ className, title, children, ...props }, ref) => {
+const ListItem = React.forwardRef(({ className, title, label, children, ...props }, ref) => {
   return (
     <li>
       <NavigationMenuLink asChild>
@@ -119,7 +178,9 @@ const ListItem = React.forwardRef(({ className, title, children, ...props }, ref
           )}
           {...props}>
           <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">{children}</p>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground" title={label}>
+            {children}
+          </p>
         </a>
       </NavigationMenuLink>
     </li>
