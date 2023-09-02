@@ -33,17 +33,17 @@ const OurTeachers = () => {
             {skillsLeft.map((item, index) => {
               const { label, description } = item;
 
-              return <TeacherSkill key={index} label={label} description={description} />;
+              return <TeacherSkill key={index + 1} label={label} description={description} />;
             })}
           </div>
           <div className="w-1/3">
-            <AspectRatio ratio={15 / 16} className="bg-indigo-100 rounded-lg"></AspectRatio>
+            <AspectRatio ratio={15 / 16} className="bg-accent rounded-lg"></AspectRatio>
           </div>
           <div className="w-1/3 flex flex-col space-y-8">
             {skillsRight.map((item, index) => {
               const { label, description } = item;
 
-              return <TeacherSkill key={index} label={label} description={description} />;
+              return <TeacherSkill key={index + 1} label={label} description={description} />;
             })}
           </div>
         </div>

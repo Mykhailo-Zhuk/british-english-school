@@ -32,19 +32,19 @@ const HowToSign = () => {
   return (
     <section className="how-to-sign w-full pb-2 pt-20">
       <div className="h-[730px] w-full max-w-[1320px] mx-auto flex flex-col">
-        <h1 className="w-[416px] h-28 rounded-full p-5 text-2xl bg-white text-black text-center">
+        <h1 className="w-[416px] h-28 rounded-full p-5 text-2xl bg-accent text-black text-center">
           Як записатися на курси англійської мови?
         </h1>
         <div className="flex space-x-2 overflow-y-auto">
           <div className="w-1/3 mx-2 ">
-            <div className="h-full w-full max-h-[580px] max-w-[416px] lg:h-[580px] lg:w-[416px] bg-indigo-100 rounded-xl" />
+            <div className="h-full w-full max-h-[580px] max-w-[416px] lg:h-[580px] lg:w-[416px] bg-accent rounded-xl" />
           </div>
           <div className="flex flex-wrap w-2/3 items-center justify-center">
             {context.map((elem) => {
               return (
                 <div
                   key={elem.id}
-                  className="w-[416px] h-[244px] px-6 pt-6 pb-10 bg-white rounded-lg lg:odd:mr-6 my-3 flex flex-col space-y-2">
+                  className="w-[416px] h-[244px] px-6 pt-6 pb-10 bg-accent rounded-lg lg:odd:mr-6 my-3 flex flex-col space-y-2">
                   <div className="flex space-x-2 justify-start max-h-16 h-full">
                     <div className="w-16 h-16 rounded-full how-to-sign-card  border-[7px] border-transparent flex justify-center items-center">
                       <div className="bg-[#FAF4F8] w-12 h-12 text-black text-2xl flex justify-center items-center rounded-full">

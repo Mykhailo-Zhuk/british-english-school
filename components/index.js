@@ -24,3 +24,7 @@ export { default as Testimonials } from './sections/Testimonials';
 export { default as Contacts } from './sections/Contacts';
 export { default as Blog } from './sections/Blog';
 export { default as SubscribeAction } from './sections/SubscribeAction';
+
+// Skeletons
+export { default as CourseCardSkeleton } from './skeletons/CourseCardSkeleton';
+export { default as TestimonialsSkeleton } from './skeletons/TestimonialsSkeleton';

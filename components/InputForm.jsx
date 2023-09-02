@@ -9,6 +9,7 @@ import { Form, FormField, FormItem, FormMessage, FormLabel } from '@/components/
 import { Input } from '@/components/ui/input';
 import { toast } from '@/components/ui/use-toast';
 import { Checkbox } from './ui/checkbox';
+import useHttp from '@/hooks/useHttp';
 
 const FormSchema = z.object({
   username: z.string().min(2, {
@@ -27,6 +28,8 @@ const FormSchema = z.object({
 });
 
 const InputForm = () => {
+  const { sendRequest, error, isLoading } = useHttp();
+
   const form = useForm({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -40,12 +43,16 @@ const InputForm = () => {
       description: (
         <div className="mt-2 w-[340px] rounded-md">
           <p className="text-black text-base">
-            Ім'я: {data.username}, email: {data.email}, номер телефону: {data.phoneNumber},
+            Ім'я: {data.username}; Еmail: {data.email}; Номер телефону: {data.phoneNumber}; Ваше
             повідомлення: {data.message}, {data.personal}
           </p>
         </div>
       ),
     });
+    sendRequest({ url: 'requests', method: 'post', data: JSON.stringify(data) });
+
+    if (error) return toast({ title: error });
+
     form.reset({ username: '', email: '', phoneNumber: '', message: '' });
   };
 
@@ -113,7 +120,7 @@ const InputForm = () => {
           )}
         />
         <Button type="submit" className="w-full text-lg">
-          Залишити заявку
+          {isLoading ? 'Надсилаю...' : 'Залишити заявку'}
         </Button>
       </form>
     </Form>

@@ -29,9 +29,9 @@ const context = {
   ],
   courses: [
     { label: 'Всі курси', link: '#' },
-    { label: 'Англійська для дорослих', link: '#' },
-    { label: 'Для підлітків 13–17 років', link: '#' },
-    { label: 'Для дітей 6–12 років', link: '#' },
+    { label: 'Англійська для дорослих', link: 'adults' },
+    { label: 'Для підлітків 13–17 років', link: 'teenagers' },
+    { label: 'Для дітей 6–12 років', link: 'kids' },
     { label: 'Розмовні клуби', link: '#' },
     { label: 'Онлайн курси англійської', link: '#' },
     { label: 'Англійська для компаній', link: '#' },
@@ -60,7 +60,7 @@ const Footer = () => {
   const { students, center, courses, contacts } = context;
   return (
     <footer className="w-full mt-20 bg-[#202E48] text-white">
-      <div className="mt-20 pt-14 pb-10 max-w-[1320px] mx-auto h-max space-y-7 flex flex-col rounded-xl">
+      <div className="pt-20 pb-10 max-w-[1320px] mx-auto h-max space-y-7 flex flex-col rounded-xl">
         <div className="flex pb-7 space-x-6 justify-between">
           <div className="flex flex-col space-y-4 w-3/12">
             <h2 className="text-base">Студенту</h2>

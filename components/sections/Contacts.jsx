@@ -55,7 +55,7 @@ const Contacts = () => {
                 return (
                   <p key={index} className="inline-flex items-center">
                     <span>
-                      <Image src={item.icon} />
+                      <Image src={item.icon} alt={item.title} width={20} height={20} />
                     </span>
                     <Button variant="link" className="text-xl">
                       {item.title}

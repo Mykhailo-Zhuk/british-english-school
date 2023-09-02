@@ -1,15 +1,4 @@
-'use client';
-
-import React, { useEffect, useState } from 'react';
-import icons from '@/public/icons';
-import Image from 'next/image';
-import { Button } from '../ui/button';
-import { ScrollArea } from '../ui/scroll-area';
-import { ScrollAreaScrollbar } from '@radix-ui/react-scroll-area';
-import useHttp from '@/hooks/useHttp';
-import { TestimonialsSkeleton } from '../index';
-
-const list = [
+const testimonials = [
   {
     username: 'Тарас',
     content:
@@ -37,64 +26,6 @@ const list = [
   },
 ];
 
-const Testimonial = ({ username, content }) => {
-  return (
-    <div className="bg-[#F8F8FA] rounded-xl w-[49%] p-6 space-y-2 mb-6 mr-6">
-      <h3 className="text-xl">{username}</h3>
-      <p className="text-base h-max">{content}</p>
-    </div>
-  );
-};
-
-const Testimonials = () => {
-  const [testimonials, setTestimonials] = useState([]);
-  const { sendRequest, error, isLoading } = useHttp();
-
-  useEffect(() => {
-    sendRequest({ url: 'testimonials' }, setTestimonials.bind(null));
-  }, []);
-
-  return (
-    <section className="w-full bg-[#f5f5f5]">
-      <div className="p-20 max-w-[1320px] mx-auto flex flex-col space-y-8">
-        <h1 className="text-3xl">Відгуки</h1>
-        <ScrollArea className="max-h-[600px] w-full rounded-md">
-          <div className="flex flex-col flex-wrap max-h-[600px] pt-4">
-            {error ? <p className="w-full text-xl text-center p-8">{error}</p> : null}
-
-            {isLoading
-              ? Array.from({ length: 6 }, (_, i) => i + 1).map((_, id) => {
-                  return <TestimonialsSkeleton key={id} />;
-                })
-              : null}
-
-            {!testimonials.length && !error ? (
-              <p className="w-full text-xl text-center p-8">We have no testimonials</p>
-            ) : (
-              testimonials.map((item, index) => {
-                const { username, content } = item;
-
-                return <Testimonial key={index} username={username} content={content} />;
-              })
-            )}
-          </div>
-          <ScrollAreaScrollbar orientation="horizontal" />
-        </ScrollArea>
-        <div className="flex justify-center">
-          <Image
-            src={icons.refresh}
-            alt="refresh"
-            width={25}
-            height={25}
-            className="cursor-pointer"
-          />
-          <Button variant="ghost" className="text-[#4A5EAA] text-lg">
-            Показати більше відгуків
-          </Button>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default Testimonials;
+export async function GET(request) {
+  return new Response(JSON.stringify(testimonials));
+}

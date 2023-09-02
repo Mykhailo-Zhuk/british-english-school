@@ -22,7 +22,7 @@ const HowTakePlace = () => {
           <ul className="w-1/2 flex flex-col space-y-4">
             {list.map((item, index) => {
               return (
-                <li key={item + index} className="relative text-xl py-1 pl-5 flex space-x-2 ">
+                <li key={index + 1} className="relative text-xl py-1 pl-5 flex space-x-2 ">
                   <span className="absolute left-0 top-1/2 transform -translate-y-1/2">
                     <Image src={icons.square} width={12} height={12} alt="square" />
                   </span>
@@ -32,7 +32,7 @@ const HowTakePlace = () => {
             })}
           </ul>
           <div className="w-1/2">
-            <AspectRatio ratio={16 / 10} className="bg-indigo-100 rounded-lg">
+            <AspectRatio ratio={16 / 10} className="bg-accent rounded-lg">
               Photo
             </AspectRatio>
           </div>

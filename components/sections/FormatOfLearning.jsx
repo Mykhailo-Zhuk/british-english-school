@@ -8,7 +8,7 @@ const FormatOfLearning = () => {
         <div className="flex space-x-6">
           <div className="w-1/2 flex flex-col space-y-7">
             <h1 className="text-2xl">Онлайн</h1>
-            <AspectRatio ratio={16 / 9} className="bg-indigo-100 rounded-lg">
+            <AspectRatio ratio={16 / 9} className="bg-accent rounded-lg">
               Video
             </AspectRatio>
             <p className="text-base">
@@ -18,7 +18,7 @@ const FormatOfLearning = () => {
           </div>
           <div className="w-1/2 flex flex-col space-y-7">
             <h1 className="text-2xl">Оффлайн</h1>
-            <AspectRatio ratio={16 / 9} className="bg-indigo-100 rounded-lg">
+            <AspectRatio ratio={16 / 9} className="bg-accent rounded-lg">
               Video
             </AspectRatio>
             <p className="text-base">

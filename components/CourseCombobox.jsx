@@ -3,6 +3,7 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { CaretSortIcon, CheckIcon } from '@radix-ui/react-icons';
 import { useForm } from 'react-hook-form';
+import { useRouter } from 'next/navigation';
 import * as z from 'zod';
 
 import { cn } from '@/lib/utils';
@@ -19,9 +20,9 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover
 import { useToast } from '@/components/ui/use-toast';
 
 const groups = [
-  { label: 'Англійська для дорослих', value: 'old' },
-  { label: 'Англійська для юнаків', value: 'young' },
-  { label: 'Англійська для дітей', value: 'child' },
+  { label: 'Англійська для дорослих', value: 'adult' },
+  { label: 'Англійська для юнаків', value: 'teenagers' },
+  { label: 'Англійська для дітей', value: 'kids' },
 ];
 
 const FormSchema = z.object({
@@ -32,6 +33,7 @@ const FormSchema = z.object({
 
 const CourseCombobox = () => {
   const { toast } = useToast();
+  const router = useRouter();
 
   const form = useForm({
     resolver: zodResolver(FormSchema),
@@ -48,6 +50,8 @@ const CourseCombobox = () => {
           </div>
         ),
       });
+
+      router.push(`${selectedGroup.value}`);
     }
   }
 
