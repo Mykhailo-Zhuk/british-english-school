@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { useParams } from 'next/navigation';
 import {
   CourseCards,
   FormatOfLearning,
@@ -19,10 +18,12 @@ import {
   Blog,
   SubscribeAction,
   Footer,
+  ChooseAdultGroup,
+  CoursesList,
+  AdultCoursesList,
 } from '@/components/index.js';
 
 const Home = ({ params: { courses } }) => {
-  const params = useParams();
   console.log(courses);
 
   return (
@@ -30,20 +31,17 @@ const Home = ({ params: { courses } }) => {
       {/* Header */}
       <Header />
 
-      {/* Choose teaching group in the top */}
-      <TopChooseGroup />
+      {/* Choose adult group */}
+      <ChooseAdultGroup />
 
       {/* Statistic at the top */}
       <TopStatistic />
 
+      {/* All Courses with filter*/}
+      <CoursesList />
+
       {/* Courses cards for older students*/}
-      <CourseCards title={'дорослих'} link={'дорослих'} />
-
-      {/* Courses cards for young students*/}
-      <CourseCards title={'підлітків 13–17 років'} link={'підлітків'} />
-
-      {/* Courses cards for children*/}
-      <CourseCards title={'дітей 6–12 років'} link={'дітей'} />
+      <AdultCoursesList />
 
       {/* How to sign section */}
       <HowToSign />

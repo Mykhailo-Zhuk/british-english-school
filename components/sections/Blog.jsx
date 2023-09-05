@@ -1,18 +1,56 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button } from '../ui/button';
 import { AspectRatio } from '../ui/aspect-ratio';
 import { ScrollArea } from '../ui/scroll-area';
 import { ScrollAreaScrollbar } from '@radix-ui/react-scroll-area';
+import useHttp from '@/hooks/useHttp';
+import Image from 'next/image';
+import { LatestNewsSkeleton, OthersNewsSkeleton } from '../skeletons/NewsSkeleton';
 
-const news = [
-  { title: 'Оновлена програма підготовки до…', date: '23.08.2023', image: '' },
-  { title: 'Оновлена програма підготовки до…', date: '23.08.2023', image: '' },
-  { title: 'Оновлена програма підготовки до…', date: '23.08.2023', image: '' },
-];
+const LatestNews = ({ latest }) => {
+  const { title, date, image } = latest;
+  return (
+    <div className="w-full max-w-[420px] p-3 hover:bg-accent rounded-lg">
+      <AspectRatio ratio={16 / 11}>
+        <Image src={image} alt="the latest news" className="rounded-md object-cover" />
+      </AspectRatio>
+      <p className="text-[#A5A5A5] text-sm">{date}</p>
+      <p className="text-xl truncate" title={title}>
+        {title}
+      </p>
+    </div>
+  );
+};
+
+const OthersNews = ({ other }) => {
+  const { title, date, image } = other;
+  return (
+    <div className="flex w-96 h-36 p-3 space-x-5 hover:bg-accent rounded-lg">
+      <div className="w-1/2">
+        <AspectRatio ratio={23 / 16}>
+          <Image src={image} alt="others news" className="rounded-md object-cover" />
+        </AspectRatio>
+      </div>
+      <div className="w-1/2 flex flex-col max-h-24">
+        <p className="text-[#A5A5A5] text-sm">{date}</p>
+        <p className="text-xl h-full line-clamp-3" title={title}>
+          {title}
+        </p>
+      </div>
+    </div>
+  );
+};
 
 const Blog = () => {
+  const [newsList, setNewsList] = useState([]);
+  const { sendRequest, error, isLoading } = useHttp();
+
+  useEffect(() => {
+    sendRequest({ url: 'news' }, setNewsList.bind(null));
+  }, []);
+
   return (
     <section className="w-full">
       <div className="pt-20 max-w-[1320px] max-h-[600px] mx-auto flex flex-col space-x-12">
@@ -22,43 +60,39 @@ const Blog = () => {
             Усі статті в блозі
           </Button>
         </div>
-        <div className="flex space-x-5">
-          <div className="w-1/3 h-max flex space-x-6">
-            <div className="w-full p-3 hover:bg-accent rounded-lg">
-              <AspectRatio ratio={16 / 14} className="bg-indigo-100 rounded-lg">
-                Photo
-              </AspectRatio>
-              <p className="text-[#A5A5A5] text-sm">Тетяна Хоролець</p>
-              <p className="text-xl">Жовто-блакитні ідіоми та вирази в англійській мові</p>
+
+        {newsList.length === 0 && !isLoading ? (
+          <p className="w-full text-xl text-center p-8">We have no news</p>
+        ) : null}
+
+        {error ? (
+          <p className="w-full text-xl text-center p-8">{error}</p>
+        ) : (
+          <div className="grid grid-cols-[1fr_2fr] h-max space-x-5">
+            <div className="w-fullflex space-x-6">
+              {isLoading ? <LatestNewsSkeleton /> : null}
+
+              {newsList.latest ? <LatestNews latest={newsList.latest} /> : null}
+            </div>
+
+            <div className="w-full">
+              <ScrollArea className="h-[480px] w-full max-w-[850px] rounded-lg">
+                <div className="w-full max-w-[850px] flex mb-5 flex-wrap">
+                  {isLoading
+                    ? Array.from({ length: 6 }, (_, i) => i + 1).map((_, id) => {
+                        return <OthersNewsSkeleton key={id} />;
+                      })
+                    : null}
+
+                  {newsList.others?.map((item, index) => {
+                    return <OthersNews key={index + 1} other={item} />;
+                  })}
+                </div>
+                <ScrollAreaScrollbar orientation="vertical" />
+              </ScrollArea>
             </div>
           </div>
-
-          <div className="w-2/3 h-max">
-            <ScrollArea className="h-[480px] w-full rounded-lg">
-              <div className="flex mb-5 flex-wrap">
-                {news.map((item, index) => {
-                  const { title, date } = item;
-                  return (
-                    <div
-                      key={index}
-                      className="flex w-96 h-36 p-3 space-x-5 hover:bg-accent rounded-lg">
-                      <div className="w-1/2">
-                        <AspectRatio ratio={23 / 16} className="bg-indigo-100 rounded-lg">
-                          Photo
-                        </AspectRatio>
-                      </div>
-                      <div className="w-1/2 flex flex-col h-max">
-                        <p className="text-[#A5A5A5] text-sm">{date}</p>
-                        <p className="text-xl">{title}</p>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-              <ScrollAreaScrollbar orientation="vertical" />
-            </ScrollArea>
-          </div>
-        </div>
+        )}
       </div>
     </section>
   );

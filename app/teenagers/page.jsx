@@ -1,3 +1,6 @@
+'use client';
+
+import React from 'react';
 import {
   CourseCards,
   FormatOfLearning,
@@ -17,7 +20,9 @@ import {
   Footer,
 } from '@/components/index.js';
 
-export default function Home() {
+const Home = ({ params: { courses } }) => {
+  console.log(courses);
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-start mx-auto">
       {/* Header */}
@@ -30,13 +35,13 @@ export default function Home() {
       <TopStatistic />
 
       {/* Courses cards for older students*/}
-      <CourseCards title="дорослих" link="дорослих" value="adult" />
+      <CourseCards title={'дорослих'} link={'дорослих'} />
 
       {/* Courses cards for young students*/}
-      <CourseCards title="підлітків 13–17 років" link="підлітків" value="teenagers" />
+      <CourseCards title={'підлітків 13–17 років'} link={'підлітків'} />
 
       {/* Courses cards for children*/}
-      <CourseCards title="дітей 6–12 років" link="дітей" value="kids" />
+      <CourseCards title={'дітей 6–12 років'} link={'дітей'} />
 
       {/* How to sign section */}
       <HowToSign />
@@ -75,4 +80,6 @@ export default function Home() {
       <Footer />
     </main>
   );
-}
+};
+
+export default Home;

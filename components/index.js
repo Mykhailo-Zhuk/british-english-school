@@ -9,7 +9,7 @@ export { default as InputForm } from './InputForm';
 export { default as TeacherSkill } from './TeacherSkill';
 export { default as SubscribeInput } from './SubscribeInput';
 
-// Sections
+// Main sections
 export { default as TopChooseGroup } from './sections/TopChooseGroup';
 export { default as TopStatistic } from './sections/TopStatistic';
 export { default as CourseCards } from './sections/CourseCards';
@@ -24,6 +24,11 @@ export { default as Testimonials } from './sections/Testimonials';
 export { default as Contacts } from './sections/Contacts';
 export { default as Blog } from './sections/Blog';
 export { default as SubscribeAction } from './sections/SubscribeAction';
+
+// Courses
+export { default as ChooseAdultGroup } from './sections/ChooseAdultGroup';
+export { default as CoursesList } from './sections/CoursesList';
+export { default as AdultCoursesList } from './sections/AdultCoursesList';
 
 // Skeletons
 export { default as CourseCardSkeleton } from './skeletons/CourseCardSkeleton';

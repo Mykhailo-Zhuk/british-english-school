@@ -7,6 +7,7 @@ import { CardItem, CourseCardSkeleton } from '../index';
 import { ScrollAreaScrollbar } from '@radix-ui/react-scroll-area';
 import useHttp from '@/hooks/useHttp';
 import { Skeleton } from '../ui/skeleton';
+import Link from 'next/link';
 
 const CourseCards = ({ title, link, value }) => {
   const [courses, setCourses] = useState([]);
@@ -22,10 +23,12 @@ const CourseCards = ({ title, link, value }) => {
         <p className="text-xl">
           {isLoading ? <Skeleton className="w-64 h-8 rounded-lg" /> : `Англійська для ${title}`}
         </p>
-        <Button variant="secondary">
-          {isLoading ? <Skeleton className="w-32 h-8 rounded-lg" /> : `Всі курси для ${link}`}{' '}
-          &#707;
-        </Button>
+        <Link href={value}>
+          <Button variant="secondary">
+            {isLoading ? <Skeleton className="w-32 h-8 rounded-lg" /> : `Всі курси для ${link}`}
+            &#707;
+          </Button>
+        </Link>
       </div>
       <ScrollArea className="h-max w-full rounded-md">
         <div className="flex space-x-5 my-3 flex-nowrap">
