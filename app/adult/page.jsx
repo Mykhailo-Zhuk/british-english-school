@@ -2,7 +2,6 @@
 
 import React from 'react';
 import {
-  CourseCards,
   FormatOfLearning,
   GroupForm,
   Header,
@@ -10,7 +9,6 @@ import {
   HowToSign,
   OurTeachers,
   TestActionRow,
-  TopChooseGroup,
   TopStatistic,
   Testimonials,
   WhyIsBest,
@@ -18,14 +16,19 @@ import {
   Blog,
   SubscribeAction,
   Footer,
+} from '@/components/index.js';
+import {
+  AdultCoursesList,
+  BenefitsOfCource,
+  BooksToLearn,
   ChooseAdultGroup,
   CoursesList,
-  AdultCoursesList,
-} from '@/components/index.js';
+  DetailedListOfCources,
+  HowWeLearn,
+  WhoWillTeach,
+} from '@/components/adult/index';
 
 const Home = ({ params: { courses } }) => {
-  console.log(courses);
-
   return (
     <main className="flex min-h-screen flex-col items-center justify-start mx-auto">
       {/* Header */}
@@ -43,11 +46,26 @@ const Home = ({ params: { courses } }) => {
       {/* Courses cards for older students*/}
       <AdultCoursesList />
 
-      {/* How to sign section */}
-      <HowToSign />
+      {/* How we learn */}
+      <HowWeLearn />
 
       {/* Group form */}
       <GroupForm />
+
+      {/* Benefits of cource */}
+      <BenefitsOfCource />
+
+      {/* How to sign section */}
+      <HowToSign />
+
+      {/* What books we have */}
+      <BooksToLearn />
+
+      {/* Who will teach */}
+      <WhoWillTeach />
+
+      {/* Detailed list of cources */}
+      <DetailedListOfCources />
 
       {/* Format of learning  */}
       <FormatOfLearning />

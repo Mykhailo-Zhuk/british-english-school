@@ -64,6 +64,8 @@
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
   }
+
+  /* Gradients */
   .topChooseCourse {
     background: linear-gradient(230deg, #dfeafd 0%, #fbebef 100%);
   }
@@ -93,6 +95,10 @@
 
   .subscribe-action-btn {
     background: linear-gradient(75deg, #ee7b40 0%, #cf5657 100%);
+  }
+
+  .how-we-learn {
+    background: linear-gradient(265deg, #dfeafd 0%, #fbebef 100%);
   }
 
   /* Customize the track style */

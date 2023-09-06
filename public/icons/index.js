@@ -18,8 +18,10 @@ import youtube from './youtube.svg';
 import x from './x.svg';
 import location from './location.svg';
 import email from './email.svg';
+import blueSquare from './blueSquare.svg';
 
 export default {
+  blueSquare,
   arrowDown,
   burger,
   square,

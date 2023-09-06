@@ -18,38 +18,40 @@ const CourseCards = ({ title, link, value }) => {
   }, []);
 
   return (
-    <section className="flex flex-col w-full max-w-[1320px] pb-20">
-      <div className="h-16 inline-flex justify-between">
-        <p className="text-xl">
-          {isLoading ? <Skeleton className="w-64 h-8 rounded-lg" /> : `Англійська для ${title}`}
-        </p>
-        <Link href={value}>
-          <Button variant="secondary">
-            {isLoading ? <Skeleton className="w-32 h-8 rounded-lg" /> : `Всі курси для ${link}`}
-            &#707;
-          </Button>
-        </Link>
-      </div>
-      <ScrollArea className="h-max w-full rounded-md">
-        <div className="flex space-x-5 my-3 flex-nowrap">
-          {error ? <p className="w-full text-xl text-center p-8">{error}</p> : null}
-
-          {isLoading
-            ? Array.from({ length: 6 }, (_, i) => i + 1).map((_, id) => {
-                return <CourseCardSkeleton key={id} />;
-              })
-            : null}
-
-          {!courses.length && !error ? (
-            <p className="w-full text-xl text-center p-8">We have no courses</p>
-          ) : (
-            courses.map((item, id) => {
-              return <CardItem key={id} courses={item} />;
-            })
-          )}
+    <section className="w-full">
+      <div className="flex flex-col h-max w-full max-w-[1320px] mx-auto pb-20">
+        <div className="h-16 inline-flex justify-between">
+          <p className="text-xl">
+            {isLoading ? <Skeleton className="w-64 h-8 rounded-lg" /> : `Англійська для ${title}`}
+          </p>
+          <Link href={value}>
+            <Button variant="secondary">
+              {isLoading ? <Skeleton className="w-32 h-8 rounded-lg" /> : `Всі курси для ${link}`}
+              &#707;
+            </Button>
+          </Link>
         </div>
-        <ScrollAreaScrollbar orientation="horizontal" />
-      </ScrollArea>
+        <ScrollArea className="h-max w-full rounded-md">
+          <div className="flex space-x-5 my-3 flex-nowrap">
+            {error ? <p className="w-full text-xl text-center p-8">{error}</p> : null}
+
+            {isLoading
+              ? Array.from({ length: 6 }, (_, i) => i + 1).map((_, id) => {
+                  return <CourseCardSkeleton key={id} />;
+                })
+              : null}
+
+            {!courses.length && !error ? (
+              <p className="w-full text-xl text-center p-8">We have no courses</p>
+            ) : (
+              courses.map((item, id) => {
+                return <CardItem key={id} courses={item} />;
+              })
+            )}
+          </div>
+          <ScrollAreaScrollbar orientation="horizontal" />
+        </ScrollArea>
+      </div>
     </section>
   );
 };

@@ -25,11 +25,6 @@ export { default as Contacts } from './sections/Contacts';
 export { default as Blog } from './sections/Blog';
 export { default as SubscribeAction } from './sections/SubscribeAction';
 
-// Courses
-export { default as ChooseAdultGroup } from './sections/ChooseAdultGroup';
-export { default as CoursesList } from './sections/CoursesList';
-export { default as AdultCoursesList } from './sections/AdultCoursesList';
-
 // Skeletons
 export { default as CourseCardSkeleton } from './skeletons/CourseCardSkeleton';
 export { default as TestimonialsSkeleton } from './skeletons/TestimonialsSkeleton';

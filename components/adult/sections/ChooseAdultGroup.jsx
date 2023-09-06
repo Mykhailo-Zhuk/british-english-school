@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
-import { Button } from '../ui/button';
-import { AspectRatio } from '../ui/aspect-ratio';
+import { Button } from '../../ui/button';
+import { AspectRatio } from '../../ui/aspect-ratio';
 
 const ChooseAdultGroup = () => {
   return (
@@ -11,9 +11,9 @@ const ChooseAdultGroup = () => {
           <Link href="/">Головна</Link> <span className="mx-1">&#707;</span>
           <p>Англійська дорослим</p>
         </div>
-        <h1 className="text-4xl text-[#202E48]">Англійська для дорослих</h1>
+        <h1 className="text-4xl">Англійська для дорослих</h1>
         <div className="flex space-x-4">
-          <div className="flex flex-col space-y-5 text-[#202E48] w-1/2">
+          <div className="flex flex-col space-y-5 w-1/2">
             <p className="text-xl">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente quidem asperiores
               veritatis vel rem cumque nam amet totam iure quisquam?

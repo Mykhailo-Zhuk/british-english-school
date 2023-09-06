@@ -3,8 +3,8 @@
 import React, { useEffect, useState } from 'react';
 import useHttp from '@/hooks/useHttp';
 import { ScrollAreaScrollbar } from '@radix-ui/react-scroll-area';
-import { ScrollArea } from '../ui/scroll-area';
-import { CardItem, CourseCardSkeleton } from '../index';
+import { ScrollArea } from '../../ui/scroll-area';
+import { CardItem, CourseCardSkeleton } from '../../index';
 
 const AdultCoursesList = () => {
   const [courses, setCourses] = useState([]);
@@ -17,8 +17,8 @@ const AdultCoursesList = () => {
   return (
     <section className="w-full">
       <div className="py-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-5">
-        <h1 className="text-4xl text-[#202E48]">Курси англійської для дорослих</h1>
-        <p className="text-xl text-[#202E48]">від А1 (Beginner) до C2 (Proficiency)</p>
+        <h1 className="text-4xl">Курси англійської для дорослих</h1>
+        <p className="text-xl">від А1 (Beginner) до C2 (Proficiency)</p>
 
         <ScrollArea className="h-max max-h-[1700px] w-full rounded-md">
           <div className="grid grid-cols-4 gap-4 my-2 flex-wrap">
