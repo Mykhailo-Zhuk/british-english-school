@@ -17,7 +17,7 @@ const context = {
 const CourseCardSkeleton = () => {
   const { title, description, price } = context;
   return (
-    <div className="w-[300px] h-[450px] flex-shrink-0 border rounded-lg hover:shadow-2xl">
+    <div className="w-[300px] h-[450px] flex-shrink-0 mr-4 mt-4 border rounded-lg hover:shadow-2xl">
       <Skeleton className="relative w-full h-[176px]"></Skeleton>
       <div className="p-5">
         <p className="font-semibold">{title}</p>

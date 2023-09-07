@@ -1,15 +1,15 @@
-export const adultCoursesDetails = [
+export const adultDetails = [
   {
     title: 'Вивчення рівня',
-    status: { title: 'Триває набір', bgColor: '#6CA8491F', textColor: '#367D4B' },
+    status: { title: 'Триває набір', bgColor: 'bg-[#6CA8491F]', textColor: 'text-[#367D4B]' },
     conditions: [
       { label: 'Підійде для рівнів:', value: 'від A1 Beginner до C2 Proficiency' },
       { label: 'Тривалість курсу:', value: '4,5 місяці' },
       {
         label: 'Формат навчання:',
         value: [
-          { title: 'Онлайн', circle: '⬤', color: '#4295F3' },
-          { title: 'Офлайн', circle: '⬤', color: '#A14669' },
+          { title: 'Онлайн', circle: '⬤ ', color: 'text-[#4295F3]' },
+          { title: 'Офлайн', circle: '⬤ ', color: 'text-[#A14669]' },
         ],
       },
     ],
@@ -27,13 +27,13 @@ export const adultCoursesDetails = [
   },
   {
     title: 'Розмовна англійська',
-    status: { title: 'Триває набір', bgColor: '#6CA8491F', textColor: '#367D4B' },
+    status: { title: 'Триває набір', bgColor: 'bg-[#6CA8491F]', textColor: 'text-[#367D4B]' },
     conditions: [
       { label: 'Підійде для рівнів:', value: 'від A1 Beginner до C2 Proficiency' },
       { label: 'Тривалість курсу:', value: '4,5 місяці' },
       {
         label: 'Формат навчання:',
-        value: [{ title: 'Онлайн', circle: '⬤', color: '#4295F3' }],
+        value: [{ title: 'Онлайн', circle: '⬤ ', color: 'text-[#4295F3]' }],
       },
     ],
     description: [
@@ -50,15 +50,15 @@ export const adultCoursesDetails = [
   },
   {
     title: 'Інтенсивна англійська',
-    status: { title: 'Триває набір', bgColor: '#6CA8491F', textColor: '#367D4B' },
+    status: { title: 'Триває набір', bgColor: 'bg-[#6CA8491F]', textColor: 'text-[#367D4B]' },
     conditions: [
       { label: 'Підійде для рівнів:', value: 'від A1 Beginner до C2 Proficiency' },
       { label: 'Тривалість курсу:', value: '2,5 місяці' },
       {
         label: 'Формат навчання:',
         value: [
-          { title: 'Онлайн', circle: '⬤', color: '#4295F3' },
-          { title: 'Офлайн', circle: '⬤', color: '#A14669' },
+          { title: 'Онлайн', circle: '⬤ ', color: 'text-[#4295F3]' },
+          { title: 'Офлайн', circle: '⬤ ', color: 'text-[#A14669]' },
         ],
       },
     ],
@@ -76,13 +76,13 @@ export const adultCoursesDetails = [
   },
   {
     title: 'Лексика і граматика',
-    status: { title: 'Триває набір', bgColor: '#6CA8491F', textColor: '#367D4B' },
+    status: { title: 'Триває набір', bgColor: 'bg-[#6CA8491F]', textColor: 'text-[#367D4B]' },
     conditions: [
       { label: 'Підійде для рівнів:', value: 'від A1 Beginner до C2 Proficiency' },
       { label: 'Тривалість курсу:', value: '4,5 місяці' },
       {
         label: 'Формат навчання:',
-        value: [{ title: 'Онлайн', circle: '⬤', color: '#4295F3' }],
+        value: [{ title: 'Онлайн', circle: '⬤ ', color: 'text-[#4295F3]' }],
       },
     ],
     description: [
@@ -99,13 +99,13 @@ export const adultCoursesDetails = [
   },
   {
     title: 'Англійська без домашки',
-    status: { title: 'Набір очікується', bgColor: '#E9EDFC', textColor: '#4A5EAA' },
+    status: { title: 'Набір очікується', bgColor: 'bg-[#E9EDFC]', textColor: 'text-[#4A5EAA]' },
     conditions: [
       { label: 'Підійде для рівнів:', value: 'від A1 Beginner до C2 Proficiency' },
       { label: 'Тривалість курсу:', value: '4,5 місяці' },
       {
         label: 'Формат навчання:',
-        value: [{ title: 'Онлайн', circle: '⬤', color: '#4295F3' }],
+        value: [{ title: 'Онлайн', circle: '⬤ ', color: 'text-[#4295F3]' }],
       },
     ],
     description: [
@@ -122,15 +122,15 @@ export const adultCoursesDetails = [
   },
   {
     title: 'Літній експрес-курс англійської',
-    status: { title: 'Літо 2024', bgColor: '#E9EDFC', textColor: '#4A5EAA' },
+    status: { title: 'Літо 2024', bgColor: 'bg-[#E9EDFC]', textColor: 'text-[#4A5EAA]' },
     conditions: [
       { label: 'Підійде для рівнів:', value: 'від A1 Beginner до C2 Proficiency' },
       { label: 'Тривалість курсу:', value: '4,5 місяці' },
       {
         label: 'Формат навчання:',
         value: [
-          { title: 'Онлайн', circle: '⬤', color: '#4295F3' },
-          { title: 'Офлайн', circle: '⬤', color: '#A14669' },
+          { title: 'Онлайн', circle: '⬤ ', color: 'text-[#4295F3]' },
+          { title: 'Офлайн', circle: '⬤ ', color: 'text-[#A14669]' },
         ],
       },
     ],
@@ -148,16 +148,16 @@ export const adultCoursesDetails = [
   },
 ];
 
-export const proficiencyAdultCourses = [
+export const proficiency = [
   {
     title: 'Бізнес-англійська',
-    status: { title: 'Триває набір', bgColor: '#6CA8491F', textColor: '#367D4B' },
+    status: { title: 'Триває набір', bgColor: 'bg-[#6CA8491F]', textColor: 'text-[#367D4B]' },
     conditions: [
       { label: 'Підійде для рівнів:', value: 'від B1+ Intermediate до C2 Proficiency' },
       { label: 'Тривалість курсу:', value: '4,5 місяці' },
       {
         label: 'Формат навчання:',
-        value: [{ title: 'Онлайн', circle: '⬤', color: '#4295F3' }],
+        value: [{ title: 'Онлайн', circle: '⬤ ', color: '#4295F3' }],
       },
     ],
     description: [
@@ -172,13 +172,13 @@ export const proficiencyAdultCourses = [
   },
   {
     title: 'Юридична англійська',
-    status: { title: 'Триває набір', bgColor: '#6CA8491F', textColor: '#367D4B' },
+    status: { title: 'Триває набір', bgColor: 'bg-[#6CA8491F]', textColor: 'text-[#367D4B]' },
     conditions: [
       { label: 'Підійде для рівнів:', value: 'від B1+ Intermediate до C2 Proficiency' },
       { label: 'Тривалість курсу:', value: '4,5 місяці' },
       {
         label: 'Формат навчання:',
-        value: [{ title: 'Онлайн', circle: '⬤', color: '#4295F3' }],
+        value: [{ title: 'Онлайн', circle: '⬤ ', color: '#4295F3' }],
       },
     ],
     description: [
@@ -188,17 +188,17 @@ export const proficiencyAdultCourses = [
   },
 ];
 
-export const coursesForExams = [
+export const forExams = [
   {
     title: 'Підготовка до іспиту IELTS',
-    status: { title: 'Триває набір', bgColor: '#6CA8491F', textColor: '#367D4B' },
+    status: { title: 'Триває набір', bgColor: 'bg-[#6CA8491F]', textColor: 'text-[#367D4B]' },
     include: [
       { title: 'Курси підготовки до іспиту IELTS:', list: ['Academic & General Training'] },
     ],
   },
   {
     title: 'Підготовка до іспиту TOEFL',
-    status: { title: 'Триває набір', bgColor: '#6CA8491F', textColor: '#367D4B' },
+    status: { title: 'Триває набір', bgColor: 'bg-[#6CA8491F]', textColor: 'text-[#367D4B]' },
     include: [
       {
         title: 'Курси підготовки до іспиту TOEFL iBT (internet-based test)',

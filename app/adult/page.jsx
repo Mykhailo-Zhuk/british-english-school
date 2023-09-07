@@ -19,18 +19,18 @@ import {
 } from '@/components/index.js';
 import {
   AdultCoursesList,
-  BenefitsOfCource,
+  BenefitsOfCourse,
   BooksToLearn,
   ChooseAdultGroup,
   CoursesList,
-  DetailedListOfCources,
+  DetailedListOfCourses,
   HowWeLearn,
   WhoWillTeach,
 } from '@/components/adult/index';
 
 const Home = ({ params: { courses } }) => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-start mx-auto">
+    <main className="flex min-h-screen flex-col items-center justify-start mx-auto bg-[#F8F8FA]">
       {/* Header */}
       <Header />
 
@@ -53,7 +53,7 @@ const Home = ({ params: { courses } }) => {
       <GroupForm />
 
       {/* Benefits of cource */}
-      <BenefitsOfCource />
+      <BenefitsOfCourse />
 
       {/* How to sign section */}
       <HowToSign />
@@ -65,7 +65,7 @@ const Home = ({ params: { courses } }) => {
       <WhoWillTeach />
 
       {/* Detailed list of cources */}
-      <DetailedListOfCources />
+      <DetailedListOfCourses />
 
       {/* Format of learning  */}
       <FormatOfLearning />

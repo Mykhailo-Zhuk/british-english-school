@@ -11,7 +11,7 @@ const CardItem = ({ courses }) => {
   };
 
   return (
-    <Card className="w-[300px] h-[450px] flex-shrink-0 hover:shadow-2xl">
+    <Card className="w-[300px] h-[450px] flex-shrink-0 mt-4 mr-4 hover:shadow-2xl">
       <CardHeader className="relative w-full h-[176px] bg-accent ">
         {discount?.exist && (
           <div className="absolute bottom-0 right-0 w-max h-6 px-4 rounded-tl-lg text-white text-base bg-red-400">

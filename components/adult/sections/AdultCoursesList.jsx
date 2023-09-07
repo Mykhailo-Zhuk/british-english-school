@@ -21,17 +21,15 @@ const AdultCoursesList = () => {
         <p className="text-xl">від А1 (Beginner) до C2 (Proficiency)</p>
 
         <ScrollArea className="h-max max-h-[1700px] w-full rounded-md">
-          <div className="grid grid-cols-4 gap-4 my-2 flex-wrap">
-            {error ? <p className="w-full text-xl text-center p-8">{error}</p> : null}
-
+          <div className="grid grid-cols-4 my-2 flex-wrap">
             {isLoading
               ? Array.from({ length: 6 }, (_, i) => i + 1).map((_, id) => {
                   return <CourseCardSkeleton key={id} />;
                 })
               : null}
 
-            {!courses.length && !error ? (
-              <p className="w-full text-xl text-center p-8">We have no courses</p>
+            {error ? (
+              <p className="w-full text-xl text-center p-8">{error}</p>
             ) : (
               courses.map((item, id) => {
                 return <CardItem key={id} courses={item} />;
