@@ -14,7 +14,7 @@ const CourseCards = ({ title, link, value }) => {
   const { sendRequest, error, isLoading } = useHttp();
 
   useEffect(() => {
-    sendRequest({ url: 'courses/' + value }, setCourses.bind(null));
+    sendRequest({ url: 'courses' }, setCourses.bind(null));
   }, []);
 
   return (
@@ -33,7 +33,13 @@ const CourseCards = ({ title, link, value }) => {
         </div>
         <ScrollArea className="h-max w-full rounded-md">
           <div className="flex space-x-5 my-3 flex-nowrap">
-            {error ? <p className="w-full text-xl text-center p-8">{error}</p> : null}
+            {error ? (
+              <p className="w-full text-xl text-center p-8">{error}</p>
+            ) : (
+              courses?.value?.map((item, id) => {
+                return <CardItem key={id} courses={item} />;
+              })
+            )}
 
             {isLoading
               ? Array.from({ length: 6 }, (_, i) => i + 1).map((_, id) => {
@@ -41,13 +47,9 @@ const CourseCards = ({ title, link, value }) => {
                 })
               : null}
 
-            {!courses.length && !error ? (
+            {!courses?.value?.length && !error ? (
               <p className="w-full text-xl text-center p-8">We have no courses</p>
-            ) : (
-              courses.map((item, id) => {
-                return <CardItem key={id} courses={item} />;
-              })
-            )}
+            ) : null}
           </div>
           <ScrollAreaScrollbar orientation="horizontal" />
         </ScrollArea>

@@ -16,13 +16,11 @@ export const adultDetails = [
     description: [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi et vel quo, iusto cumque rem? Vero perferendis ad eveniet sapiente adipisci maxime voluptates suscipit quis exercitationem! Nostrum, magnam? Laborum eos delectus ea pariatur iure?',
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi et vel quo, iusto cumque rem? Vero perferendis ad eveniet sapiente adipisci maxime voluptates suscipit quis exercitationem! Nostrum, magnam? Laborum eos delectus ea pariatur iure?',
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi et vel quo, iusto cumque rem? Vero perferendis ad eveniet sapiente adipisci maxime voluptates suscipit quis exercitationem! Nostrum, magnam? Laborum eos delectus ea pariatur iure?',
     ],
     include: [
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi.',
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi.',
       'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi.',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     ],
   },
   {
@@ -39,13 +37,11 @@ export const adultDetails = [
     description: [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi et vel quo, iusto cumque rem? Vero perferendis ad eveniet sapiente adipisci maxime voluptates suscipit quis exercitationem! Nostrum, magnam? Laborum eos delectus ea pariatur iure?',
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi et vel quo, iusto cumque rem? Vero perferendis ad eveniet sapiente adipisci maxime voluptates suscipit quis exercitationem! Nostrum, magnam? Laborum eos delectus ea pariatur iure?',
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi et vel quo, iusto cumque rem? Vero perferendis ad eveniet sapiente adipisci maxime voluptates suscipit quis exercitationem! Nostrum, magnam? Laborum eos delectus ea pariatur iure?',
     ],
     include: [
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi.',
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi.',
       'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi.',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     ],
   },
   {
@@ -65,13 +61,11 @@ export const adultDetails = [
     description: [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi et vel quo, iusto cumque rem? Vero perferendis ad eveniet sapiente adipisci maxime voluptates suscipit quis exercitationem! Nostrum, magnam? Laborum eos delectus ea pariatur iure?',
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi et vel quo, iusto cumque rem? Vero perferendis ad eveniet sapiente adipisci maxime voluptates suscipit quis exercitationem! Nostrum, magnam? Laborum eos delectus ea pariatur iure?',
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi et vel quo, iusto cumque rem? Vero perferendis ad eveniet sapiente adipisci maxime voluptates suscipit quis exercitationem! Nostrum, magnam? Laborum eos delectus ea pariatur iure?',
     ],
     include: [
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi.',
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi.',
       'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi.',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     ],
   },
   {
@@ -88,13 +82,11 @@ export const adultDetails = [
     description: [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi et vel quo, iusto cumque rem? Vero perferendis ad eveniet sapiente adipisci maxime voluptates suscipit quis exercitationem! Nostrum, magnam? Laborum eos delectus ea pariatur iure?',
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi et vel quo, iusto cumque rem? Vero perferendis ad eveniet sapiente adipisci maxime voluptates suscipit quis exercitationem! Nostrum, magnam? Laborum eos delectus ea pariatur iure?',
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi et vel quo, iusto cumque rem? Vero perferendis ad eveniet sapiente adipisci maxime voluptates suscipit quis exercitationem! Nostrum, magnam? Laborum eos delectus ea pariatur iure?',
     ],
     include: [
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi.',
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi.',
       'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi.',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     ],
   },
   {
@@ -111,13 +103,11 @@ export const adultDetails = [
     description: [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi et vel quo, iusto cumque rem? Vero perferendis ad eveniet sapiente adipisci maxime voluptates suscipit quis exercitationem! Nostrum, magnam? Laborum eos delectus ea pariatur iure?',
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi et vel quo, iusto cumque rem? Vero perferendis ad eveniet sapiente adipisci maxime voluptates suscipit quis exercitationem! Nostrum, magnam? Laborum eos delectus ea pariatur iure?',
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi et vel quo, iusto cumque rem? Vero perferendis ad eveniet sapiente adipisci maxime voluptates suscipit quis exercitationem! Nostrum, magnam? Laborum eos delectus ea pariatur iure?',
     ],
     include: [
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi.',
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi.',
       'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi.',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     ],
   },
   {
@@ -137,13 +127,11 @@ export const adultDetails = [
     description: [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi et vel quo, iusto cumque rem? Vero perferendis ad eveniet sapiente adipisci maxime voluptates suscipit quis exercitationem! Nostrum, magnam? Laborum eos delectus ea pariatur iure?',
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi et vel quo, iusto cumque rem? Vero perferendis ad eveniet sapiente adipisci maxime voluptates suscipit quis exercitationem! Nostrum, magnam? Laborum eos delectus ea pariatur iure?',
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi et vel quo, iusto cumque rem? Vero perferendis ad eveniet sapiente adipisci maxime voluptates suscipit quis exercitationem! Nostrum, magnam? Laborum eos delectus ea pariatur iure?',
     ],
     include: [
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi.',
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi.',
       'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione quae est consectetur saepe eligendi.',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     ],
   },
 ];
@@ -157,7 +145,7 @@ export const proficiency = [
       { label: 'Тривалість курсу:', value: '4,5 місяці' },
       {
         label: 'Формат навчання:',
-        value: [{ title: 'Онлайн', circle: '⬤ ', color: '#4295F3' }],
+        value: [{ title: 'Онлайн', circle: '⬤ ', color: 'text-[#4295F3]' }],
       },
     ],
     description: [
@@ -178,7 +166,7 @@ export const proficiency = [
       { label: 'Тривалість курсу:', value: '4,5 місяці' },
       {
         label: 'Формат навчання:',
-        value: [{ title: 'Онлайн', circle: '⬤ ', color: '#4295F3' }],
+        value: [{ title: 'Онлайн', circle: '⬤ ', color: 'text-[#4295F3]' }],
       },
     ],
     description: [

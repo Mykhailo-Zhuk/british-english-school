@@ -49,6 +49,25 @@ const Testimonial = ({ username, content }) => {
 const Testimonials = () => {
   const [testimonials, setTestimonials] = useState([]);
   const { sendRequest, error, isLoading } = useHttp();
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const itemsPerPage = 5;
+  const totalPages = Math.ceil(testimonials?.length / itemsPerPage);
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage((prevPage) => prevPage + 1);
+    }
+  };
+
+  const endIndex = currentPage * itemsPerPage;
+
+  const startIndex = 0;
+
+  const currentPageItems = testimonials?.slice(startIndex, endIndex);
+
+  const height = ['h-[300px]', 'h-[220px]', 'h-[310px]', 'h-[130px]'];
+  const heightPicker = (id) => (id + height.length) % height.length;
 
   useEffect(() => {
     sendRequest({ url: 'testimonials' }, setTestimonials.bind(null));
@@ -60,23 +79,25 @@ const Testimonials = () => {
         <h1 className="text-3xl">Відгуки</h1>
         <ScrollArea className="max-h-[600px] w-full rounded-md">
           <div className="flex flex-col flex-wrap max-h-[600px] pt-4">
-            {error ? <p className="w-full text-xl text-center p-8">{error}</p> : null}
-
             {isLoading
               ? Array.from({ length: 6 }, (_, i) => i + 1).map((_, id) => {
-                  return <TestimonialsSkeleton key={id} />;
+                  return <TestimonialsSkeleton key={id} height={height[heightPicker(id)]} />;
                 })
               : null}
 
-            {!testimonials.length && !error ? (
-              <p className="w-full text-xl text-center p-8">We have no testimonials</p>
+            {error ? (
+              <p className="w-full text-xl text-center p-8">{error}</p>
             ) : (
-              testimonials.map((item, index) => {
+              currentPageItems.map((item, index) => {
                 const { username, content } = item;
 
                 return <Testimonial key={index} username={username} content={content} />;
               })
             )}
+
+            {!currentPageItems.length && !error ? (
+              <p className="w-full text-xl text-center p-8">We have no testimonials</p>
+            ) : null}
           </div>
           <ScrollAreaScrollbar orientation="horizontal" />
         </ScrollArea>
@@ -88,7 +109,11 @@ const Testimonials = () => {
             height={25}
             className="cursor-pointer"
           />
-          <Button variant="ghost" className="text-[#4A5EAA] text-lg">
+          <Button
+            variant="ghost"
+            className="text-[#4A5EAA] text-lg"
+            onClick={handleNextPage}
+            disabled={currentPage === totalPages}>
             Показати більше відгуків
           </Button>
         </div>

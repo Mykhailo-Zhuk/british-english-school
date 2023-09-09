@@ -26,19 +26,17 @@ import {
   DetailedListOfCourses,
   HowWeLearn,
   WhoWillTeach,
+  WhyWeAreTrusted,
 } from '@/components/adult/index';
 
 const Home = ({ params: { courses } }) => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-start mx-auto bg-[#F8F8FA]">
+    <section className="flex min-h-screen flex-col items-center justify-start mx-auto bg-[#F8F8FA]">
       {/* Header */}
       <Header />
 
       {/* Choose adult group */}
       <ChooseAdultGroup />
-
-      {/* Statistic at the top */}
-      <TopStatistic />
 
       {/* All Courses with filter*/}
       <CoursesList />
@@ -67,20 +65,8 @@ const Home = ({ params: { courses } }) => {
       {/* Detailed list of cources */}
       <DetailedListOfCourses />
 
-      {/* Format of learning  */}
-      <FormatOfLearning />
-
-      {/* How the learning take place */}
-      <HowTakePlace />
-
-      {/* List of Teachers */}
-      <OurTeachers />
-
-      {/* Test action row*/}
-      <TestActionRow />
-
-      {/* Test action row*/}
-      <WhyIsBest />
+      {/* Why we are trusted */}
+      <WhyWeAreTrusted />
 
       {/* Testimonials */}
       <Testimonials />
@@ -96,7 +82,7 @@ const Home = ({ params: { courses } }) => {
 
       {/* Footer */}
       <Footer />
-    </main>
+    </section>
   );
 };
 

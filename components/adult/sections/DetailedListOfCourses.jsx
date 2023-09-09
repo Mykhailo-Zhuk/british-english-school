@@ -14,10 +14,9 @@ const DetailedListOfCourses = () => {
   const { sendRequest, error, isLoading } = useHttp();
 
   useEffect(() => {
-    sendRequest({ url: 'courses/adult/detail' }, setCourses.bind(null));
+    sendRequest({ url: 'courses/adult/details' }, setCourses.bind(null));
   }, []);
 
-  console.log(courses);
   return (
     <section className="w-full">
       <div className="py-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-6">

@@ -7,6 +7,8 @@ export { default as BenefitsOfCourse } from './sections/BenefitsOfCourse';
 export { default as BooksToLearn } from './sections/BooksToLearn';
 export { default as WhoWillTeach } from './sections/WhoWillTeach';
 export { default as DetailedListOfCourses } from './sections/DetailedListOfCourses';
+export { default as WhyWeAreTrusted } from './sections/WhyWeAreTrusted';
 
 // Utils
 export { default as AdultCard } from './AdultCard';
+export { default as FilterForm } from './FilterForm';

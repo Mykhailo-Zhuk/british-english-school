@@ -1,9 +1,5 @@
-import { initialData } from '../initialData';
+import { adultListWithFilter } from './adultListWithFilter.js';
 
 export async function GET(request) {
-  const {
-    courses: { adult },
-  } = initialData;
-
-  return new Response(JSON.stringify(adult));
+  return new Response(JSON.stringify(adultListWithFilter));
 }

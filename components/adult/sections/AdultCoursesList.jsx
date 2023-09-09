@@ -11,7 +11,7 @@ const AdultCoursesList = () => {
   const { sendRequest, error, isLoading } = useHttp();
 
   useEffect(() => {
-    sendRequest({ url: 'courses/adult' }, setCourses.bind(null));
+    sendRequest({ url: 'courses' }, setCourses.bind(null));
   }, []);
 
   return (
@@ -31,7 +31,7 @@ const AdultCoursesList = () => {
             {error ? (
               <p className="w-full text-xl text-center p-8">{error}</p>
             ) : (
-              courses.map((item, id) => {
+              courses?.adult?.map((item, id) => {
                 return <CardItem key={id} courses={item} />;
               })
             )}

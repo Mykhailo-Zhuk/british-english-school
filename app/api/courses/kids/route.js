@@ -1,9 +1,7 @@
-import { initialData } from '../initialData';
+import { shortCard } from '../shortCard';
 
 export async function GET(request) {
-  const {
-    courses: { kids },
-  } = initialData;
+  const { kids } = shortCard;
 
   return new Response(JSON.stringify(kids));
 }

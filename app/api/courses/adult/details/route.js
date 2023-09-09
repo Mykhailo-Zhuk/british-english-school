@@ -1,4 +1,4 @@
-import { adultDetails, proficiency, forExams } from '../../adultCoursesDatails';
+import { adultDetails, proficiency, forExams } from './details';
 
 export async function GET(request) {
   return new Response(

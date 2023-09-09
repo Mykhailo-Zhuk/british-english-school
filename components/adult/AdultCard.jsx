@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
-import icons from '@/public/icons';
+import icons from '@/public/icons/adult';
 import { Button } from '../ui/button';
 
 const Condition = ({ condition }) => {

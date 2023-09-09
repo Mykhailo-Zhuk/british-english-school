@@ -21,8 +21,6 @@ import {
 } from '@/components/index.js';
 
 const Home = ({ params: { courses } }) => {
-  console.log(courses);
-
   return (
     <main className="flex min-h-screen flex-col items-center justify-start mx-auto">
       {/* Header */}
