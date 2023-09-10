@@ -15,8 +15,7 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { toast } from '@/components/ui/use-toast';
-import useHttp from '@/hooks/useHttp';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '../ui/collapsible';
 import { CaretSortIcon } from '@radix-ui/react-icons';
 import { RadioGroup, RadioGroupItem } from '../ui/radio-group';
@@ -52,18 +51,13 @@ const RadioFormItem = ({ filter }) => {
     </FormItem>
   );
 };
-const FilterForm = () => {
+const FilterForm = ({ filterItems, isLoading, error }) => {
   const [isOpenType, setIsOpenType] = useState(true);
   const [isOpenProgram, setIsOpenProgram] = useState(true);
   const [isOpenFormat, setIsOpenFormat] = useState(true);
   const [isOpenTime, setIsOpenTime] = useState(true);
   const [isOpenTeacher, setIsOpenTeacher] = useState(true);
-  const [adultList, setAdultList] = useState([]);
-  const { sendRequest, error, isLoading } = useHttp();
-
-  useEffect(() => {
-    sendRequest({ url: 'courses/adult' }, setAdultList.bind(null));
-  }, []);
+  const { type, program, format, time, teacher } = filterItems;
 
   const form = useForm({
     resolver: zodResolver(FormSchema),
@@ -120,7 +114,7 @@ const FilterForm = () => {
                         ? Array.from({ length: 8 }, (_, i) => i + 1).map((_, id) => {
                             return <Skeleton key={id} className="h-4 w-3/5"></Skeleton>;
                           })
-                        : adultList?.filter?.type?.map((filter, index) => {
+                        : type?.map((filter, index) => {
                             return <RadioFormItem key={index} filter={filter} />;
                           })}
                     </RadioGroup>
@@ -155,7 +149,7 @@ const FilterForm = () => {
                     ? Array.from({ length: 7 }, (_, i) => i + 1).map((_, id) => {
                         return <Skeleton key={id} className="h-4 w-3/5"></Skeleton>;
                       })
-                    : adultList?.filter?.program?.map((item) => (
+                    : program?.map((item) => (
                         <FormField
                           key={item.id}
                           control={form.control}
@@ -214,7 +208,7 @@ const FilterForm = () => {
                     ? Array.from({ length: 2 }, (_, i) => i + 1).map((_, id) => {
                         return <Skeleton key={id} className="h-4 w-1/4"></Skeleton>;
                       })
-                    : adultList?.filter?.format?.map((item) => (
+                    : format?.map((item) => (
                         <FormField
                           key={item.id}
                           control={form.control}
@@ -242,7 +236,6 @@ const FilterForm = () => {
                           }}
                         />
                       ))}
-
                   <FormMessage />
                 </CollapsibleContent>
               </Collapsible>
@@ -273,7 +266,7 @@ const FilterForm = () => {
                     ? Array.from({ length: 2 }, (_, i) => i + 1).map((_, id) => {
                         return <Skeleton key={id} className="h-4 w-1/3"></Skeleton>;
                       })
-                    : adultList?.filter?.time?.map((item) => (
+                    : time?.map((item) => (
                         <FormField
                           key={item.id}
                           control={form.control}
@@ -331,7 +324,7 @@ const FilterForm = () => {
                     ? Array.from({ length: 6 }, (_, i) => i + 1).map((_, id) => {
                         return <Skeleton key={id} className="h-4 w-1/3"></Skeleton>;
                       })
-                    : adultList?.filter?.teacher?.map((item) => (
+                    : teacher?.map((item) => (
                         <FormField
                           key={item.id}
                           control={form.control}

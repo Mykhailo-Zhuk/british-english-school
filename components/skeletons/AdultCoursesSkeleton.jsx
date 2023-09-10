@@ -1,7 +1,7 @@
 'use client';
 
-import { Fragment } from 'react';
 import { Skeleton } from '../ui/skeleton';
+import { Separator } from '../ui/separator';
 
 export const AdultCardSkeleton = () => {
   return (
@@ -24,11 +24,7 @@ export const AdultCardSkeleton = () => {
 
       <ul className="space-y-2">
         {Array.from({ length: 3 }, (_, i) => i + 1).map((_, id) => {
-          return (
-            <Fragment key={id}>
-              <Skeleton className="h-4 w-3/4"></Skeleton>
-            </Fragment>
-          );
+          return <Skeleton key={id} className="h-4 w-3/4"></Skeleton>;
         })}
       </ul>
 
@@ -58,11 +54,7 @@ export const ProficiencyCardSkeleton = () => {
 
       <ul className="space-y-2">
         {Array.from({ length: 4 }, (_, i) => i + 1).map((_, id) => {
-          return (
-            <Fragment key={id}>
-              <Skeleton className="h-4 w-1/3"></Skeleton>
-            </Fragment>
-          );
+          return <Skeleton key={id} className="h-4 w-1/3"></Skeleton>;
         })}
       </ul>
 
@@ -80,15 +72,57 @@ export const ExamsCardSkeleton = () => {
       </div>
       <ul className="space-y-2">
         {Array.from({ length: 1 }, (_, i) => i + 1).map((_, id) => {
-          return (
-            <Fragment key={id}>
-              <Skeleton className="h-4 w-3/4"></Skeleton>
-            </Fragment>
-          );
+          return <Skeleton key={id} className="h-4 w-3/4"></Skeleton>;
         })}
       </ul>
 
       <Skeleton className="float-left w-48 h-10"></Skeleton>
+    </div>
+  );
+};
+
+export const AdultMainCardSkeleton = () => {
+  return (
+    <div className="ralative w-[410px] h-max flex flex-col space-y-6  odd:mr-4 mb-4 rounded-md bg-white py-7 px-12  text-sm">
+      <div className="flex flex-col space-y-5">
+        <Skeleton className="w-20 h-4"></Skeleton>
+        <Skeleton className="w-20 h-4"></Skeleton>
+        <Skeleton className="w-48 h-6 my-2"></Skeleton>
+      </div>
+      <div className="flex flex-col space-y-2">
+        <Skeleton className="w-40 h-3"></Skeleton>
+        <Skeleton className="w-40 h-3"></Skeleton>
+        <Skeleton className="w-40 h-3"></Skeleton>
+      </div>
+      <div className="text-left px-4 py-1 bg-[#EBF7F6] border-l-4 border-[#36A8A0] rounded-sm">
+        <Skeleton className="w-full h-5"></Skeleton>
+      </div>
+      <div className="flex flex-col space-y-1">
+        {Array.from({ length: 3 }, (_, i) => i + 1).map((_, id) => {
+          return (
+            <div key={id} className="flex justify-between w-3/4">
+              <Skeleton className="w-24 h-4"></Skeleton>
+              <Skeleton className="w-24 h-4"></Skeleton>
+            </div>
+          );
+        })}
+      </div>
+      <Separator />
+
+      <div className="flex justify-between w-3/4">
+        <Skeleton className="w-20 h-4"></Skeleton>
+        <Skeleton className="w-20 h-4"></Skeleton>
+      </div>
+
+      <div className="flex justify-between w-3/4">
+        <Skeleton className="w-1/3 h-4"></Skeleton>
+        <Skeleton className="w-1/3 h-4"></Skeleton>
+      </div>
+
+      <Separator />
+      <div className="flex items-center justify-center">
+        <Skeleton className="w-1/2 h-8"></Skeleton>
+      </div>
     </div>
   );
 };

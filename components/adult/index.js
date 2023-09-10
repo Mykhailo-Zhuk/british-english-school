@@ -10,5 +10,6 @@ export { default as DetailedListOfCourses } from './sections/DetailedListOfCours
 export { default as WhyWeAreTrusted } from './sections/WhyWeAreTrusted';
 
 // Utils
-export { default as AdultCard } from './AdultCard';
+export { default as AdultDetailedCard } from './AdultDetailedCard';
+export { default as AdultMainCard } from './AdultMainCard';
 export { default as FilterForm } from './FilterForm';

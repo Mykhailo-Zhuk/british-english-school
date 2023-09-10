@@ -5,10 +5,29 @@ import useHttp from '@/hooks/useHttp';
 import { ScrollAreaScrollbar } from '@radix-ui/react-scroll-area';
 import { ScrollArea } from '../../ui/scroll-area';
 import { CardItem, CourseCardSkeleton } from '../../index';
+import { Button } from '@/components/ui/button';
+import Image from 'next/image';
+import icons from '@/public/icons/adult';
 
 const AdultCoursesList = () => {
   const [courses, setCourses] = useState([]);
   const { sendRequest, error, isLoading } = useHttp();
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const itemsPerPage = 8;
+  const totalPages = Math.ceil(courses?.adult?.length / itemsPerPage);
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage((prevPage) => prevPage + 1);
+    }
+  };
+
+  const endIndex = currentPage * itemsPerPage;
+
+  const startIndex = 0;
+
+  const currentPageItems = courses?.adult?.slice(startIndex, endIndex);
 
   useEffect(() => {
     sendRequest({ url: 'courses' }, setCourses.bind(null));
@@ -31,13 +50,25 @@ const AdultCoursesList = () => {
             {error ? (
               <p className="w-full text-xl text-center p-8">{error}</p>
             ) : (
-              courses?.adult?.map((item, id) => {
+              currentPageItems?.map((item, id) => {
                 return <CardItem key={id} courses={item} />;
               })
             )}
           </div>
           <ScrollAreaScrollbar orientation="vertical" />
         </ScrollArea>
+        <div className="flex justify-center items-center">
+          <Button variant="ghost" onClick={handleNextPage} disabled={currentPage === totalPages}>
+            <Image
+              src={icons.circle_arrow}
+              alt="circle arrow"
+              width={20}
+              height={18}
+              className="mr-3"
+            />
+            Показати більше груп
+          </Button>
+        </div>
       </div>
     </section>
   );

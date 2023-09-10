@@ -17,6 +17,8 @@ const CourseCards = ({ title, link, value }) => {
     sendRequest({ url: 'courses' }, setCourses.bind(null));
   }, []);
 
+  const filteredList = courses[value];
+
   return (
     <section className="w-full">
       <div className="flex flex-col h-max w-full max-w-[1320px] mx-auto pb-20">
@@ -36,7 +38,7 @@ const CourseCards = ({ title, link, value }) => {
             {error ? (
               <p className="w-full text-xl text-center p-8">{error}</p>
             ) : (
-              courses?.value?.map((item, id) => {
+              filteredList?.map((item, id) => {
                 return <CardItem key={id} courses={item} />;
               })
             )}
@@ -47,7 +49,7 @@ const CourseCards = ({ title, link, value }) => {
                 })
               : null}
 
-            {!courses?.value?.length && !error ? (
+            {!filteredList?.length && !error ? (
               <p className="w-full text-xl text-center p-8">We have no courses</p>
             ) : null}
           </div>

@@ -25,7 +25,7 @@ const Condition = ({ condition }) => {
   );
 };
 
-const AdultCard = ({ width = 'w-[48%]', course }) => {
+const AdultDetailedCard = ({ width = 'w-[48%]', course }) => {
   const { title, status, conditions, description, include } = course;
 
   return (
@@ -87,7 +87,7 @@ const AdultCard = ({ width = 'w-[48%]', course }) => {
   );
 };
 
-AdultCard.propTypes = {
+AdultDetailedCard.propTypes = {
   title: PropTypes.string,
   status: PropTypes.object,
   conditions: PropTypes.arrayOf(PropTypes.object),
@@ -95,4 +95,4 @@ AdultCard.propTypes = {
   include: PropTypes.arrayOf(PropTypes.string),
 };
 
-export default AdultCard;
+export default AdultDetailedCard;

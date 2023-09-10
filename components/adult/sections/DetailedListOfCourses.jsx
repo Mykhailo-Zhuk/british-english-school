@@ -2,7 +2,7 @@
 
 import useHttp from '@/hooks/useHttp';
 import React, { useEffect, useState } from 'react';
-import { AdultCard } from '../index';
+import { AdultDetailedCard } from '../index';
 import {
   AdultCardSkeleton,
   ProficiencyCardSkeleton,
@@ -34,7 +34,7 @@ const DetailedListOfCourses = () => {
               <p className="w-full text-xl text-center p-8">{error}</p>
             ) : (
               courses?.adult?.map((course, index) => {
-                return <AdultCard key={index} course={course} />;
+                return <AdultDetailedCard key={index} course={course} />;
               })
             )}
           </div>
@@ -52,7 +52,7 @@ const DetailedListOfCourses = () => {
               <p className="w-full text-xl text-center p-8">{error}</p>
             ) : (
               courses?.proficiency?.map((course, index) => {
-                return <AdultCard key={index} course={course} />;
+                return <AdultDetailedCard key={index} course={course} />;
               })
             )}
           </div>
@@ -70,7 +70,7 @@ const DetailedListOfCourses = () => {
               <p className="w-full text-xl text-center p-8">{error}</p>
             ) : (
               courses?.exams?.map((course, index) => {
-                return <AdultCard key={index} width="w-1/3" course={course} />;
+                return <AdultDetailedCard key={index} width="w-1/3" course={course} />;
               })
             )}
           </div>

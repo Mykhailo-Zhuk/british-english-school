@@ -6,16 +6,14 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Kids Courses',
-  description: 'All courses for kids',
+  description: 'All courses for adult students',
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        {children}
-        <Toaster />
-      </body>
-    </html>
+    <main className={inter.className}>
+      {children}
+      <Toaster />
+    </main>
   );
 }
