@@ -2,65 +2,65 @@
 
 import React from 'react';
 import {
-  CourseCards,
-  FormatOfLearning,
   GroupForm,
   Header,
-  HowTakePlace,
   HowToSign,
-  OurTeachers,
-  TestActionRow,
-  TopChooseGroup,
-  TopStatistic,
   Testimonials,
-  WhyIsBest,
   Contacts,
   Blog,
   SubscribeAction,
   Footer,
 } from '@/components/index.js';
+import {
+  AdultCoursesList,
+  BenefitsOfCourse,
+  BooksToLearn,
+  ChooseAdultGroup,
+  CoursesList,
+  DetailedListOfCourses,
+  HowWeLearn,
+  WhoWillTeach,
+  WhyWeAreTrusted,
+} from '@/components/adult/index';
 
-const Home = ({ params: { courses } }) => {
+const Teenagers = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-start mx-auto">
+    <section className="flex min-h-screen flex-col items-center justify-start mx-auto bg-[#F8F8FA]">
       {/* Header */}
       <Header />
 
-      {/* Choose teaching group in the top */}
-      <TopChooseGroup />
+      {/* Choose adult group */}
+      <ChooseAdultGroup />
 
-      {/* Statistic at the top */}
-      <TopStatistic />
+      {/* All Courses with filter*/}
+      <CoursesList />
 
       {/* Courses cards for older students*/}
-      <CourseCards title={'дорослих'} link={'дорослих'} />
+      <AdultCoursesList />
 
-      {/* Courses cards for young students*/}
-      <CourseCards title={'підлітків 13–17 років'} link={'підлітків'} />
-
-      {/* Courses cards for children*/}
-      <CourseCards title={'дітей 6–12 років'} link={'дітей'} />
-
-      {/* How to sign section */}
-      <HowToSign />
+      {/* How we learn */}
+      <HowWeLearn />
 
       {/* Group form */}
       <GroupForm />
 
-      {/* Format of learning  */}
-      <FormatOfLearning />
+      {/* Benefits of cource */}
+      <BenefitsOfCourse />
 
-      {/* How the learning take place */}
-      <HowTakePlace />
+      {/* How to sign section */}
+      <HowToSign />
 
-      {/* List of Teachers */}
-      <OurTeachers />
+      {/* What books we have */}
+      <BooksToLearn />
 
-      {/* Test action row*/}
-      <TestActionRow />
+      {/* Who will teach */}
+      <WhoWillTeach />
 
-      {/* Test action row*/}
-      <WhyIsBest />
+      {/* Detailed list of cources */}
+      <DetailedListOfCourses />
+
+      {/* Why we are trusted */}
+      <WhyWeAreTrusted />
 
       {/* Testimonials */}
       <Testimonials />
@@ -76,8 +76,8 @@ const Home = ({ params: { courses } }) => {
 
       {/* Footer */}
       <Footer />
-    </main>
+    </section>
   );
 };
 
-export default Home;
+export default Teenagers;

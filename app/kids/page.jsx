@@ -29,7 +29,7 @@ import {
   WhyWeAreTrusted,
 } from '@/components/adult/index';
 
-const Home = ({ params: { courses } }) => {
+const Kids = () => {
   return (
     <section className="flex min-h-screen flex-col items-center justify-start mx-auto bg-[#F8F8FA]">
       {/* Header */}
@@ -86,4 +86,4 @@ const Home = ({ params: { courses } }) => {
   );
 };
 
-export default Home;
+export default Kids;

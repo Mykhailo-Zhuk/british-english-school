@@ -8,6 +8,7 @@ import { ScrollAreaScrollbar } from '@radix-ui/react-scroll-area';
 import useHttp from '@/hooks/useHttp';
 import Image from 'next/image';
 import { LatestNewsSkeleton, OthersNewsSkeleton } from '../skeletons/NewsSkeleton';
+import Link from 'next/link';
 
 const LatestNews = ({ latest }) => {
   const { title, date, image } = latest;
@@ -51,13 +52,15 @@ const Blog = () => {
     sendRequest({ url: 'news' }, setNewsList.bind(null));
   }, []);
 
+  const [latest, ...others] = newsList;
+
   return (
     <section className="w-full">
       <div className="pt-20 max-w-[1320px] max-h-[600px] mx-auto flex flex-col space-x-12">
         <div className="flex justify-between">
           <h3 className="text-2xl">Новини</h3>
           <Button variant="link" className="text-sm hover:text-[#AA4965]">
-            Усі статті в блозі
+            <Link href={'news'}>Усі статті в блозі</Link>
           </Button>
         </div>
 
@@ -70,9 +73,7 @@ const Blog = () => {
         ) : (
           <div className="grid grid-cols-[1fr_2fr] h-max space-x-5">
             <div className="w-fullflex space-x-6">
-              {isLoading ? <LatestNewsSkeleton /> : null}
-
-              {newsList.latest ? <LatestNews latest={newsList.latest} /> : null}
+              {isLoading ? <LatestNewsSkeleton /> : <LatestNews latest={latest} />}
             </div>
 
             <div className="w-full">
@@ -82,11 +83,9 @@ const Blog = () => {
                     ? Array.from({ length: 6 }, (_, i) => i + 1).map((_, id) => {
                         return <OthersNewsSkeleton key={id} />;
                       })
-                    : null}
-
-                  {newsList.others?.map((item, index) => {
-                    return <OthersNews key={index + 1} other={item} />;
-                  })}
+                    : others?.map((item, index) => {
+                        return <OthersNews key={index + 1} other={item} />;
+                      })}
                 </div>
                 <ScrollAreaScrollbar orientation="vertical" />
               </ScrollArea>

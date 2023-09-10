@@ -1,7 +1,5 @@
-'use client';
-
-import React from 'react';
 import {
+  CourseCards,
   FormatOfLearning,
   GroupForm,
   Header,
@@ -9,6 +7,7 @@ import {
   HowToSign,
   OurTeachers,
   TestActionRow,
+  TopChooseGroup,
   TopStatistic,
   Testimonials,
   WhyIsBest,
@@ -17,56 +16,48 @@ import {
   SubscribeAction,
   Footer,
 } from '@/components/index.js';
-import {
-  AdultCoursesList,
-  BenefitsOfCourse,
-  BooksToLearn,
-  ChooseAdultGroup,
-  CoursesList,
-  DetailedListOfCourses,
-  HowWeLearn,
-  WhoWillTeach,
-  WhyWeAreTrusted,
-} from '@/components/adult/index';
 
-const Home = ({ params: { courses } }) => {
+export default function Home() {
   return (
-    <section className="flex min-h-screen flex-col items-center justify-start mx-auto bg-[#F8F8FA]">
+    <main className="flex min-h-screen flex-col items-center justify-start mx-auto">
       {/* Header */}
       <Header />
 
-      {/* Choose adult group */}
-      <ChooseAdultGroup />
+      {/* Choose teaching group in the top */}
+      <TopChooseGroup />
 
-      {/* All Courses with filter*/}
-      <CoursesList />
+      {/* Statistic at the top */}
+      <TopStatistic />
 
       {/* Courses cards for older students*/}
-      <AdultCoursesList />
+      <CourseCards title="дорослих" link="дорослих" value="adult" />
 
-      {/* How we learn */}
-      <HowWeLearn />
+      {/* Courses cards for young students*/}
+      <CourseCards title="підлітків 13–17 років" link="підлітків" value="teenagers" />
 
-      {/* Group form */}
-      <GroupForm />
-
-      {/* Benefits of cource */}
-      <BenefitsOfCourse />
+      {/* Courses cards for children*/}
+      <CourseCards title="дітей 6–12 років" link="дітей" value="kids" />
 
       {/* How to sign section */}
       <HowToSign />
 
-      {/* What books we have */}
-      <BooksToLearn />
+      {/* Group form */}
+      <GroupForm />
 
-      {/* Who will teach */}
-      <WhoWillTeach />
+      {/* Format of learning  */}
+      <FormatOfLearning />
 
-      {/* Detailed list of cources */}
-      <DetailedListOfCourses />
+      {/* How the learning take place */}
+      <HowTakePlace />
 
-      {/* Why we are trusted */}
-      <WhyWeAreTrusted />
+      {/* List of Teachers */}
+      <OurTeachers />
+
+      {/* Test action row*/}
+      <TestActionRow />
+
+      {/* Test action row*/}
+      <WhyIsBest />
 
       {/* Testimonials */}
       <Testimonials />
@@ -82,8 +73,6 @@ const Home = ({ params: { courses } }) => {
 
       {/* Footer */}
       <Footer />
-    </section>
+    </main>
   );
-};
-
-export default Home;
+}
