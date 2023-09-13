@@ -11,6 +11,7 @@ const News = () => {
 
       {/* News list  */}
       <NewsList />
+
       {/* Subscribe action row */}
       <SubscribeAction />
 

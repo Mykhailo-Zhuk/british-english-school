@@ -1,5 +1,6 @@
+import { NextResponse } from 'next/server.js';
 import { adultListWithFilter } from './adultListWithFilter.js';
 
-export async function GET(request) {
-  return new Response(JSON.stringify(adultListWithFilter));
+export async function GET() {
+  return NextResponse.json(adultListWithFilter);
 }

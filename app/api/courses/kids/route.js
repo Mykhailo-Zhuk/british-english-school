@@ -1,7 +1,8 @@
+import { NextResponse } from 'next/server';
 import { shortCard } from '../shortCard';
 
-export async function GET(request) {
+export async function GET() {
   const { kids } = shortCard;
 
-  return new Response(JSON.stringify(kids));
+  return NextResponse.json(kids);
 }

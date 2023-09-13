@@ -21,3 +21,14 @@ export const OthersNewsSkeleton = () => {
     </div>
   );
 };
+
+export const NewsItemsSkeleton = ({ id }) => {
+  return (
+    <div
+      className={`${id === 1 || id === 2 ? 'w-1/2' : 'w-1/3'} h-max p-5 hover:bg-accent space-y-3`}>
+      <Skeleton className="w-full h-96 bg-accent rounded-md object-cover"></Skeleton>
+      <Skeleton className="w-16 h-4"></Skeleton>
+      <Skeleton className="w-full h-4"></Skeleton>
+    </div>
+  );
+};
