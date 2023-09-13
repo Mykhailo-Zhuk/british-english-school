@@ -11,33 +11,31 @@ import { LatestNewsSkeleton, OthersNewsSkeleton } from '../skeletons/NewsSkeleto
 import Link from 'next/link';
 
 const LatestNews = ({ latest }) => {
-  const { title, date, image } = latest;
   return (
     <div className="w-full max-w-[420px] p-3 hover:bg-accent rounded-lg">
       <AspectRatio ratio={16 / 11}>
-        <Image src={image} alt="the latest news" className="rounded-md object-cover" />
+        <Image src={latest?.image} alt="the latest news" className="rounded-md object-cover" />
       </AspectRatio>
-      <p className="text-[#A5A5A5] text-sm">{date}</p>
-      <p className="text-xl truncate" title={title}>
-        {title}
+      <p className="text-[#A5A5A5] text-sm">{latest?.date}</p>
+      <p className="text-xl truncate" title={latest?.title}>
+        {latest?.title}
       </p>
     </div>
   );
 };
 
 const OthersNews = ({ other }) => {
-  const { title, date, image } = other;
   return (
     <div className="flex w-96 h-36 p-3 space-x-5 hover:bg-accent rounded-lg">
       <div className="w-1/2">
         <AspectRatio ratio={23 / 16}>
-          <Image src={image} alt="others news" className="rounded-md object-cover" />
+          <Image src={other?.image} alt="others news" className="rounded-md object-cover" />
         </AspectRatio>
       </div>
       <div className="w-1/2 flex flex-col max-h-24">
-        <p className="text-[#A5A5A5] text-sm">{date}</p>
-        <p className="text-xl h-full line-clamp-3" title={title}>
-          {title}
+        <p className="text-[#A5A5A5] text-sm">{other?.date}</p>
+        <p className="text-xl h-full line-clamp-3" title={other?.title}>
+          {other?.title}
         </p>
       </div>
     </div>
@@ -51,6 +49,7 @@ const Blog = () => {
   useEffect(() => {
     sendRequest({ url: 'news' }, setNewsList.bind(null));
   }, []);
+  console.log(newsList);
 
   const [latest, ...others] = newsList;
 
