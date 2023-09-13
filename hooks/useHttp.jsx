@@ -3,7 +3,7 @@
 import axios from 'axios';
 import { useCallback, useState } from 'react';
 
-const baseURL = 'http://localhost:3000/api/';
+const baseURL = 'https://british-english-school-5xlshegfc-mykhailo-zhuk.vercel.app/api/';
 
 const useHttp = () => {
   const [isLoading, setIsLoading] = useState(false);
