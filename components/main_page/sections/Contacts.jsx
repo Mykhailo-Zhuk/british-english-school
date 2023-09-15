@@ -3,7 +3,7 @@
 import React from 'react';
 import { InputForm } from '../index';
 import icons from '@/public/icons';
-import { Button } from '../ui/button';
+import { Button } from '../../ui/button';
 import Image from 'next/image';
 
 const content = {

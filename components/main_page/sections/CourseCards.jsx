@@ -1,13 +1,14 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { Button } from '../ui/button';
+import { Button } from '../../ui/button';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { CardItem, CourseCardSkeleton } from '../index';
+import { CardItem } from '../index';
 import { ScrollAreaScrollbar } from '@radix-ui/react-scroll-area';
 import useHttp from '@/hooks/useHttp';
-import { Skeleton } from '../ui/skeleton';
+import { Skeleton } from '../../ui/skeleton';
 import Link from 'next/link';
+import CourseCardSkeleton from '@/components/skeletons/CourseCardSkeleton';
 
 const CourseCards = ({ title, link, value }) => {
   const [courses, setCourses] = useState([]);

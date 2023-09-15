@@ -1,4 +1,4 @@
-import { AspectRatio } from '../ui/aspect-ratio';
+import { AspectRatio } from '../../ui/aspect-ratio';
 import icons from '@/public/icons';
 import Image from 'next/image';
 

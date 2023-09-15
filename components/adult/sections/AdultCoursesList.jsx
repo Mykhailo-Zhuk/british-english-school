@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import useHttp from '@/hooks/useHttp';
 import { ScrollAreaScrollbar } from '@radix-ui/react-scroll-area';
 import { ScrollArea } from '../../ui/scroll-area';
-import { CardItem, CourseCardSkeleton } from '../../index';
+import { CardItem, CourseCardSkeleton } from '../../main_page/index';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import icons from '@/public/icons/adult';

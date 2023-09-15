@@ -8,6 +8,7 @@ export { default as CardItem } from './CardItem';
 export { default as InputForm } from './InputForm';
 export { default as TeacherSkill } from './TeacherSkill';
 export { default as SubscribeInput } from './SubscribeInput';
+export { default as LanguageSwitcher } from './LanguageSwitcher';
 
 // Main sections
 export { default as TopChooseGroup } from './sections/TopChooseGroup';
@@ -22,9 +23,9 @@ export { default as TestActionRow } from './sections/TestActionRow';
 export { default as WhyIsBest } from './sections/WhyIsBest';
 export { default as Testimonials } from './sections/Testimonials';
 export { default as Contacts } from './sections/Contacts';
-export { default as Blog } from './sections/Blog';
+export { default as News } from './sections/News';
 export { default as SubscribeAction } from './sections/SubscribeAction';
 
 // Skeletons
-export { default as CourseCardSkeleton } from './skeletons/CourseCardSkeleton';
-export { default as TestimonialsSkeleton } from './skeletons/TestimonialsSkeleton';
+export { default as CourseCardSkeleton } from '../skeletons/CourseCardSkeleton';
+export { default as TestimonialsSkeleton } from '../skeletons/TestimonialsSkeleton';

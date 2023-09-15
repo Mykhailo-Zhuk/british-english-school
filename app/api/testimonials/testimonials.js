@@ -24,4 +24,14 @@ export const testimonials = [
     content:
       'Anna was my teacher on the course B2.1 upper intermediate. I liked her manner of teaching! I saw how she liked it and I think it is The most important thing! To love what you are doing! Also, I attend a lot of speaking and grammar clubs with different teachers. But her classes were and are the best!!!! She is so organized and helpful!',
   },
+  {
+    username: 'No name',
+    content:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui aliquam quibusdam velit error animi quasi fugit non tempore voluptas est perspiciatis molestias ipsam a, magnam dolores eos ab sequi. Tempore maxime doloremque tempora quo, eos incidunt iure praesentium dignissimos a.',
+  },
+  {
+    username: 'No name',
+    content:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui aliquam quibusdam velit error animi quasi fugit non tempore voluptas est perspiciatis molestias ipsam a, magnam dolores eos ab sequi. Tempore maxime doloremque tempora quo, eos incidunt iure praesentium dignissimos a.',
+  },
 ];

@@ -14,36 +14,36 @@ export const news = [
       ],
       subtitleOne: {
         subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-        content: {
-          top: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
-          highlight:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
-          bottom:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
-        },
+        content: [
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+        ],
       },
       subtitleTwo: {
         subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-        list: {
-          row: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-          items: [
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-          ],
-        },
-        content: ['Lorem ipsum dolor sit amet consectetur adipisicing elit'],
-        secondList: {
-          row: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-          items: [
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-          ],
-        },
-        highlight: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+        content: [
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+          {
+            list: [
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+            ],
+          },
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur:',
+          {
+            list: [
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+            ],
+          },
+          { highlight: 'Lorem ipsum dolor sit amet consectetur adipisicing elit' },
+        ],
       },
       footer: [
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
@@ -52,15 +52,15 @@ export const news = [
       ],
     },
     socialLink: {
-      meta: 'www.facebook.com/loremipsum',
-      x: 'www.x.com/loremipsum',
-      telagram: 't.com/loremipsum',
-      linkedIn: 'www.linkedin.com/loremipsum',
-      youtube: 'www.youtube.com/loremipsum',
-      instagram: 'www.instagram.com/loremipsum',
+      meta: 'https://www.facebook.com/loremipsum',
+      x: 'https://www.x.com/loremipsum',
+      telegram: 'https://www.t.com/loremipsum',
+      linkedIn: 'https://www.linkedin.com/loremipsum',
+      youtube: 'https://www.youtube.com/loremipsum',
+      instagram: 'https://www.instagram.com/loremipsum',
     },
-    likes: '0',
-    views: '0',
+    likes: 0,
+    views: 0,
   },
   {
     id: '2',
@@ -75,36 +75,36 @@ export const news = [
       ],
       subtitleOne: {
         subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-        content: {
-          top: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
-          highlight:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
-          bottom:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
-        },
+        content: [
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+        ],
       },
       subtitleTwo: {
         subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-        list: {
-          row: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-          items: [
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-          ],
-        },
-        content: ['Lorem ipsum dolor sit amet consectetur adipisicing elit'],
-        secondList: {
-          row: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-          items: [
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-          ],
-        },
-        highlight: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+        content: [
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+          {
+            list: [
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+            ],
+          },
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur:',
+          {
+            list: [
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+            ],
+          },
+          { highlight: 'Lorem ipsum dolor sit amet consectetur adipisicing elit' },
+        ],
       },
       footer: [
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
@@ -113,15 +113,15 @@ export const news = [
       ],
     },
     socialLink: {
-      meta: 'www.facebook.com/loremipsum',
-      x: 'www.x.com/loremipsum',
-      telagram: 't.com/loremipsum',
-      linkedIn: 'www.linkedin.com/loremipsum',
-      youtube: 'www.youtube.com/loremipsum',
-      instagram: 'www.instagram.com/loremipsum',
+      meta: 'https://www.facebook.com/loremipsum',
+      x: 'https://www.x.com/loremipsum',
+      telegram: 'https://www.t.com/loremipsum',
+      linkedIn: 'https://www.linkedin.com/loremipsum',
+      youtube: 'https://www.youtube.com/loremipsum',
+      instagram: 'https://www.instagram.com/loremipsum',
     },
-    likes: '0',
-    views: '0',
+    likes: 0,
+    views: 0,
   },
   {
     id: '3',
@@ -136,36 +136,36 @@ export const news = [
       ],
       subtitleOne: {
         subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-        content: {
-          top: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
-          highlight:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
-          bottom:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
-        },
+        content: [
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+        ],
       },
       subtitleTwo: {
         subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-        list: {
-          row: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-          items: [
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-          ],
-        },
-        content: ['Lorem ipsum dolor sit amet consectetur adipisicing elit'],
-        secondList: {
-          row: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-          items: [
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-          ],
-        },
-        highlight: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+        content: [
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+          {
+            list: [
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+            ],
+          },
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur:',
+          {
+            list: [
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+            ],
+          },
+          { highlight: 'Lorem ipsum dolor sit amet consectetur adipisicing elit' },
+        ],
       },
       footer: [
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
@@ -174,15 +174,15 @@ export const news = [
       ],
     },
     socialLink: {
-      meta: 'www.facebook.com/loremipsum',
-      x: 'www.x.com/loremipsum',
-      telagram: 't.com/loremipsum',
-      linkedIn: 'www.linkedin.com/loremipsum',
-      youtube: 'www.youtube.com/loremipsum',
-      instagram: 'www.instagram.com/loremipsum',
+      meta: 'https://www.facebook.com/loremipsum',
+      x: 'https://www.x.com/loremipsum',
+      telegram: 'https://www.t.com/loremipsum',
+      linkedIn: 'https://www.linkedin.com/loremipsum',
+      youtube: 'https://www.youtube.com/loremipsum',
+      instagram: 'https://www.instagram.com/loremipsum',
     },
-    likes: '0',
-    views: '0',
+    likes: 0,
+    views: 0,
   },
   {
     id: '4',
@@ -197,36 +197,36 @@ export const news = [
       ],
       subtitleOne: {
         subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-        content: {
-          top: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
-          highlight:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
-          bottom:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
-        },
+        content: [
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+        ],
       },
       subtitleTwo: {
         subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-        list: {
-          row: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-          items: [
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-          ],
-        },
-        content: ['Lorem ipsum dolor sit amet consectetur adipisicing elit'],
-        secondList: {
-          row: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-          items: [
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-          ],
-        },
-        highlight: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+        content: [
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+          {
+            list: [
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+            ],
+          },
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur:',
+          {
+            list: [
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+            ],
+          },
+          { highlight: 'Lorem ipsum dolor sit amet consectetur adipisicing elit' },
+        ],
       },
       footer: [
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
@@ -235,15 +235,15 @@ export const news = [
       ],
     },
     socialLink: {
-      meta: 'www.facebook.com/loremipsum',
-      x: 'www.x.com/loremipsum',
-      telagram: 't.com/loremipsum',
-      linkedIn: 'www.linkedin.com/loremipsum',
-      youtube: 'www.youtube.com/loremipsum',
-      instagram: 'www.instagram.com/loremipsum',
+      meta: 'https://www.facebook.com/loremipsum',
+      x: 'https://www.x.com/loremipsum',
+      telegram: 'https://www.t.com/loremipsum',
+      linkedIn: 'https://www.linkedin.com/loremipsum',
+      youtube: 'https://www.youtube.com/loremipsum',
+      instagram: 'https://www.instagram.com/loremipsum',
     },
-    likes: '0',
-    views: '0',
+    likes: 0,
+    views: 0,
   },
   {
     id: '5',
@@ -257,36 +257,36 @@ export const news = [
       ],
       subtitleOne: {
         subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-        content: {
-          top: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
-          highlight:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
-          bottom:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
-        },
+        content: [
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+        ],
       },
       subtitleTwo: {
         subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-        list: {
-          row: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-          items: [
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-          ],
-        },
-        content: ['Lorem ipsum dolor sit amet consectetur adipisicing elit'],
-        secondList: {
-          row: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-          items: [
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-          ],
-        },
-        highlight: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+        content: [
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+          {
+            list: [
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+            ],
+          },
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur:',
+          {
+            list: [
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+            ],
+          },
+          { highlight: 'Lorem ipsum dolor sit amet consectetur adipisicing elit' },
+        ],
       },
       footer: [
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
@@ -295,15 +295,15 @@ export const news = [
       ],
     },
     socialLink: {
-      meta: 'www.facebook.com/loremipsum',
-      x: 'www.x.com/loremipsum',
-      telagram: 't.com/loremipsum',
-      linkedIn: 'www.linkedin.com/loremipsum',
-      youtube: 'www.youtube.com/loremipsum',
-      instagram: 'www.instagram.com/loremipsum',
+      meta: 'https://www.facebook.com/loremipsum',
+      x: 'https://www.x.com/loremipsum',
+      telegram: 'https://www.t.com/loremipsum',
+      linkedIn: 'https://www.linkedin.com/loremipsum',
+      youtube: 'https://www.youtube.com/loremipsum',
+      instagram: 'https://www.instagram.com/loremipsum',
     },
-    likes: '0',
-    views: '0',
+    likes: 0,
+    views: 0,
   },
   {
     id: '6',
@@ -317,36 +317,36 @@ export const news = [
       ],
       subtitleOne: {
         subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-        content: {
-          top: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
-          highlight:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
-          bottom:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
-        },
+        content: [
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+        ],
       },
       subtitleTwo: {
         subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-        list: {
-          row: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-          items: [
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-          ],
-        },
-        content: ['Lorem ipsum dolor sit amet consectetur adipisicing elit'],
-        secondList: {
-          row: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-          items: [
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-          ],
-        },
-        highlight: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+        content: [
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+          {
+            list: [
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+            ],
+          },
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur:',
+          {
+            list: [
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+            ],
+          },
+          { highlight: 'Lorem ipsum dolor sit amet consectetur adipisicing elit' },
+        ],
       },
       footer: [
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
@@ -355,15 +355,15 @@ export const news = [
       ],
     },
     socialLink: {
-      meta: 'www.facebook.com/loremipsum',
-      x: 'www.x.com/loremipsum',
-      telagram: 't.com/loremipsum',
-      linkedIn: 'www.linkedin.com/loremipsum',
-      youtube: 'www.youtube.com/loremipsum',
-      instagram: 'www.instagram.com/loremipsum',
+      meta: 'https://www.facebook.com/loremipsum',
+      x: 'https://www.x.com/loremipsum',
+      telegram: 'https://www.t.com/loremipsum',
+      linkedIn: 'https://www.linkedin.com/loremipsum',
+      youtube: 'https://www.youtube.com/loremipsum',
+      instagram: 'https://www.instagram.com/loremipsum',
     },
-    likes: '0',
-    views: '0',
+    likes: 0,
+    views: 0,
   },
   {
     id: '7',
@@ -377,36 +377,36 @@ export const news = [
       ],
       subtitleOne: {
         subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-        content: {
-          top: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
-          highlight:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
-          bottom:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
-        },
+        content: [
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+        ],
       },
       subtitleTwo: {
         subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-        list: {
-          row: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-          items: [
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-          ],
-        },
-        content: ['Lorem ipsum dolor sit amet consectetur adipisicing elit'],
-        secondList: {
-          row: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-          items: [
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-          ],
-        },
-        highlight: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+        content: [
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+          {
+            list: [
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+            ],
+          },
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur:',
+          {
+            list: [
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+            ],
+          },
+          { highlight: 'Lorem ipsum dolor sit amet consectetur adipisicing elit' },
+        ],
       },
       footer: [
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
@@ -415,15 +415,15 @@ export const news = [
       ],
     },
     socialLink: {
-      meta: 'www.facebook.com/loremipsum',
-      x: 'www.x.com/loremipsum',
-      telagram: 't.com/loremipsum',
-      linkedIn: 'www.linkedin.com/loremipsum',
-      youtube: 'www.youtube.com/loremipsum',
-      instagram: 'www.instagram.com/loremipsum',
+      meta: 'https://www.facebook.com/loremipsum',
+      x: 'https://www.x.com/loremipsum',
+      telegram: 'https://www.t.com/loremipsum',
+      linkedIn: 'https://www.linkedin.com/loremipsum',
+      youtube: 'https://www.youtube.com/loremipsum',
+      instagram: 'https://www.instagram.com/loremipsum',
     },
-    likes: '0',
-    views: '0',
+    likes: 0,
+    views: 0,
   },
   {
     id: '8',
@@ -437,36 +437,36 @@ export const news = [
       ],
       subtitleOne: {
         subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-        content: {
-          top: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
-          highlight:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
-          bottom:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
-        },
+        content: [
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+        ],
       },
       subtitleTwo: {
         subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-        list: {
-          row: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-          items: [
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-          ],
-        },
-        content: ['Lorem ipsum dolor sit amet consectetur adipisicing elit'],
-        secondList: {
-          row: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-          items: [
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-            'Lorem ipsum dolor sit amet consectetur',
-          ],
-        },
-        highlight: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+        content: [
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+          {
+            list: [
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+            ],
+          },
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur:',
+          {
+            list: [
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+            ],
+          },
+          { highlight: 'Lorem ipsum dolor sit amet consectetur adipisicing elit' },
+        ],
       },
       footer: [
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
@@ -475,14 +475,194 @@ export const news = [
       ],
     },
     socialLink: {
-      meta: 'www.facebook.com/loremipsum',
-      x: 'www.x.com/loremipsum',
-      telagram: 't.com/loremipsum',
-      linkedIn: 'www.linkedin.com/loremipsum',
-      youtube: 'www.youtube.com/loremipsum',
-      instagram: 'www.instagram.com/loremipsum',
+      meta: 'https://www.facebook.com/loremipsum',
+      x: 'https://www.x.com/loremipsum',
+      telegram: 'https://www.t.com/loremipsum',
+      linkedIn: 'https://www.linkedin.com/loremipsum',
+      youtube: 'https://www.youtube.com/loremipsum',
+      instagram: 'https://www.instagram.com/loremipsum',
     },
-    likes: '0',
-    views: '0',
+    likes: 0,
+    views: 0,
+  },
+  {
+    id: '9',
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit.',
+    date: '30.08.2023',
+    image: images.news,
+    content: {
+      header: [
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+      ],
+      subtitleOne: {
+        subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+        content: [
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+        ],
+      },
+      subtitleTwo: {
+        subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+        content: [
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+          {
+            list: [
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+            ],
+          },
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur:',
+          {
+            list: [
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+            ],
+          },
+          { highlight: 'Lorem ipsum dolor sit amet consectetur adipisicing elit' },
+        ],
+      },
+      footer: [
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+      ],
+    },
+    socialLink: {
+      meta: 'https://www.facebook.com/loremipsum',
+      x: 'https://www.x.com/loremipsum',
+      telegram: 'https://www.t.com/loremipsum',
+      linkedIn: 'https://www.linkedin.com/loremipsum',
+      youtube: 'https://www.youtube.com/loremipsum',
+      instagram: 'https://www.instagram.com/loremipsum',
+    },
+    likes: 0,
+    views: 0,
+  },
+  {
+    id: '10',
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit.',
+    date: '30.08.2023',
+    image: images.news,
+    content: {
+      header: [
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+      ],
+      subtitleOne: {
+        subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+        content: [
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+        ],
+      },
+      subtitleTwo: {
+        subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+        content: [
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+          {
+            list: [
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+            ],
+          },
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur:',
+          {
+            list: [
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+            ],
+          },
+          { highlight: 'Lorem ipsum dolor sit amet consectetur adipisicing elit' },
+        ],
+      },
+      footer: [
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+      ],
+    },
+    socialLink: {
+      meta: 'https://www.facebook.com/loremipsum',
+      x: 'https://www.x.com/loremipsum',
+      telegram: 'https://www.t.com/loremipsum',
+      linkedIn: 'https://www.linkedin.com/loremipsum',
+      youtube: 'https://www.youtube.com/loremipsum',
+      instagram: 'https://www.instagram.com/loremipsum',
+    },
+    likes: 0,
+    views: 0,
+  },
+  {
+    id: '11',
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit.',
+    date: '30.08.2023',
+    image: images.news,
+    content: {
+      header: [
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+      ],
+      subtitleOne: {
+        subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+        content: [
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+        ],
+      },
+      subtitleTwo: {
+        subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+        content: [
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+          {
+            list: [
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+            ],
+          },
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur.',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur:',
+          {
+            list: [
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+              'Lorem ipsum dolor sit amet consectetur',
+            ],
+          },
+          { highlight: 'Lorem ipsum dolor sit amet consectetur adipisicing elit' },
+        ],
+      },
+      footer: [
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at quia. Molestiae voluptas unde cupiditate! Dolorum blanditiis quod, asperiores voluptates, deserunt exercitationem impedit voluptate, necessitatibus illo officiis cum nisi eligendi.',
+      ],
+    },
+    socialLink: {
+      meta: 'https://www.facebook.com/loremipsum',
+      x: 'https://www.x.com/loremipsum',
+      telegram: 'https://www.t.com/loremipsum',
+      linkedIn: 'https://www.linkedin.com/loremipsum',
+      youtube: 'https://www.youtube.com/loremipsum',
+      instagram: 'https://www.instagram.com/loremipsum',
+    },
+    likes: 0,
+    views: 0,
   },
 ];

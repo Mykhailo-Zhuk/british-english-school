@@ -2,32 +2,30 @@
 
 import React from 'react';
 import {
-  FormatOfLearning,
   GroupForm,
   Header,
-  HowTakePlace,
   HowToSign,
-  OurTeachers,
-  TestActionRow,
-  TopStatistic,
   Testimonials,
-  WhyIsBest,
   Contacts,
-  Blog,
+  News,
   SubscribeAction,
   Footer,
-} from '@/components/index.js';
+} from '@/components/main_page/index';
 import {
-  AdultCoursesList,
   BenefitsOfCourse,
   BooksToLearn,
-  ChooseAdultGroup,
   CoursesList,
   DetailedListOfCourses,
   HowWeLearn,
   WhoWillTeach,
   WhyWeAreTrusted,
 } from '@/components/adult/index';
+import {
+  ChooseTeenagersGroup,
+  PrepareToHMT,
+  ProgramDescription,
+  WhatExamsYouNeed,
+} from '@/components/teenagers';
 
 const Kids = () => {
   return (
@@ -35,38 +33,20 @@ const Kids = () => {
       {/* Header */}
       <Header />
 
-      {/* Choose adult group */}
-      <ChooseAdultGroup />
+      {/* Choose teenagers group */}
+      <ChooseTeenagersGroup />
 
       {/* All Courses with filter*/}
-      <CoursesList />
+      <CoursesList url="courses/teenagers" />
 
-      {/* Courses cards for older students*/}
-      <AdultCoursesList />
+      {/* Program description */}
+      <ProgramDescription />
 
-      {/* How we learn */}
-      <HowWeLearn />
+      {/* What exams you need */}
+      <WhatExamsYouNeed />
 
-      {/* Group form */}
-      <GroupForm />
-
-      {/* Benefits of cource */}
-      <BenefitsOfCourse />
-
-      {/* How to sign section */}
-      <HowToSign />
-
-      {/* What books we have */}
-      <BooksToLearn />
-
-      {/* Who will teach */}
-      <WhoWillTeach />
-
-      {/* Detailed list of cources */}
-      <DetailedListOfCourses />
-
-      {/* Why we are trusted */}
-      <WhyWeAreTrusted />
+      {/* Prepare to HMT */}
+      <PrepareToHMT />
 
       {/* Testimonials */}
       <Testimonials />
@@ -74,8 +54,8 @@ const Kids = () => {
       {/* Contacts */}
       <Contacts />
 
-      {/* Blog */}
-      <Blog />
+      {/* News */}
+      <News />
 
       {/* Subscribe action row */}
       <SubscribeAction />

@@ -97,8 +97,20 @@
     background: linear-gradient(75deg, #ee7b40 0%, #cf5657 100%);
   }
 
+  .program_duration {
+    background: linear-gradient(84deg, #cf5657 0%, #8b3d70 100%);
+  }
+
   .how-we-learn {
     background: linear-gradient(265deg, #dfeafd 0%, #fbebef 100%);
+  }
+
+  .youtube_link {
+    background: linear-gradient(269deg, #dfeafd 0%, #fbebef 100%);
+  }
+
+  .teenagers_top {
+    background: linear-gradient(269deg, #fbebef 0%, #dfeafd 100%);
   }
 
   .due_card {

@@ -13,7 +13,7 @@ import {
   Testimonials,
   WhyIsBest,
   Contacts,
-  Blog,
+  News,
   SubscribeAction,
   Footer,
 } from '@/components/index.js';
@@ -74,8 +74,8 @@ const Kids = () => {
       {/* Contacts */}
       <Contacts />
 
-      {/* Blog */}
-      <Blog />
+      {/* News */}
+      <News />
 
       {/* Subscribe action row */}
       <SubscribeAction />

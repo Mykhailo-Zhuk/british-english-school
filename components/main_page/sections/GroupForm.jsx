@@ -1,6 +1,6 @@
 import React from 'react';
 import { InputForm } from '../index';
-import { AspectRatio } from '../ui/aspect-ratio';
+import { AspectRatio } from '../../ui/aspect-ratio';
 
 const GroupForm = () => {
   return (

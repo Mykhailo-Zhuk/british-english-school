@@ -17,37 +17,32 @@ import icons from '@/public/icons';
 import Image from 'next/image';
 
 const components = {
-  students: [
-    { label: 'Правила центру', link: '#' },
-    { label: 'Договір навчання', link: '#' },
-    { label: 'Знайти сертифікат', link: '#' },
-    { label: 'Знижки', link: '#' },
-    { label: 'Кабінет', link: '#' },
-    { label: 'Мапа сайту', link: '#' },
-  ],
   center: [
-    { label: 'Про компанію', link: '#' },
-    { label: 'Організація навчання', link: '#' },
     { label: 'Контактні дані', link: '#' },
-    { label: 'Наша команда', link: '#' },
-    { label: 'Новини', link: '#' },
-    { label: 'Блог', link: '#' },
-    { label: 'Тест на рівень англійської', link: '#' },
-    { label: 'Іспити Cambridge English', link: '#' },
-    { label: 'Вакансії', link: '#' },
+    { label: 'Новини', link: '#news' },
   ],
   courses: [
-    { label: 'Всі курси', link: '#' },
-    { label: 'Англійська для дорослих', link: '#' },
-    { label: 'Для підлітків 13–17 років', link: '#' },
-    { label: 'Для дітей 6–12 років', link: '#' },
-    { label: 'Розмовні клуби', link: '#' },
-    { label: 'Онлайн курси англійської', link: '#' },
-    { label: 'Англійська для компаній', link: '#' },
+    {
+      label: 'Англійська для дорослих',
+      link: '/adult',
+      description:
+        'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, perspiciatis?',
+    },
+    {
+      label: 'Для підлітків 13–17 років',
+      link: '/teenagers',
+      description:
+        'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, perspiciatis?',
+    },
+    {
+      label: 'Для дітей 6–12 років',
+      link: '/kids',
+      description:
+        'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, perspiciatis?',
+    },
   ],
   contacts: {
-    address:
-      'Київ, 01054, Україна, вул. Ярославів Вал, 13/2-Б, офіс 39. Найближча станція метро — Золоті Ворота',
+    address: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, perspiciatis?',
     mapLink: '#',
     email: 'example@gmail.com',
     messengers: [
@@ -77,7 +72,7 @@ const components = {
 };
 
 const Navigation = () => {
-  const { students, contacts, center, courses } = components;
+  const { contacts, center, courses } = components;
 
   return (
     <NavigationMenu>
@@ -86,27 +81,41 @@ const Navigation = () => {
           <NavigationMenuTrigger>Обрати курс</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="/">
-                    <div className="mb-2 mt-4 text-lg font-medium">shadcn/ui</div>
-                    <p className="text-sm leading-tight text-muted-foreground">
-                      Beautifully designed components built with Radix UI and Tailwind CSS.
-                    </p>
-                  </a>
-                </NavigationMenuLink>
-              </li>
-              <ListItem href="/docs" title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
-              </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
-                How to install dependencies and structure your app.
-              </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
-              </ListItem>
+              {courses?.map(({ label, link, description }, index) => {
+                if (index === 0) {
+                  return (
+                    <li key={index} className="row-span-3">
+                      <NavigationMenuLink asChild>
+                        <a
+                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                          href={link}>
+                          <p className="text-sm leading-tight font-bold text-red-500">
+                            Найбільш популярний
+                          </p>
+                          <div className="mb-2 mt-4 text-lg font-medium">{label}</div>
+                          <p className="text-sm leading-tight text-muted-foreground">
+                            {description}
+                          </p>
+                        </a>
+                      </NavigationMenuLink>
+                    </li>
+                  );
+                } else
+                  return (
+                    <li key={index}>
+                      <NavigationMenuLink asChild>
+                        <a
+                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                          href={link}>
+                          <div className="mb-2 mt-4 text-lg font-medium">{label}</div>
+                          <p className="text-sm leading-tight text-muted-foreground">
+                            {description}
+                          </p>
+                        </a>
+                      </NavigationMenuLink>
+                    </li>
+                  );
+              })}
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import images from '@/public/images';
-import { Button } from '../ui/button';
+import { Button } from '../../ui/button';
 
 const TestActionRow = () => {
   return (

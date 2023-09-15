@@ -6,7 +6,7 @@ import Image from 'next/image';
 import icons from '@/public/icons/adult';
 import { AdultMainCardSkeleton } from '@/components/skeletons/AdultCoursesSkeleton';
 
-const CoursesList = () => {
+const CoursesList = ({ url }) => {
   const [adultList, setAdultList] = useState([]);
   const { sendRequest, error, isLoading } = useHttp();
   const [currentPage, setCurrentPage] = useState(1);
@@ -27,10 +27,9 @@ const CoursesList = () => {
   const currentPageItems = adultList?.courses?.slice(startIndex, endIndex);
 
   useEffect(() => {
-    sendRequest({ url: 'courses/adult' }, setAdultList.bind(null));
+    sendRequest({ url }, setAdultList.bind(null));
   }, []);
 
-  console.log(adultList);
   return (
     <section className="w-full">
       <div className="py-20 max-w-[1320px] mx-auto grid grid-cols-[350px_auto]">

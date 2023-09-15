@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Form, FormField, FormItem, FormMessage, FormLabel } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { toast } from '@/components/ui/use-toast';
-import { Checkbox } from './ui/checkbox';
+import { Checkbox } from '../ui/checkbox';
 import useHttp from '@/hooks/useHttp';
 
 const FormSchema = z.object({

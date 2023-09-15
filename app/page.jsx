@@ -12,10 +12,10 @@ import {
   Testimonials,
   WhyIsBest,
   Contacts,
-  Blog,
+  News,
   SubscribeAction,
   Footer,
-} from '@/components/index.js';
+} from '@/components/main_page/index';
 
 export default function Home() {
   return (
@@ -65,8 +65,8 @@ export default function Home() {
       {/* Contacts */}
       <Contacts />
 
-      {/* Blog */}
-      <Blog />
+      {/* News */}
+      <News />
 
       {/* Subscribe action row */}
       <SubscribeAction />

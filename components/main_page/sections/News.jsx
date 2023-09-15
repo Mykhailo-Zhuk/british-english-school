@@ -1,13 +1,13 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { Button } from '../ui/button';
-import { AspectRatio } from '../ui/aspect-ratio';
-import { ScrollArea } from '../ui/scroll-area';
+import { Button } from '../../ui/button';
+import { AspectRatio } from '../../ui/aspect-ratio';
+import { ScrollArea } from '../../ui/scroll-area';
 import { ScrollAreaScrollbar } from '@radix-ui/react-scroll-area';
 import useHttp from '@/hooks/useHttp';
 import Image from 'next/image';
-import { LatestNewsSkeleton, OthersNewsSkeleton } from '../skeletons/NewsSkeleton';
+import { LatestNewsSkeleton, OthersNewsSkeleton } from '../../skeletons/NewsSkeleton';
 import Link from 'next/link';
 
 const LatestNews = ({ latest }) => {
@@ -42,19 +42,18 @@ const OthersNews = ({ other }) => {
   );
 };
 
-const Blog = () => {
+const News = () => {
   const [newsList, setNewsList] = useState([]);
   const { sendRequest, error, isLoading } = useHttp();
 
   useEffect(() => {
     sendRequest({ url: 'news' }, setNewsList.bind(null));
   }, []);
-  console.log(newsList);
 
   const [latest, ...others] = newsList;
 
   return (
-    <section className="w-full">
+    <section className="w-full" id="news">
       <div className="pt-20 max-w-[1320px] max-h-[600px] mx-auto flex flex-col space-x-12">
         <div className="flex justify-between">
           <h3 className="text-2xl">Новини</h3>
@@ -96,4 +95,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default News;

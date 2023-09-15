@@ -2,8 +2,8 @@
 
 import React, { Fragment } from 'react';
 import icons from '@/public/icons';
-import { Separator } from './ui/separator';
-import { Button } from './ui/button';
+import { Separator } from '../ui/separator';
+import { Button } from '../ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
 

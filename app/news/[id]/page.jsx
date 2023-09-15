@@ -1,7 +1,7 @@
 'use client';
 
 import { Header, SubscribeAction, Footer } from '@/components/index.js';
-import MainNewsItemContent from '@/components/news/sections/MainContent';
+import { RestNews, MainNewsItemContent } from '@/components/news';
 
 const News = ({ params: { id } }) => {
   return (
@@ -13,6 +13,7 @@ const News = ({ params: { id } }) => {
       <MainNewsItemContent itemId={id} />
 
       {/* Rest news */}
+      <RestNews itemId={id} />
 
       {/* Subscribe action row */}
       <SubscribeAction />

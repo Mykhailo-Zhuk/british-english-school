@@ -1,4 +1,4 @@
-import { AspectRatio } from '../ui/aspect-ratio';
+import { AspectRatio } from '../../ui/aspect-ratio';
 
 const FormatOfLearning = () => {
   return (

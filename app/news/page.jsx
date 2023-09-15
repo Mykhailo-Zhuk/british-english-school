@@ -1,7 +1,7 @@
 'use client';
 
-import { Header, SubscribeAction, Footer } from '@/components/index.js';
-import NewsList from '@/components/news/NewsList';
+import { Header, SubscribeAction, Footer } from '@/components/main_page';
+import { NewsList } from '@/components/news';
 
 const News = () => {
   return (

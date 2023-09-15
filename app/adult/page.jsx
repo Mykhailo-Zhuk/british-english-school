@@ -2,21 +2,15 @@
 
 import React from 'react';
 import {
-  FormatOfLearning,
   GroupForm,
   Header,
-  HowTakePlace,
   HowToSign,
-  OurTeachers,
-  TestActionRow,
-  TopStatistic,
   Testimonials,
-  WhyIsBest,
   Contacts,
-  Blog,
+  News,
   SubscribeAction,
   Footer,
-} from '@/components/index.js';
+} from '@/components/main_page';
 import {
   AdultCoursesList,
   BenefitsOfCourse,
@@ -27,7 +21,7 @@ import {
   HowWeLearn,
   WhoWillTeach,
   WhyWeAreTrusted,
-} from '@/components/adult/index';
+} from '@/components/adult';
 
 const Adult = () => {
   return (
@@ -39,7 +33,7 @@ const Adult = () => {
       <ChooseAdultGroup />
 
       {/* All Courses with filter*/}
-      <CoursesList />
+      <CoursesList url="courses/adult" />
 
       {/* Courses cards for older students*/}
       <AdultCoursesList />
@@ -74,8 +68,8 @@ const Adult = () => {
       {/* Contacts */}
       <Contacts />
 
-      {/* Blog */}
-      <Blog />
+      {/* News */}
+      <News />
 
       {/* Subscribe action row */}
       <SubscribeAction />

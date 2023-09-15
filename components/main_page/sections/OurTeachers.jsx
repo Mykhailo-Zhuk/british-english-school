@@ -1,5 +1,5 @@
-import { AspectRatio } from '../ui/aspect-ratio';
-import { Button } from '../ui/button';
+import { AspectRatio } from '../../ui/aspect-ratio';
+import { Button } from '../../ui/button';
 import { TeacherSkill } from '../index';
 
 const skillsLeft = [

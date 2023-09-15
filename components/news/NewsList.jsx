@@ -2,20 +2,41 @@ import useHttp from '@/hooks/useHttp';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import NewsItem from './NewsItem';
-import { useRouter } from 'next/navigation';
 import { NewsItemsSkeleton } from '../skeletons/NewsSkeleton';
+import { Button } from '../ui/button';
+import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from 'react-icons/bs';
 
 const NewsList = () => {
   const [newsList, setNewsList] = useState([]);
   const { sendRequest, error, isLoading } = useHttp();
-  const router = useRouter();
+  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     sendRequest({ url: 'news' }, setNewsList.bind(null));
   }, []);
 
+  const itemsPerPage = 8;
+  const totalPages = Math.ceil(newsList?.length / itemsPerPage);
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage((prevPage) => prevPage + 1);
+    }
+  };
+
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage((prevPage) => prevPage - 1);
+    }
+  };
+
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = Math.min(startIndex + itemsPerPage, newsList?.length);
+
+  const currentPageItems = newsList?.slice(startIndex, endIndex);
+
   const getIdHandler = (id) => {
-    router.push(`news/${id}`);
+    router.push(`/news/${id}`);
   };
 
   return (
@@ -35,12 +56,22 @@ const NewsList = () => {
             })}
 
           {!isLoading && newsList?.length > 0 ? (
-            newsList?.map((news) => {
-              return <NewsItem key={news.id} news={news} getId={getIdHandler} />;
+            currentPageItems?.map((item) => {
+              return <NewsItem key={item.id} getId={getIdHandler} news={item} />;
             })
           ) : (
             <p className="w-full text-center text-xl p-4">News not found</p>
           )}
+          <div className="flex items-center justify-center w-full">
+            {/* Pagination controls */}
+            <Button variant="ghost" onClick={handlePrevPage} disabled={currentPage === 1}>
+              <BsFillArrowLeftCircleFill size={18} />
+            </Button>
+            <span>{currentPage}</span>
+            <Button variant="ghost" onClick={handleNextPage} disabled={currentPage === totalPages}>
+              <BsFillArrowRightCircleFill size={18} />
+            </Button>
+          </div>
         </div>
       </div>
     </section>

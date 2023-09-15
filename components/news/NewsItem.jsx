@@ -1,12 +1,13 @@
+'use client';
+
 import Image from 'next/image';
-import React from 'react';
 import { AspectRatio } from '../ui/aspect-ratio';
 
-const NewsItem = ({ news, getId }) => {
+const NewsItem = ({ news, getId, fullList = true }) => {
   return (
     <div
       className={`${
-        news.id === '1' || news.id === '2' ? 'w-1/2' : 'w-1/3'
+        fullList && (news.id === '1' || news.id === '2') ? 'w-1/2' : 'w-1/3'
       } h-max p-5 hover:bg-accent cursor-pointer`}
       onClick={() => getId(news.id)}>
       <AspectRatio ratio={16 / 11}>
