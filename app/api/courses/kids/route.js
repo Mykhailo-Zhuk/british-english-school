@@ -1,8 +1,6 @@
 import { NextResponse } from 'next/server';
-import { shortCard } from '../shortCard';
+import { kidsListWithFilter } from './kidsListWithFilter';
 
 export async function GET() {
-  const { kids } = shortCard;
-
-  return NextResponse.json(kids);
+  return NextResponse.json(kidsListWithFilter);
 }

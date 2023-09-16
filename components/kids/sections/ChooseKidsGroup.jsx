@@ -1,17 +1,16 @@
 import Link from 'next/link';
-import React from 'react';
 import { AspectRatio } from '../../ui/aspect-ratio';
 import { ContactForm } from '@/components/features';
 
-const ChooseTeenagersGroup = () => {
+const ChooseKidsGroup = () => {
   return (
     <section className="w-full">
       <div className="py-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-14">
         <div className="flex w-max space-x-4 text-sm text-[#A7A7A7]">
           <Link href="/">Головна</Link> <span className="mx-1">&#707;</span>
-          <p>Англійська для підлітків та школярів</p>
+          <p>Курси англійської для дітей</p>
         </div>
-        <h1 className="text-4xl">Англійська для підлітків та школярів</h1>
+        <h1 className="text-4xl">Курси англійської для дітей</h1>
         <div className="flex space-x-4">
           <div className="flex flex-col space-y-5 w-1/2">
             <p className="text-xl">
@@ -31,7 +30,7 @@ const ChooseTeenagersGroup = () => {
           </div>
           <div className="w-1/2">
             <AspectRatio ratio={16 / 9} className="bg-accent rounded-lg">
-              Photo
+              Video
             </AspectRatio>
           </div>
         </div>
@@ -40,4 +39,4 @@ const ChooseTeenagersGroup = () => {
   );
 };
 
-export default ChooseTeenagersGroup;
+export default ChooseKidsGroup;

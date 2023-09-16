@@ -2,32 +2,21 @@
 
 import React from 'react';
 import {
-  FormatOfLearning,
-  GroupForm,
   Header,
-  HowTakePlace,
-  HowToSign,
-  OurTeachers,
-  TestActionRow,
-  TopStatistic,
   Testimonials,
-  WhyIsBest,
   Contacts,
   News,
   SubscribeAction,
   Footer,
-} from '@/components/index.js';
+} from '@/components/main_page/index';
 import {
-  AdultCoursesList,
-  BenefitsOfCourse,
-  BooksToLearn,
-  ChooseAdultGroup,
-  CoursesList,
-  DetailedListOfCourses,
-  HowWeLearn,
-  WhoWillTeach,
-  WhyWeAreTrusted,
-} from '@/components/adult/index';
+  ChooseTeenagersGroup,
+  PrepareToHMT,
+  ProgramDescription,
+  WhatExamsYouNeed,
+} from '@/components/teenagers';
+import { ChooseKidsGroup, HowTakePlace, RangeOfAges, SchoolYear } from '@/components/kids';
+import { CoursesList } from '@/components/adult';
 
 const Kids = () => {
   return (
@@ -35,38 +24,20 @@ const Kids = () => {
       {/* Header */}
       <Header />
 
-      {/* Choose adult group */}
-      <ChooseAdultGroup />
+      {/* Choose teenagers group */}
+      <ChooseKidsGroup />
 
       {/* All Courses with filter*/}
-      <CoursesList />
+      <CoursesList url="courses/kids" />
 
-      {/* Courses cards for older students*/}
-      <AdultCoursesList />
+      {/* Range of ages */}
+      <RangeOfAges />
 
-      {/* How we learn */}
-      <HowWeLearn />
+      {/* School year */}
+      <SchoolYear />
 
-      {/* Group form */}
-      <GroupForm />
-
-      {/* Benefits of cource */}
-      <BenefitsOfCourse />
-
-      {/* How to sign section */}
-      <HowToSign />
-
-      {/* What books we have */}
-      <BooksToLearn />
-
-      {/* Who will teach */}
-      <WhoWillTeach />
-
-      {/* Detailed list of cources */}
-      <DetailedListOfCourses />
-
-      {/* Why we are trusted */}
-      <WhyWeAreTrusted />
+      {/* How it take place */}
+      <HowTakePlace />
 
       {/* Testimonials */}
       <Testimonials />

@@ -77,7 +77,7 @@ const News = () => {
             <div className="w-full">
               <ScrollArea className="h-[480px] w-full max-w-[850px] rounded-lg">
                 <div className="w-full max-w-[850px] flex mb-5 flex-wrap">
-                  {isLoading
+                  {isLoading && !error
                     ? Array.from({ length: 6 }, (_, i) => i + 1).map((_, id) => {
                         return <OthersNewsSkeleton key={id} />;
                       })
