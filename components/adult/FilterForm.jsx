@@ -14,6 +14,7 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form';
+
 import { toast } from '@/components/ui/use-toast';
 import { useState } from 'react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '../ui/collapsible';
@@ -51,13 +52,13 @@ const RadioFormItem = ({ filter }) => {
     </FormItem>
   );
 };
-const FilterForm = ({ filterItems, isLoading, error }) => {
+const FilterForm = ({ filterList, isLoading, error, filteredCoursesHandler }) => {
   const [isOpenType, setIsOpenType] = useState(true);
   const [isOpenProgram, setIsOpenProgram] = useState(true);
   const [isOpenFormat, setIsOpenFormat] = useState(true);
   const [isOpenTime, setIsOpenTime] = useState(true);
   const [isOpenTeacher, setIsOpenTeacher] = useState(true);
-  const { type, program, format, time, teacher } = filterItems;
+  const { type, program, format, time, teacher } = filterList;
 
   const form = useForm({
     resolver: zodResolver(FormSchema),
@@ -70,12 +71,38 @@ const FilterForm = ({ filterItems, isLoading, error }) => {
   });
 
   const onSubmit = (data) => {
+    filteredCoursesHandler(data);
+
+    const selectedOptions = [];
+
+    const { type, programs, format, time, teacher } = data;
+    // Selected type
+    const selectedType = filterList?.type?.filter((item) => item.value === type);
+    // Selected programs
+    const selectedPrograms = filterList?.program?.filter((item) => programs?.includes(item.id));
+    // Selected format
+    const selectedFormat = filterList?.format?.filter((item) => format?.includes(item.id));
+    // Selected time
+    const selectedTime = filterList?.time?.filter((item) => time?.includes(item.id));
+    // Selected teacher
+    const selectedTeacher = filterList?.teacher?.filter((item) => teacher?.includes(item.id));
+
+    selectedOptions.push(
+      ...selectedType,
+      ...selectedPrograms,
+      ...selectedFormat,
+      ...selectedTime,
+      ...selectedTeacher,
+    );
+
+    const filterSelectedFields = selectedOptions.map((item) => item.label).join(', ');
+
     toast({
-      title: 'You submitted the following values:',
+      title: 'Ви обрали наступні параменти для пошуку:',
       description: (
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
+        <p className="mt-2 w-[340px] rounded-md bg-slate-950 p-4 text-white h-max">
+          {filterSelectedFields}
+        </p>
       ),
     });
   };

@@ -8,33 +8,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const context = {
-  students: [
-    { label: 'Правила центру', link: '#' },
-    { label: 'Договір навчання', link: '#' },
-    { label: 'Знайти сертифікат', link: '#' },
-    { label: 'Знижки', link: '#' },
-    { label: 'Кабінет', link: '#' },
-    { label: 'Мапа сайту', link: '#' },
-  ],
+  students: [{ label: 'Договір навчання', link: '#' }],
   center: [
-    { label: 'Про компанію', link: '#' },
-    { label: 'Організація навчання', link: '#' },
-    { label: 'Контактні дані', link: '#' },
-    { label: 'Наша команда', link: '#' },
-    { label: 'Новини', link: '#' },
-    { label: 'Блог', link: '#' },
-    { label: 'Тест на рівень англійської', link: '#' },
-    { label: 'Іспити Cambridge English', link: '#' },
-    { label: 'Вакансії', link: '#' },
+    { label: 'Контактні дані', link: '#contacts' },
+    { label: 'Новини', link: '#news' },
   ],
   courses: [
-    { label: 'Всі курси', link: '#' },
     { label: 'Англійська для дорослих', link: 'adults' },
     { label: 'Для підлітків 13–17 років', link: 'teenagers' },
     { label: 'Для дітей 6–12 років', link: 'kids' },
-    { label: 'Розмовні клуби', link: '#' },
-    { label: 'Онлайн курси англійської', link: '#' },
-    { label: 'Англійська для компаній', link: '#' },
   ],
   contacts: {
     address:

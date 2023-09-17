@@ -21,7 +21,7 @@ const CourseCards = ({ title, link, value }) => {
   const filteredList = courses[value];
 
   return (
-    <section className="w-full">
+    <section className="w-full" id="courses">
       <div className="flex flex-col h-max w-full max-w-[1320px] mx-auto pb-20">
         <div className="h-16 inline-flex justify-between">
           <p className="text-xl">

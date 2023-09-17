@@ -1,4 +1,4 @@
-const contextInTop = [
+const context = [
   {
     title: 'Великий вибір навчальних програм',
     description:
@@ -14,8 +14,6 @@ const contextInTop = [
     description:
       'Нам важливо, щоб наші курси вивчення англійської мови приносили вам реальні результати. Саме тому ми проводимо тести контролю знань після кожного модулю, а в дитячих та підліткових групах надсилаємо регулярні фідбеки батькам',
   },
-];
-const contextInMiddle = [
   {
     title: 'Онлайн-кабінет студента',
     description:
@@ -31,9 +29,6 @@ const contextInMiddle = [
     description:
       'Наші студенти мають змогу скласти іспити Cambridge Assessment English безпосередньо у нас у центрі і отримати міжнародний сертифікат для навчання або роботи за кордоном',
   },
-];
-
-const contextInEnd = [
   {
     title: 'Онлайн-кабінет студента',
     description:
@@ -53,7 +48,7 @@ const contextInEnd = [
 
 const Context = ({ title, description }) => {
   return (
-    <div className="flex flex-col mr-2 w-1/3 space-y-3">
+    <div className="flex flex-col md:mr-2 w-full md:w-1/3 space-y-3">
       <h3 className="text-xl">{title}</h3>
       <p className="text-base">{description}</p>
     </div>
@@ -64,21 +59,11 @@ const WhyIsBest = () => {
   return (
     <section className="w-full">
       <div className="py-20 max-w-[1320px] mx-auto flex flex-col space-y-14">
-        <h1 className="text-3xl">Чому British School — найкраща школа англійської мови</h1>
-        <div className="flex space-x-12">
-          {contextInTop.map((text, index) => {
-            const { title, description } = text;
-            return <Context key={index} title={title} description={description} />;
-          })}
-        </div>
-        <div className="flex space-x-12">
-          {contextInMiddle.map((text, index) => {
-            const { title, description } = text;
-            return <Context key={index} title={title} description={description} />;
-          })}
-        </div>
-        <div className="flex space-x-12">
-          {contextInEnd.map((text, index) => {
+        <h1 className="text-2xl md:text-3xl px-10">
+          Чому British School — найкраща школа англійської мови
+        </h1>
+        <div className="flex flex-wrap space-y-6 md:space-x-12 px-10">
+          {context.map((text, index) => {
             const { title, description } = text;
             return <Context key={index} title={title} description={description} />;
           })}

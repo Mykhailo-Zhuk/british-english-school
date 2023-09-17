@@ -1,19 +1,22 @@
 'use client';
 
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet';
 import icons from '@/public/icons';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const listOfLinks = [
-  { title: 'Обрати курс', path: 'course' },
+  { title: 'Обрати курс', path: '#courses' },
   { title: 'Про компанію', path: 'about' },
-  { title: 'Партнери', path: 'partners' },
-  { title: 'Новини', path: 'news' },
-  { title: 'Блог', path: 'blog' },
-  { title: 'Вакансії', path: 'vacancies' },
-  { title: 'Наша команда', path: 'team' },
-  { title: 'Контакти', path: 'contacts' },
+  { title: 'Новини', path: '#news' },
+  { title: 'Контакти', path: '#contacts' },
 ];
 
 const SheetBlock = () => {
@@ -29,11 +32,13 @@ const SheetBlock = () => {
         <ul className="flex flex-col space-y-2 mt-16">
           {listOfLinks.map((elem, index) => {
             return (
-              <Link key={index} href={`/${elem?.path}`}>
-                <li className="text-xl text-muted-foreground hover:bg-accent p-2 rounded-lg">
-                  {elem?.title}
-                </li>
-              </Link>
+              <SheetClose key={index} asChild>
+                <Link href={`/${elem?.path}`}>
+                  <li className="text-xl text-muted-foreground hover:bg-accent p-2 rounded-lg">
+                    {elem?.title}
+                  </li>
+                </Link>
+              </SheetClose>
             );
           })}
         </ul>

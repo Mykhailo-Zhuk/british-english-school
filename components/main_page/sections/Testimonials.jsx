@@ -10,7 +10,7 @@ import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from 'react-ico
 
 const Testimonial = ({ username, content }) => {
   return (
-    <div className="bg-[#F8F8FA] rounded-xl w-[49%] p-6 space-y-2 mb-6 mr-6">
+    <div className="bg-[#F8F8FA] rounded-xl w-[280px] md:w-[49%] p-6 space-y-2 mb-6 mr-6 overflow-auto">
       <h3 className="text-xl">{username}</h3>
       <p className="text-base h-max">{content}</p>
     </div>
@@ -50,11 +50,11 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section className="w-full bg-[#f5f5f5]">
-      <div className="p-20 max-w-[1320px] mx-auto flex flex-col space-y-8">
-        <h1 className="text-3xl">Відгуки</h1>
-        <ScrollArea className="max-h-[600px] w-full rounded-md">
-          <div className="flex flex-col flex-wrap max-h-[600px] pt-4">
+    <section className="w-full bg-[#f5f5f5]" id="testimonials">
+      <div className="py-20 px-5 md:px-10 max-w-[1320px] mx-auto flex flex-col space-y-8">
+        <h1 className="text-2xl md:text-3xl">Відгуки</h1>
+        <ScrollArea className="max-h-[460px] md:max-h-[600px] w-full rounded-md">
+          <div className="flex w-full md:flex-col md:flex-wrap max-h-[460px] md:max-h-[600px] pt-4">
             {isLoading
               ? Array.from({ length: 6 }, (_, i) => i + 1).map((_, id) => {
                   return <TestimonialsSkeleton key={id} height={height[heightPicker(id)]} />;

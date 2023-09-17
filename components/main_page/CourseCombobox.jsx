@@ -57,7 +57,9 @@ const CourseCombobox = () => {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-x-6 flex">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="md:space-x-6 space-y-2 flex flex-col p-5 md:flex-row">
         <FormField
           control={form.control}
           name="group"
@@ -70,7 +72,7 @@ const CourseCombobox = () => {
                       variant="outline"
                       role="combobox"
                       className={cn(
-                        'w-[318px] h-[60px] justify-between',
+                        'w-full md:w-[318px] p-2 h-[60px] justify-between',
                         !field.value && 'text-muted-foreground',
                       )}>
                       {field.value
@@ -80,7 +82,7 @@ const CourseCombobox = () => {
                     </Button>
                   </FormControl>
                 </PopoverTrigger>
-                <PopoverContent className="w-[318px] p-0">
+                <PopoverContent className="w-9/12 md:w-[318px] p-1">
                   <Command>
                     <CommandInput placeholder="Пошук групи..." className="h-9" />
                     <CommandEmpty>Жодної групи не знайдено.</CommandEmpty>
@@ -109,7 +111,7 @@ const CourseCombobox = () => {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-[200px] h-[60px] flex-shrink-0 text-base">
+        <Button type="submit" className="w-full md:w-[200px] py-3 h-[60px] flex-shrink-0 text-base">
           Підібрати групу
         </Button>
       </form>

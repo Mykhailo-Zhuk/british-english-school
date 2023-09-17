@@ -25,6 +25,7 @@ export { default as Testimonials } from './sections/Testimonials';
 export { default as Contacts } from './sections/Contacts';
 export { default as News } from './sections/News';
 export { default as SubscribeAction } from './sections/SubscribeAction';
+export { default as Carousel } from './sections/Carousel';
 
 // Skeletons
 export { default as CourseCardSkeleton } from '../skeletons/CourseCardSkeleton';

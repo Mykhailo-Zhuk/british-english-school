@@ -15,6 +15,7 @@ import {
   News,
   SubscribeAction,
   Footer,
+  Carousel,
 } from '@/components/main_page/index';
 
 export default function Home() {
@@ -22,6 +23,9 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-start mx-auto">
       {/* Header */}
       <Header />
+
+      {/* Carusel */}
+      <Carousel />
 
       {/* Choose teaching group in the top */}
       <TopChooseGroup />

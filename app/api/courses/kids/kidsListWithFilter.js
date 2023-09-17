@@ -18,8 +18,8 @@ export const kidsListWithFilter = {
       { id: 's5+', label: 'Step 5 Plus' },
     ],
     format: [
-      { id: 'on', label: 'Онлайн' },
-      { id: 'off', label: 'Офлайн' },
+      { id: 'online', label: 'Онлайн' },
+      { id: 'offline', label: 'Офлайн' },
     ],
     time: [
       { id: 'morning', label: 'Ранкові групи' },

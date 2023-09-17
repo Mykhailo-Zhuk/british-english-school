@@ -60,7 +60,7 @@ const InputForm = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="w-full space-y-6 bg-white p-12 rounded-sm">
+        className="w-full space-y-6 bg-white p-2 md:p-12 rounded-sm">
         <FormField
           control={form.control}
           name="username"

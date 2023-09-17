@@ -24,8 +24,8 @@ const content = {
 const Contacts = () => {
   const { email, messengers, phoneNumbers } = content;
   return (
-    <section className="w-full contacts-gradient">
-      <div className="py-20 max-w-[1320px] mx-auto flex space-x-52">
+    <section className="w-full contacts-gradient" id="contacts">
+      <div className="py-20 max-w-[1320px] mx-auto flex flex-col xl:flex-row xl:space-x-52">
         <div className="w-1/2 flex flex-col space-y-8">
           <h1 className="text-3xl">Як з нами зв'язатися?</h1>
           <div className="flex">

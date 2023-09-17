@@ -54,7 +54,7 @@ const News = () => {
 
   return (
     <section className="w-full" id="news">
-      <div className="pt-20 max-w-[1320px] max-h-[600px] mx-auto flex flex-col space-x-12">
+      <div className="py-20 max-w-[1320px] max-h-[700px] xl:max-h-[600px] mx-auto flex flex-col space-x-12">
         <div className="flex justify-between">
           <h3 className="text-2xl">Новини</h3>
           <Button variant="link" className="text-sm hover:text-[#AA4965]">
@@ -69,13 +69,13 @@ const News = () => {
         {error ? (
           <p className="w-full text-xl text-center p-8">{error}</p>
         ) : (
-          <div className="grid grid-cols-[1fr_2fr] h-max space-x-5">
-            <div className="w-fullflex space-x-6">
+          <div className="grid xl:grid-cols-[1fr_2fr] grid-cols-1 h-max space-x-5">
+            <div className="w-full flex space-x-6">
               {isLoading ? <LatestNewsSkeleton /> : <LatestNews latest={latest} />}
             </div>
 
             <div className="w-full">
-              <ScrollArea className="h-[480px] w-full max-w-[850px] rounded-lg">
+              <ScrollArea className="h-[280px] xl:h-[480px] w-full max-w-[850px] rounded-lg">
                 <div className="w-full max-w-[850px] flex mb-5 flex-wrap">
                   {isLoading && !error
                     ? Array.from({ length: 6 }, (_, i) => i + 1).map((_, id) => {

@@ -20,8 +20,8 @@ export const teenagersListWithFilter = {
       { id: 'c2', label: 'C2 Proficiency: Course' },
     ],
     format: [
-      { id: 'on', label: 'Онлайн' },
-      { id: 'off', label: 'Офлайн' },
+      { id: 'online', label: 'Онлайн' },
+      { id: 'offline', label: 'Офлайн' },
     ],
     time: [
       { id: 'morning', label: 'Ранкові групи' },
