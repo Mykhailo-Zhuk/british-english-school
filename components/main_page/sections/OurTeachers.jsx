@@ -21,13 +21,8 @@ const skillsRight = [
 const OurTeachers = () => {
   return (
     <section className="w-full">
-      <div className="pt-20 max-w-[1320px] mx-auto flex flex-col space-y-12">
-        <div className="flex space-x-2 justify-between">
-          <h1 className="text-3xl text-left">Наші викладачі</h1>
-          <Button variant="secondary" className="text-xl text-[#4A5EAA]">
-            Детальніше про викладачів &#707;
-          </Button>
-        </div>
+      <div className="py-20 max-w-[1320px] mx-auto flex flex-col space-y-12">
+        <h1 className="text-3xl text-left">Наші викладачі</h1>
         <div className="flex space-x-6">
           <div className="w-1/3 flex flex-col space-y-8">
             {skillsLeft.map((item, index) => {

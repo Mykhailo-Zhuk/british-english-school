@@ -56,7 +56,7 @@ export default function Home() {
       {/* Test action row*/}
       <TestActionRow />
 
-      {/* Test action row*/}
+      {/* Why is best*/}
       <WhyIsBest />
 
       {/* Testimonials */}

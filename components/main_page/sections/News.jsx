@@ -58,12 +58,12 @@ const News = () => {
         <div className="flex justify-between">
           <h3 className="text-2xl">Новини</h3>
           <Button variant="link" className="text-sm hover:text-[#AA4965]">
-            <Link href={'news'}>Усі статті в блозі</Link>
+            <Link href={'news'}>Усі новини</Link>
           </Button>
         </div>
 
         {newsList.length === 0 && !isLoading ? (
-          <p className="w-full text-xl text-center p-8">We have no news</p>
+          <p className="w-full text-xl text-center p-8">Немає жодних новин</p>
         ) : null}
 
         {error ? (

@@ -8,15 +8,18 @@ import {
   News,
   SubscribeAction,
   Footer,
+  FormatOfLearning,
+  HowToSign,
+  OurTeachers,
 } from '@/components/main_page/index';
 import {
-  ChooseTeenagersGroup,
-  PrepareToHMT,
-  ProgramDescription,
-  WhatExamsYouNeed,
-} from '@/components/teenagers';
-import { ChooseKidsGroup, HowTakePlace, RangeOfAges, SchoolYear } from '@/components/kids';
-import { CoursesList } from '@/components/adult';
+  BenefitsOfKidCourse,
+  ChooseKidsGroup,
+  HowTakePlace,
+  RangeOfAges,
+  SchoolYear,
+} from '@/components/kids';
+import { CoursesList, WhyWeAreTrusted } from '@/components/adult';
 
 const Kids = () => {
   return (
@@ -38,6 +41,21 @@ const Kids = () => {
 
       {/* How it take place */}
       <HowTakePlace />
+
+      {/* Format of learning */}
+      <FormatOfLearning kids="true" />
+
+      {/* Benefits */}
+      <BenefitsOfKidCourse />
+
+      {/* How to sign */}
+      <HowToSign kids="true" />
+
+      {/* List of Teachers */}
+      <OurTeachers />
+
+      {/* Why we are trusted */}
+      <WhyWeAreTrusted />
 
       {/* Testimonials */}
       <Testimonials />

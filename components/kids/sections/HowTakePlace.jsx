@@ -29,7 +29,7 @@ const HowTakePlace = () => {
         <h1 className="text-4xl">Як буде займатися ваша дитина?</h1>
 
         <div className="grid grid-cols-[minmax(0,_1fr),_minmax(0,_2fr)] space-x-10">
-          <div className="bg-white rounded-lg w-full p-6 space-y-3 text-base">
+          <div className="bg-white rounded-lg w-full p-6 space-y-3 text-base h-max">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam accusantium.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, porro!</p>
             <div className="bg-accent h-32 w-32 mx-auto">Photo</div>
