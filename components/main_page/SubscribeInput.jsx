@@ -34,12 +34,14 @@ const SubscribeInput = () => {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="w-full flex space-x-4 items-center">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="w-full flex flex-col md:flex-row space-y-4 md:space-x-4 items-center">
         <FormField
           control={form.control}
           name="email"
           render={({ field }) => (
-            <FormItem className="flex flex-col w-2/3">
+            <FormItem className="flex flex-col w-full sm:w-2/3">
               <Input
                 {...field}
                 type="email"
@@ -54,7 +56,7 @@ const SubscribeInput = () => {
         <Button
           type="submit"
           size="lg"
-          className="text-sm text-white subscribe-action-btn h-16 w-auto">
+          className="text-sm text-white subscribe-action-btn sm:h-16 w-full sm:w-auto">
           Підписатися
         </Button>
       </form>

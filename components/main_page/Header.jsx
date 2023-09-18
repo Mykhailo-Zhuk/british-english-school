@@ -6,9 +6,9 @@ import Link from 'next/link';
 
 const Header = () => {
   return (
-    <header className="fixed w-full bg-white z-50 bg-opacity-70">
-      <div className="flex w-full px-2 justify-between max-w-[1320px] mx-auto p-1 h-20 md:h-14">
-        <div className="flex space-x-2 flex-shrink-0 w-max">
+    <header className="fixed w-[100vw] bg-white z-50 bg-opacity-70">
+      <div className="flex w-full px-5 justify-between max-w-[1320px] mx-auto h-20 md:h-14">
+        <div className="flex space-x-2 items-center flex-shrink-0 w-max">
           <Avatar>
             <Link href={'/'}>
               <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
@@ -25,7 +25,7 @@ const Header = () => {
         <div className="hidden md:visible">
           <Navigation />
         </div>
-        <div className="hidden md:visible md:flex space-x-2 items-center">
+        <div className="flex space-x-2 items-center">
           <LanguageSwitcher />
           <SheetBlock />
         </div>

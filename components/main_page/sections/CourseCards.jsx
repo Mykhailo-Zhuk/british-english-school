@@ -22,20 +22,28 @@ const CourseCards = ({ title, link, value }) => {
 
   return (
     <section className="w-full" id="courses">
-      <div className="flex flex-col h-max w-full max-w-[1320px] mx-auto pb-20">
-        <div className="h-16 inline-flex justify-between">
-          <p className="text-xl">
-            {isLoading ? <Skeleton className="w-64 h-8 rounded-lg" /> : `Англійська для ${title}`}
+      <div className="py-10 px-2 sm:px-5 flex flex-col h-max w-full max-w-[1320px] mx-auto ">
+        <div className="h-max inline-flex justify-between items-center px-3">
+          <p className="text-sm md:text-xl ">
+            {isLoading ? (
+              <Skeleton className="w-48 md:w-64 h-8 rounded-lg" />
+            ) : (
+              `Англійська для ${title}`
+            )}
           </p>
           <Link href={value}>
             <Button variant="secondary">
-              {isLoading ? <Skeleton className="w-32 h-8 rounded-lg" /> : `Всі курси для ${link}`}
+              {isLoading ? (
+                <Skeleton className="w-32 h-8 rounded-lg hidden sm:visible" />
+              ) : (
+                <span className="hidden sm:visible">{`Всі курси для ${link}`}</span>
+              )}
               &#707;
             </Button>
           </Link>
         </div>
-        <ScrollArea className="h-max w-full rounded-md">
-          <div className="flex space-x-5 my-3 flex-nowrap">
+        <ScrollArea className="h-max w-[94vw] md:w-full rounded-md">
+          <div className="flex space-x-5 my-3 flex-nowrap w-[94vw] overflow-auto">
             {error ? (
               <p className="w-full text-xl text-center p-8">{error}</p>
             ) : (

@@ -12,9 +12,9 @@ export const LatestNewsSkeleton = () => {
 
 export const OthersNewsSkeleton = () => {
   return (
-    <div className="flex w-96 h-36 p-3 space-x-5 hover:bg-accent rounded-lg">
-      <Skeleton className="w-1/2 h-full"></Skeleton>
-      <div className="w-1/2 flex flex-col mt-2 space-y-2 h-max">
+    <div className="flex flex-col md:flex-row w-full md:w-96 md:h-36 p-3 space-y-5 md:space-x-5 hover:bg-accent rounded-lg">
+      <Skeleton className="w-full md:w-1/2 h-44 md:h-full"></Skeleton>
+      <div className="w-full md:w-1/2 flex flex-col mt-2 space-y-2 h-max">
         <Skeleton className="w-24 h-4"></Skeleton>
         <Skeleton className="w-full h-12"></Skeleton>
       </div>

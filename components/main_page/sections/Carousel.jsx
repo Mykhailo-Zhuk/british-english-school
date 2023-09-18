@@ -29,7 +29,7 @@ const Carousel = () => {
 
   if (error)
     return (
-      <p className="w-full h-[515px] flex items-center justify-center text-2xl mt-14 p-4">
+      <p className="w-full h-[515px] flex items-center justify-center text-2xl mt-20 md:mt-14 p-4">
         {error}
       </p>
     );
@@ -37,7 +37,7 @@ const Carousel = () => {
   if (isLoading) return <CarouselSkeleton />;
 
   return (
-    <section className="w-full max-w-[1320px] mt-14 h-[515px]">
+    <section className="w-full max-w-[1320px] mt-20 md:mt-14 h-[515px]">
       <div className="carousel-container">
         <Slider {...settings}>
           {items?.map((item) => (

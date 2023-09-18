@@ -13,7 +13,7 @@ const LanguageSwitcher = () => {
     <select
       onChange={changeLanguage}
       defaultValue="ua"
-      className="flex h-9 w-full items-center justify-evenly rounded-md border border-input bg-transparent p-1 text-sm shadow-sm ring-offset-background focus:outline-none focus:ring-1 focus:ring-ring">
+      className="flex h-9 w-full items-center justify-evenly rounded-md hover:border hover:border-input bg-transparent p-1 text-sm hover:shadow-sm ring-offset-background focus:outline-none focus:ring-1 focus:ring-ring">
       <option value="ua">UK</option>
       <option value="en">EN</option>
     </select>

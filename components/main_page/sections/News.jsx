@@ -26,13 +26,13 @@ const LatestNews = ({ latest }) => {
 
 const OthersNews = ({ other }) => {
   return (
-    <div className="flex w-96 h-36 p-3 space-x-5 hover:bg-accent rounded-lg">
-      <div className="w-1/2">
+    <div className="flex flex-col md:flex-row space-y-5 w-full md:w-96 h-max md:h-36 p-3 md:space-x-5 hover:bg-accent rounded-lg">
+      <div className="w-full md:w-1/2">
         <AspectRatio ratio={23 / 16}>
           <Image src={other?.image} alt="others news" className="rounded-md object-cover" />
         </AspectRatio>
       </div>
-      <div className="w-1/2 flex flex-col max-h-24">
+      <div className="w-full md:w-1/2 flex flex-col max-h-28">
         <p className="text-[#A5A5A5] text-sm">{other?.date}</p>
         <p className="text-xl h-full line-clamp-3" title={other?.title}>
           {other?.title}
@@ -54,7 +54,7 @@ const News = () => {
 
   return (
     <section className="w-full" id="news">
-      <div className="py-20 max-w-[1320px] max-h-[700px] xl:max-h-[600px] mx-auto flex flex-col space-x-12">
+      <div className="py-10 md:py-20 max-w-[1320px] h-max px-5 max-h-[700px] mx-auto flex flex-col md:space-x-12">
         <div className="flex justify-between">
           <h3 className="text-2xl">Новини</h3>
           <Button variant="link" className="text-sm hover:text-[#AA4965]">
@@ -69,7 +69,7 @@ const News = () => {
         {error ? (
           <p className="w-full text-xl text-center p-8">{error}</p>
         ) : (
-          <div className="grid xl:grid-cols-[1fr_2fr] grid-cols-1 h-max space-x-5">
+          <div className="grid xl:grid-cols-[1fr_2fr] grid-cols-1 h-max md:space-x-5">
             <div className="w-full flex space-x-6">
               {isLoading ? <LatestNewsSkeleton /> : <LatestNews latest={latest} />}
             </div>
