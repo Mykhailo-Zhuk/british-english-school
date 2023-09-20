@@ -26,9 +26,9 @@ const Contacts = () => {
   return (
     <section className="w-full contacts-gradient" id="contacts">
       <div className="py-10 md:py-20 px-5 max-w-[1320px] mx-auto flex flex-col space-y-6 xl:flex-row xl:space-x-52">
-        <div className="w-full md:w-1/2 flex flex-col space-y-8">
+        <div className="w-full lg:w-1/2 flex flex-col items-center space-y-8">
           <h1 className="text-2xl md:text-3xl text-center md:text-left">Як з нами зв'язатися?</h1>
-          <div className="flex flex-col md:flex-row space-y-6">
+          <div className="flex flex-col md:flex-row space-y-6 md:space-x-20">
             <div className="w-full md:w-1/2 space-y-8">
               <div className="flex flex-col text-xl items-center md:items-start">
                 <h3 className="pb-2">Email</h3>
@@ -66,7 +66,7 @@ const Contacts = () => {
             </div>
           </div>
         </div>
-        <div className="w-full md:w-1/2">
+        <div className="w-full flex justify-center items-center lg:w-1/2">
           <InputForm />
         </div>
       </div>

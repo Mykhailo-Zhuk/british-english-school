@@ -42,53 +42,53 @@ const Footer = () => {
   const { students, center, courses, contacts } = context;
   return (
     <footer className="w-full mt-20 bg-[#202E48] text-white">
-      <div className="pt-10 md:pt-20 pb-10 px-5 max-w-[1320px] mx-auto h-max space-y-7 flex flex-col rounded-xl">
-        <div className="flex pb-7 flex-col md:flex-row space-y-6 md:space-x-6 justify-between">
-          <div className="flex flex-col space-y-4 w-full md:w-3/12">
+      <div className="pt-10 lg:pt-20 pb-10 px-5 max-w-[1320px] mx-auto h-max space-y-7 flex flex-col rounded-xl">
+        <div className="flex pb-7 flex-col md:flex-row md:flex-wrap space-y-6 even:md:space-y-0 md:space-x-6 justify-between md:justify-evenly">
+          <div className="flex flex-col space-y-4 w-full md:w-5/12">
             <h2 className="text-base text-center">Студенту</h2>
             {students.map((item, index) => {
               return (
                 <Fragment key={index}>
                   <Link
                     href={item.link}
-                    className="text-white text-center md:text-left text-sm p-1 hover:bg-gray-500 rounded-sm">
+                    className="text-white text-center lg:text-left text-sm p-1 hover:bg-gray-500 rounded-sm">
                     {item.label}
                   </Link>
                 </Fragment>
               );
             })}
           </div>
-          <div className="flex flex-col space-y-4 w-full md:w-3/12">
-            <h2 className="text-base  text-center">Наш освітній центр</h2>
+          <div className="flex flex-col space-y-4 w-full md:w-5/12">
+            <h2 className="text-base text-center">Наш освітній центр</h2>
             {center.map((item, index) => {
               return (
                 <Fragment key={index}>
                   <Link
                     href={item.link}
-                    className="text-white  text-center md:text-left text-sm p-1 hover:bg-gray-500 rounded-sm">
+                    className="text-white text-center lg:text-left text-sm p-1 hover:bg-gray-500 rounded-sm">
                     {item.label}
                   </Link>
                 </Fragment>
               );
             })}
           </div>
-          <div className="flex flex-col space-y-4 w-full md:w-3/12">
+          <div className="flex flex-col space-y-4 w-full md:w-5/12">
             <h2 className="text-base  text-center">Курси англійської мови</h2>
             {courses.map((item, index) => {
               return (
                 <Fragment key={index}>
                   <Link
                     href={item.link}
-                    className="text-white text-center md:text-left text-sm p-1 hover:bg-gray-500 rounded-sm">
+                    className="text-white text-center lg:text-left text-sm p-1 hover:bg-gray-500 rounded-sm">
                     {item.label}
                   </Link>
                 </Fragment>
               );
             })}
           </div>
-          <div className="flex flex-col space-y-4 w-full md:w-3/12">
+          <div className="flex flex-col space-y-4 w-full md:w-5/12">
             <h2 className="text-base text-center">Контакти</h2>
-            <p className="text-sm p-1 hover:bg-gray-500  text-center rounded-sm">
+            <p className="text-sm p-1 hover:bg-gray-500 text-center rounded-sm">
               {contacts.address}
             </p>
             <Button variant="link">
@@ -107,7 +107,7 @@ const Footer = () => {
                 );
               })}
             </div>
-            <p className="text-base  text-center">Наші Telegram-канали</p>
+            <p className="text-base text-center">Наші Telegram-канали</p>
             {contacts.telagramChannels.map((item, index) => {
               return (
                 <p

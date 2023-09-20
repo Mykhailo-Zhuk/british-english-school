@@ -46,19 +46,19 @@ const HowToSign = ({ kids = false }) => {
   return (
     <section className="how-to-sign w-full">
       <div className="py-20 h-max w-full max-w-[1320px] mx-auto flex flex-col">
-        <h1 className="w-full md:w-1/3 h-28 rounded-full p-5 text-2xl bg-accent text-black text-center">
+        <h1 className="w-full md:w-1/2 h-28 rounded-full p-5 text-2xl bg-accent text-black text-center">
           {kids ? 'Як записати дитину на англійську?' : 'Як записатися на курси англійської мови?'}
         </h1>
         <div className="flex flex-col md:flex-row md:space-x-4">
-          <div className="w-full md:w-1/3 mx-2">
+          <div className="w-full lg:w-2/5 mx-2">
             <div className="h-full bg-accent rounded-xl" />
           </div>
-          <div className="flex flex-col md:flex-row flex-wrap w-full md:w-4/6 items-center justify-center px-5">
+          <div className="flex flex-col lg:flex-row lg:flex-wrap w-full lg:w-3/5 items-center justify-center px-5">
             {context.map((elem) => {
               return (
                 <div
                   key={elem.id}
-                  className="w-full md:w-[48%] h-max px-6 pt-6 pb-10 bg-accent rounded-lg lg:odd:mr-6 my-3 flex flex-col space-y-2">
+                  className="w-full lg:w-[48%] h-max px-6 pt-6 pb-10 bg-accent rounded-lg lg:odd:mr-6 my-3 flex flex-col space-y-2">
                   <div className="flex space-x-2 justify-start max-h-16 h-full">
                     <div className="w-16 h-16 rounded-full how-to-sign-card  border-[7px] border-transparent flex justify-center items-center">
                       <div className="bg-[#FAF4F8] w-12 h-12 text-black text-2xl flex justify-center items-center rounded-full">

@@ -59,7 +59,7 @@ const CourseCombobox = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="md:space-x-6 space-y-2 flex flex-col p-5 md:flex-row">
+        className="lg:space-x-6 space-y-6 lg:space-y-0 flex flex-col p-5 lg:flex-row">
         <FormField
           control={form.control}
           name="group"
@@ -111,7 +111,7 @@ const CourseCombobox = () => {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full md:w-[200px] py-3 h-[60px] flex-shrink-0 text-base">
+        <Button type="submit" className="w-full md:w-[318px] py-3 h-[60px] flex-shrink-0 text-base">
           Підібрати групу
         </Button>
       </form>

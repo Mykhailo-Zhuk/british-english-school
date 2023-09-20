@@ -34,9 +34,9 @@ const CourseCards = ({ title, link, value }) => {
           <Link href={value}>
             <Button variant="secondary">
               {isLoading ? (
-                <Skeleton className="w-32 h-8 rounded-lg hidden sm:visible" />
+                <Skeleton className="w-32 h-8 rounded-lg  md:visible invisible" />
               ) : (
-                <span className="hidden sm:visible">{`Всі курси для ${link}`}</span>
+                <span className="md:visible invisible">{`Всі курси для ${link}`}</span>
               )}
               &#707;
             </Button>
