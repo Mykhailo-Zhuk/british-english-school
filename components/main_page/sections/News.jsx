@@ -69,7 +69,7 @@ const News = () => {
         {error ? (
           <p className="w-full text-xl text-center p-8">{error}</p>
         ) : (
-          <div className="grid xl:grid-cols-[1fr_2fr] grid-cols-1 h-max md:space-x-5">
+          <div className="grid lg:grid-cols-[1fr_2fr] grid-cols-1 h-max md:space-x-5">
             <div className="w-full flex justify-center space-x-6">
               {isLoading ? <LatestNewsSkeleton /> : <LatestNews latest={latest} />}
             </div>

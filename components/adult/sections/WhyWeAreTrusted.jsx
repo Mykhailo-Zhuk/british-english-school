@@ -40,18 +40,20 @@ const contentToRender = [
 const WhyWeAreTrusted = () => {
   return (
     <section className="w-full bg-accent">
-      <div className="py-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-6">
-        <h1 className="text-4xl">Чому нам довіряють</h1>
-        <div className="flex flex-wrap">
+      <div className="py-10 lg:py-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-6 px-5">
+        <h1 className="text-2xl lg:text-4xl text-center lg:text-left">Чому нам довіряють</h1>
+        <div className="flex flex-col md:flex-row md:flex-wrap">
           {contentToRender?.map((item, index) => {
             return (
-              <div key={index} className="flex flex-col space-y-2 p-5 w-1/4">
+              <div
+                key={index}
+                className="flex flex-col items-center lg:items-start space-y-2 p-5 w-full md:w-1/3">
                 {item?.value ? (
-                  <p className="text-4xl">{item?.value}</p>
+                  <p className="text-4xl text-center lg:text-left">{item?.value}</p>
                 ) : (
                   <Image src={item?.icon} alt="icon" width={40} height={40} />
                 )}
-                <p className="text-xl">{item?.description}</p>
+                <p className="text-xl text-center lg:text-left">{item?.description}</p>
               </div>
             );
           })}

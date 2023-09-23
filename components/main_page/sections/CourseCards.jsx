@@ -24,7 +24,7 @@ const CourseCards = ({ title, link, value }) => {
     <section className="w-full" id="courses">
       <div className="py-10 px-2 sm:px-5 flex flex-col h-max w-full max-w-[1320px] mx-auto ">
         <div className="h-max inline-flex justify-between items-center px-3">
-          <p className="text-sm md:text-xl ">
+          <p className="text-sm md:text-xl">
             {isLoading ? (
               <Skeleton className="w-48 md:w-64 h-8 rounded-lg" />
             ) : (
@@ -34,9 +34,9 @@ const CourseCards = ({ title, link, value }) => {
           <Link href={value}>
             <Button variant="secondary">
               {isLoading ? (
-                <Skeleton className="w-32 h-8 rounded-lg  md:visible invisible" />
+                <Skeleton className="w-32 h-8 rounded-lg  md:block hidden" />
               ) : (
-                <span className="md:visible invisible">{`Всі курси для ${link}`}</span>
+                <span className="md:block hidden">{`Всі курси для ${link}`}</span>
               )}
               &#707;
             </Button>

@@ -19,11 +19,11 @@ const DetailedListOfCourses = () => {
 
   return (
     <section className="w-full">
-      <div className="py-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-6">
-        <h1 className="text-4xl">Які курси ми пропонуємо?</h1>
+      <div className="py-10 lg:py-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-6 px-5">
+        <h1 className="text-2xl lg:text-4xl">Які курси ми пропонуємо?</h1>
         <div className="flex flex-col space-y-6">
-          <h1 className="text-3xl">Курси англійської для дорослих</h1>
-          <div className="flex flex-wrap">
+          <h1 className="text-xl lg:text-3xl">Курси англійської для дорослих</h1>
+          <div className="flex flex-wrap md:grid md:grid-cols-2 xl:grid-cols-3 gap-5">
             {isLoading
               ? Array.from({ length: 6 }, (_, i) => i + 1).map((_, id) => {
                   return <AdultCardSkeleton key={id} />;
@@ -40,8 +40,8 @@ const DetailedListOfCourses = () => {
           </div>
         </div>
         <div className="flex flex-col space-y-6">
-          <h1 className="text-3xl">Програми для вашого професійного розвитку</h1>
-          <div className="flex flex-wrap">
+          <h1 className="text-xl lg:text-3xl">Програми для вашого професійного розвитку</h1>
+          <div className="flex flex-wrap md:grid md:grid-cols-2 xl:grid-cols-3 gap-5">
             {isLoading
               ? Array.from({ length: 2 }, (_, i) => i + 1).map((_, id) => {
                   return <ProficiencyCardSkeleton key={id} />;
@@ -58,8 +58,8 @@ const DetailedListOfCourses = () => {
           </div>
         </div>
         <div className="flex flex-col space-y-6">
-          <h1 className="text-3xl">Курси з підготовки до міжнародних іспитів</h1>
-          <div className="flex flex-wrap">
+          <h1 className="text-xl lg:text-3xl">Курси з підготовки до міжнародних іспитів</h1>
+          <div className="flex flex-wrap md:grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {isLoading
               ? Array.from({ length: 2 }, (_, i) => i + 1).map((_, id) => {
                   return <ExamsCardSkeleton key={id} />;
@@ -70,7 +70,7 @@ const DetailedListOfCourses = () => {
               <p className="w-full text-xl text-center p-8">{error}</p>
             ) : (
               courses?.exams?.map((course, index) => {
-                return <AdultDetailedCard key={index} width="w-1/3" course={course} />;
+                return <AdultDetailedCard key={index} course={course} />;
               })
             )}
           </div>

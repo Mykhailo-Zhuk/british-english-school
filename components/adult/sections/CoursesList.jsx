@@ -79,9 +79,9 @@ const CoursesList = ({ url }) => {
 
   return (
     <section className="w-full">
-      <div className="py-20 max-w-[1320px] mx-auto grid grid-cols-[350px_auto]">
+      <div className="py-10 lg:py-20 max-w-[1320px] mx-auto grid grid-cols-1 sm:grid-cols-[320px_auto]">
         {/* Filter */}
-        <div className="w-full">
+        <div className="w-full max-w-[320px] mx-auto sm:mx-0 px-5">
           <FilterForm
             filterList={filteredCourses.filter}
             isLoading={isLoading}
@@ -90,8 +90,8 @@ const CoursesList = ({ url }) => {
           />
         </div>
         {/* Courses list */}
-        <div className="flex flex-col ">
-          <div className="flex flex-wrap min-h-[40vh]">
+        <div className="flex flex-col px-2">
+          <div className="flex justify-center sm:justify-start flex-wrap min-h-[40vh]">
             {filtered?.length === 0 && (
               <p className="w-full flex justify-center items-center">Курсів не знайдено</p>
             )}

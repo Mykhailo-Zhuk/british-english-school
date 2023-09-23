@@ -25,22 +25,17 @@ const TeacherSkill = ({ item }) => {
 const WhoWillTeach = () => {
   return (
     <section className="w-full">
-      <div className="flex flex-col h-max w-full max-w-[1320px] mx-auto pb-20 space-y-7">
-        <div className="flex justify-between">
-          <h1 className="text-4xl">Хто вас навчатиме?</h1>
-          <Link href="teachers">
-            <Button className="w-72 text-[#4A5EAA] bg-[#E9EDFC] text-base hover:text-white">
-              Детальніше про викладачів &#707;
-            </Button>
-          </Link>
+      <div className="py-10 lg:py-20 flex flex-col h-max w-full max-w-[1320px] mx-auto space-y-7 px-5">
+        <div className="h-max inline-flex justify-between items-center">
+          <p className="text-2xl lg:text-4xl mr-1">Хто вас навчатиме?</p>
         </div>
-        <div className="flex space-x-6">
-          <div className="w-1/2">
+        <div className="flex flex-col space-y-6 md:flex-row md:space-x-6 md:space-y-0">
+          <div className="w-full md:w-1/2">
             <AspectRatio ratio={16 / 12} className="bg-accent rounded-lg">
               Video
             </AspectRatio>
           </div>
-          <div className="w-1/2 space-y-4">
+          <div className="w-full md:w-1/2 space-y-4">
             {skills.map((item, index) => {
               return (
                 <p key={index} className="text-xl">

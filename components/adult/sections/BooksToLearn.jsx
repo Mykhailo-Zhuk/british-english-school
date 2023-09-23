@@ -48,10 +48,10 @@ const ListItem = ({ item }) => {
 const BooksToLearn = () => {
   return (
     <section className="w-full">
-      <div className="py-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-6">
-        <h1 className="text-4xl">За якими підручниками навчаємося?</h1>
-        <div className="grid grid-cols-3 gap-8">
-          <div className="flex flex-col space-y-5">
+      <div className="py-10 lg:py-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-6 px-5">
+        <h1 className="text-2xl lg:text-4xl">За якими підручниками навчаємося?</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-col space-y-5 text-justify">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, deleniti officia?
               Ad deleniti omnis aperiam dicta magnam, perspiciatis dolores quo.
@@ -64,12 +64,12 @@ const BooksToLearn = () => {
               Photo
             </AspectRatio>
           </div>
-          <ul className="space-y-6">
+          <ul className="space-y-6 text-justify">
             {context1?.map((item, index) => {
               return <ListItem key={index} item={item} />;
             })}
           </ul>
-          <ul className="space-y-6">
+          <ul className="space-y-6 text-justify">
             {context2?.map((item, index) => {
               return <ListItem key={index} item={item} />;
             })}

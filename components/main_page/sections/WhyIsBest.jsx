@@ -62,7 +62,7 @@ const WhyIsBest = () => {
         <h1 className="text-2xl md:text-3xl">
           Чому British School — найкраща школа англійської мови
         </h1>
-        <div className="flex md:justify-around flex-wrap space-y-6 text-justify">
+        <div className="flex md:justify-evenly flex-wrap space-y-6 text-justify">
           {context.map((text, index) => {
             const { title, description } = text;
             return <Context key={index} title={title} description={description} />;

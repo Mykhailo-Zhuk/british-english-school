@@ -25,11 +25,11 @@ const Condition = ({ condition }) => {
   );
 };
 
-const AdultDetailedCard = ({ width = 'w-[48%]', course }) => {
+const AdultDetailedCard = ({ course }) => {
   const { title, status, conditions, description, include } = course;
 
   return (
-    <div className={`${width} p-5 space-y-4 h-max mt-5 odd:mr-5 text-sm bg-white rounded-lg`}>
+    <div className="w-full p-5 space-y-4 h-max text-sm bg-white rounded-lg">
       <div className="flex items-center flex-wrap space-x-4">
         <h2 className="text-xl">{title}</h2>
         <p className={`${status?.bgColor} ${status?.textColor} text-sm px-2 py-2 rounded-full`}>

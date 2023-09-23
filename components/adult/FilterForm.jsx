@@ -107,11 +107,11 @@ const FilterForm = ({ filterList, isLoading, error, filteredCoursesHandler }) =>
     });
   };
 
-  if (error) return <p className="w-[350px] text-base text-center">{error}</p>;
+  if (error) return <p className="w-full text-base text-center">{error}</p>;
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 pb-10">
         {/* Types */}
         <FormField
           control={form.control}
@@ -121,7 +121,7 @@ const FilterForm = ({ filterList, isLoading, error, filteredCoursesHandler }) =>
               <Collapsible
                 open={isOpenType}
                 onOpenChange={setIsOpenType}
-                className="w-[350px] space-y-2">
+                className="w-full space-y-2">
                 <div className="flex items-center justify-between space-x-4 px-1">
                   <FormLabel>Тип курса</FormLabel>
                   <CollapsibleTrigger asChild>
@@ -161,7 +161,7 @@ const FilterForm = ({ filterList, isLoading, error, filteredCoursesHandler }) =>
               <Collapsible
                 open={isOpenProgram}
                 onOpenChange={setIsOpenProgram}
-                className="w-[350px] space-y-2">
+                className="w-full space-y-2">
                 <div className="flex items-center justify-between space-x-4 px-1 mb-4">
                   <FormLabel className="text-base">Програма курсу</FormLabel>
                   <CollapsibleTrigger asChild>
@@ -220,7 +220,7 @@ const FilterForm = ({ filterList, isLoading, error, filteredCoursesHandler }) =>
               <Collapsible
                 open={isOpenFormat}
                 onOpenChange={setIsOpenFormat}
-                className="w-[350px] space-y-2">
+                className="w-full space-y-2">
                 <div className="flex items-center justify-between space-x-4 px-1 mb-4">
                   <FormLabel className="text-base">Місце проведення</FormLabel>
                   <CollapsibleTrigger asChild>
@@ -278,7 +278,7 @@ const FilterForm = ({ filterList, isLoading, error, filteredCoursesHandler }) =>
               <Collapsible
                 open={isOpenTime}
                 onOpenChange={setIsOpenTime}
-                className="w-[350px] space-y-2">
+                className="w-full space-y-2">
                 <div className="flex items-center justify-between space-x-4 px-1 mb-4">
                   <FormLabel className="text-base">Час занять</FormLabel>
                   <CollapsibleTrigger asChild>
@@ -336,7 +336,7 @@ const FilterForm = ({ filterList, isLoading, error, filteredCoursesHandler }) =>
               <Collapsible
                 open={isOpenTeacher}
                 onOpenChange={setIsOpenTeacher}
-                className="w-[350px] space-y-2">
+                className="w-full space-y-2">
                 <div className="flex items-center justify-between space-x-4 px-1 mb-4">
                   <FormLabel className="text-base">Викладач</FormLabel>
                   <CollapsibleTrigger asChild>

@@ -25,7 +25,7 @@ const Contacts = () => {
   const { email, messengers, phoneNumbers } = content;
   return (
     <section className="w-full contacts-gradient" id="contacts">
-      <div className="py-10 md:py-20 px-5 max-w-[1320px] mx-auto flex flex-col space-y-6 xl:flex-row xl:space-x-52">
+      <div className="py-10 md:py-20 px-5 max-w-[1320px] mx-auto flex flex-col space-y-6 lg:flex-row lg:space-x-6">
         <div className="w-full lg:w-1/2 flex flex-col items-center space-y-8">
           <h1 className="text-2xl md:text-3xl text-center md:text-left">Як з нами зв'язатися?</h1>
           <div className="flex flex-col md:flex-row space-y-6 md:space-x-20">

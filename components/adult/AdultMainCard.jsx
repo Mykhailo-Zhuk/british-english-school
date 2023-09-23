@@ -19,7 +19,7 @@ const AdultMainCard = ({ course }) => {
   } = course;
 
   return (
-    <div className="relative w-[410px] h-max flex flex-col space-y-4 odd:mr-4 mb-4 rounded-md bg-white py-7 px-12 text-sm">
+    <div className="relative w-full max-w-[410px] h-max flex flex-col space-y-4 lg:odd:mr-4 mb-4 rounded-md bg-white py-3 md:py-7 px-3 md:px-7 lg:px-12 text-sm">
       {due && (
         <div className="absolute top-0 right-0 w-max px-5 py-1 due_card text-white">{due}</div>
       )}

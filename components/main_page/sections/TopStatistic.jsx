@@ -8,7 +8,7 @@ const statistics = [
 const TopStatistic = () => {
   return (
     <section className="statistic-gradient w-full">
-      <div className="py-20 px-5 max-w-[1320px] mx-auto h-max lg:h-36 flex flex-col space-y-6 md:space-y-0 md:flex-row md:space-x-2">
+      <div className="py-20 px-5 max-w-[1320px] mx-auto h-max flex flex-col space-y-6 md:space-y-0 md:flex-row md:space-x-2">
         {statistics?.map((elem, index) => {
           return (
             <div

@@ -3,11 +3,11 @@ import React from 'react';
 const WhatExamsYouNeed = () => {
   return (
     <section className="w-full">
-      <div className="py-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-6">
-        <h1 className="text-4xl">Які іспити потрібно складати та коли?</h1>
-        <div className="flex space-x-20">
-          <div className="relative w-3/5 flex flex-col max-h-[588px] flex-wrap odd:space-y-10 odd:space-x-4">
-            <div className="w-[360px] h-[170px] border bg-white rounded-lg px-10 py-5">
+      <div className="py-10 lg:py-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-6 px-5">
+        <h1 className="text-2xl lg:text-4xl">Які іспити потрібно складати та коли?</h1>
+        <div className="flex flex-col space-y-10 lg:flex-row lg:space-x-20 lg:space-y-0">
+          <div className="lg:relative w-full md:w-3/5 flex flex-col space-y-5 h-max md:max-h-[588px] md:flex-wrap md:odd:space-y-10 md:odd:space-x-4">
+            <div className="w-full md:w-[360px] h-max md:h-[170px] border bg-white rounded-lg md:px-10 px-5 py-5">
               <p className="text-xl">Загальноосвітні школи</p>
               <p className="inline-flex items-center justify-between w-full mt-3">
                 <span>9 клас</span>
@@ -18,9 +18,9 @@ const WhatExamsYouNeed = () => {
                 <span>B1 Preliminary (PET)</span>
               </p>
             </div>
-            <div className="w-[365px] h-[170px] border bg-accent rounded-lg px-10 py-5"></div>
-            <div className="w-[210px] h-[260px] border bg-accent rounded-lg px-10 py-5"></div>
-            <div className="relative w-[360px] h-[170px] border bg-white rounded-lg px-10 py-5 right-40">
+            <div className="w-full md:w-[365px] h-[170px] border bg-accent rounded-lg md:px-10 px-5 py-5"></div>
+            <div className="w-full md:w-[210px] h-[260px] border bg-accent rounded-lg md:px-10 px-5 py-5"></div>
+            <div className="lg:relative w-full md:w-[350px] h-max md:h-[170px] border bg-white rounded-lg md:px-10 px-5 py-5 md:right-40">
               <p className="text-xl">Школи з поглибленим вивченням мови</p>
               <p className="inline-flex items-center justify-between w-full mt-3">
                 <span>9 клас</span>
@@ -32,8 +32,8 @@ const WhatExamsYouNeed = () => {
               </p>
             </div>
           </div>
-          <div className="w-2/5 flex items-center justify-left">
-            <p className="text-xl max-w-md pl-5 border-l-4 border-l-[#A14669]">
+          <div className="w-full lg:w-2/5 flex items-center justify-left">
+            <p className="text-xl lg:max-w-md pl-5 border-l-4 border-l-[#A14669]">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque optio adipisci,
               impedit, asperiores eius incidunt magni, ea quasi itaque aliquid iusto debitis
               suscipit voluptate eligendi cum exercitationem excepturi consectetur dolor.

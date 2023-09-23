@@ -18,10 +18,10 @@ const content = [
 const PrepareToHMT = () => {
   return (
     <section className="w-full">
-      <div className="py-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-6">
-        <h1 className="text-4xl">Підготовка до НМТ</h1>
-        <div className="flex space-x-20 pb-10">
-          <div className="w-3/5 flex flex-col space-y-2">
+      <div className="py-10 ld:py-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-6 px-5">
+        <h1 className="text-2xl lg:text-4xl">Підготовка до НМТ</h1>
+        <div className="flex flex-col space-y-10 md:space-y-0 md:flex-row md:space-x-20 pb-10">
+          <div className="w-full lg:w-3/5 flex flex-col space-y-2">
             <p className="text-2xl max-w-lg">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque optio adipisci,
               impedit, asperiores eius incidunt magni, ea quasi itaque aliquid iusto debitis.
@@ -31,7 +31,7 @@ const PrepareToHMT = () => {
               impedit, asperiores eius incidunt magni, ea quasi itaque aliquid iusto debitis.
             </p>
           </div>
-          <div className="w-2/5 flex items-center justify-left">
+          <div className="w-full lg:w-2/5 flex items-center justify-left">
             <p className="text-xl max-w-md pl-5 border-l-4 border-l-[#A14669]">
               Цей курс розраховано на ґрунтовну підготовку до НМТ, він включає в себе детальний
               розбір структури іспиту, усіх типів завдань, пропрацювання навичок, необхідних для
@@ -39,22 +39,22 @@ const PrepareToHMT = () => {
             </p>
           </div>
         </div>
-        <div className="flex space-x-20">
-          <div className="w-3/5">
+        <div className="flex flex-col space-y-10 lg:flex-row lg:space-x-10 lg:space-y-0">
+          <div className="w-full lg:w-3/5">
             <ul>
               {content.map((item, index) => {
                 return (
                   <li
                     key={index}
                     className="w-full inline-grid grid-cols-2 py-10 border-b border-b-[#CFCFDC]">
-                    <span className="text-2xl">{item.question}</span>
+                    <span className="text-xl lg:text-2xl">{item.question}</span>
                     <span className="text-base max-w-xs text-left">{item.answer}</span>
                   </li>
                 );
               })}
             </ul>
           </div>
-          <div className="w-2/5 flex items-center justify-center">
+          <div className="w-full lg:w-2/5 flex items-center justify-center">
             <AspectRatio ratio={9 / 6} className="bg-accent rounded-lg"></AspectRatio>
           </div>
         </div>

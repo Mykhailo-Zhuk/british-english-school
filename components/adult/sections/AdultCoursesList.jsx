@@ -35,12 +35,12 @@ const AdultCoursesList = () => {
 
   return (
     <section className="w-full">
-      <div className="py-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-5">
-        <h1 className="text-4xl">Курси англійської для дорослих</h1>
-        <p className="text-xl">від А1 (Beginner) до C2 (Proficiency)</p>
+      <div className="py-10 lg:py-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-5 px-2">
+        <h1 className="text-2xl lg:text-4xl px-3">Курси англійської для дорослих</h1>
+        <p className="text-xl px-3">від А1 (Beginner) до C2 (Proficiency)</p>
 
         <ScrollArea className="h-max max-h-[1700px] w-full rounded-md">
-          <div className="grid grid-cols-4 my-2 flex-wrap">
+          <div className="flex my-2 xl:grid xl:grid-cols-4 xl:gap-2 flex-nowrap">
             {isLoading
               ? Array.from({ length: 6 }, (_, i) => i + 1).map((_, id) => {
                   return <CourseCardSkeleton key={id} />;
@@ -55,7 +55,7 @@ const AdultCoursesList = () => {
               })
             )}
           </div>
-          <ScrollAreaScrollbar orientation="vertical" />
+          <ScrollAreaScrollbar orientation="horizontal" />
         </ScrollArea>
         <div className="flex justify-center items-center">
           <Button variant="ghost" onClick={handleNextPage} disabled={currentPage === totalPages}>

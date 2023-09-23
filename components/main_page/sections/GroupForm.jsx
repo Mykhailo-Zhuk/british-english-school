@@ -5,8 +5,8 @@ import { AspectRatio } from '../../ui/aspect-ratio';
 const GroupForm = () => {
   return (
     <section className="bg-[#F8F8FA] w-full">
-      <div className="h-max py-10 lg:py-20 px-5 max-w-[1320px] space-y-6 w-full mx-auto flex flex-col lg:flex-row">
-        <div className="w-full lg:w-1/2 flex max-w-[525px] mx-auto">
+      <div className="h-max py-10 lg:py-20 px-5 max-w-[1320px] space-y-6 w-full mx-auto flex flex-col lg:flex-row lg:space-x-5 lg:space-y-0 lg:px-10">
+        <div className="w-full lg:w-1/2 flex max-w-[525px] mx-auto ">
           <AspectRatio ratio={16 / 16} className="bg-accent rounded-lg ">
             Photo
           </AspectRatio>

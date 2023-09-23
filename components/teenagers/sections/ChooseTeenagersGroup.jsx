@@ -6,14 +6,16 @@ import { ContactForm } from '@/components/features';
 const ChooseTeenagersGroup = () => {
   return (
     <section className="w-full">
-      <div className="py-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-14">
-        <div className="flex w-max space-x-4 text-sm text-[#A7A7A7]">
+      <div className="pt-20 pb-10 lg:pb-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-14 px-5">
+        <div className="flex w-full space-x-4 text-sm text-[#A7A7A7]">
           <Link href="/">Головна</Link> <span className="mx-1">&#707;</span>
-          <p>Англійська для підлітків та школярів</p>
+          <p className="truncate" title="Англійська для підлітків та школярів">
+            Англійська для підлітків та школярів
+          </p>
         </div>
-        <h1 className="text-4xl">Англійська для підлітків та школярів</h1>
-        <div className="flex space-x-4">
-          <div className="flex flex-col space-y-5 w-1/2">
+        <h1 className="text-2xl lg:text-4xl">Англійська для підлітків та школярів</h1>
+        <div className="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0">
+          <div className="flex flex-col space-y-5 w-full lg:w-1/2">
             <p className="text-xl">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente quidem asperiores
               veritatis vel rem cumque nam amet totam iure quisquam?
@@ -29,7 +31,7 @@ const ChooseTeenagersGroup = () => {
             </p>
             <ContactForm />
           </div>
-          <div className="w-1/2">
+          <div className="w-full lg:w-1/2">
             <AspectRatio ratio={16 / 9} className="bg-accent rounded-lg">
               Photo
             </AspectRatio>

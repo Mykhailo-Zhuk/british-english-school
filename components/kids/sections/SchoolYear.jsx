@@ -14,10 +14,10 @@ const SchoolYear = () => {
 
   return (
     <section className="w-full">
-      <div className="py-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-14">
-        <h1 className="text-4xl">Навчальний рік</h1>
-        <div className="flex space-x-4">
-          <div className="flex flex-col space-y-5 w-1/2">
+      <div className="py-10 lg:py-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-14 px-5">
+        <h1 className="text-2xl lg:text-4xl">Навчальний рік</h1>
+        <div className="flex flex-col lg:flex-row space-y-5 lg:space-y-0 lg:space-x-5">
+          <div className="flex flex-col space-y-5 w-full lg:w-1/2 text-justify">
             <p className="text-xl">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente quidem asperiores
               veritatis vel rem cumque nam amet totam iure quisquam?
@@ -28,13 +28,13 @@ const SchoolYear = () => {
               non nulla beatae laboriosam blanditiis, tenetur natus consectetur.
             </p>
           </div>
-          <div className="w-1/2">
+          <div className="w-full lg:w-1/2">
             <AspectRatio ratio={16 / 9} className="bg-accent rounded-lg">
               Video
             </AspectRatio>
           </div>
         </div>
-        <div className="flex space-x-4">
+        <div className="flex flex-col md:flex-row space-y-5 md:space-y-0 md:space-x-5">
           {error && <p className="w-full text-xl text-center p-8">{error}</p>}
 
           {coursesSchedule?.length === 0 && !isLoading ? (
@@ -47,7 +47,9 @@ const SchoolYear = () => {
               })
             : coursesSchedule?.map((item, index) => {
                 return (
-                  <div key={index} className="bg-[#F4F6FD] p-4 w-1/2 space-y-5">
+                  <div
+                    key={index}
+                    className="bg-[#F4F6FD] p-2 lg:p-4 w-full md:w-1/2 space-y-5 rounded-lg">
                     <h1 className="text-2xl">
                       {item.type}
                       <span className="py-1 px-2 bg-white mx-5 rounded-lg text-base">

@@ -14,13 +14,13 @@ const context1 = [
 const BenefitsOfCourse = () => {
   return (
     <section className="w-full">
-      <div className="py-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-10">
-        <h1 className="text-4xl">Переваги навчання у нас</h1>
-        <div className="grid grid-cols-3">
-          <ul className="space-y-10 mt-5 mr-5">
+      <div className="py-10 lg:py-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-5 md:space-y-10 px-5">
+        <h1 className="text-2xl lg:text-4xl">Переваги навчання у нас</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <ul className="space-y-10">
             {context1?.map((item, index) => {
               return (
-                <li key={index} className="relative text-xl py-1 pl-5 mr-4 mt-4 flex space-x-2 ">
+                <li key={index} className="relative text-xl py-1 pl-5 flex space-x-2 ">
                   <span className="absolute left-0 top-1/2 transform -translate-y-1/2">
                     <Image src={icons.square} width={12} height={12} alt="square" />
                   </span>
@@ -32,7 +32,7 @@ const BenefitsOfCourse = () => {
           <ul className="space-y-10">
             {context1?.map((item, index) => {
               return (
-                <li key={index} className="relative text-xl py-1 pl-5 mr-4 mt-4 flex space-x-2 ">
+                <li key={index} className="relative text-xl py-1 pl-5 flex space-x-2 ">
                   <span className="absolute left-0 top-1/2 transform -translate-y-1/2">
                     <Image src={icons.square} width={12} height={12} alt="square" />
                   </span>
@@ -42,7 +42,7 @@ const BenefitsOfCourse = () => {
             })}
           </ul>
           <div className="flex items-center justify-center">
-            <div className="p-6 w-96 h-96 bg-[#E9EDFC] flex flex-col space-y-2 items-center rounded-lg">
+            <div className="p-6 w-96 h-max md:h-96 bg-[#E9EDFC] flex flex-col space-y-2 items-center rounded-lg">
               <p className="text-xl text-center">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum consectetur
                 voluptatibus alias accusamus nostrum soluta.
@@ -51,16 +51,16 @@ const BenefitsOfCourse = () => {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-2">
-          <div className="flex flex-col space-y-8 bg-white rounded-lg mt-5 p-8">
-            <h1 className="text-4xl">Онлайн</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="flex flex-col space-y-8 bg-white rounded-lg px-2 py-5 md:p-8">
+            <h1 className="text-2xl lg:text-4xl">Онлайн</h1>
             <AspectRatio ratio={16 / 9} className="bg-accent rounded-lg">
               Video
             </AspectRatio>
             <p className="text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
-          <div className="flex flex-col space-y-8 bg-white rounded-lg mt-5 p-8">
-            <h1 className="text-4xl">Офлайн</h1>
+          <div className="flex flex-col space-y-8 bg-white rounded-lg px-2 py-5 md:p-8">
+            <h1 className="text-2xl lg:text-4xl">Офлайн</h1>
             <AspectRatio ratio={16 / 9} className="bg-accent rounded-lg">
               Video
             </AspectRatio>

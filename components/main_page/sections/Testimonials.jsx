@@ -52,7 +52,7 @@ const Testimonials = () => {
   return (
     <section className="w-full bg-[#f5f5f5]" id="testimonials">
       <div className="py-10 md:py-20 px-5 md:px-10 max-w-[1320px] mx-auto flex flex-col space-y-8">
-        <h1 className="text-2xl md:text-3xl px-2">Відгуки</h1>
+        <h1 className="text-2xl md:text-3xl px-2 text-center md:text-left">Відгуки</h1>
         <ScrollArea className="max-h-[460px] md:max-h-[600px] w-full rounded-md">
           <div className="flex w-full md:flex-col md:flex-wrap max-h-[460px] md:max-h-[600px] pt-4">
             {isLoading

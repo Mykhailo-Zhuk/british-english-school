@@ -5,7 +5,7 @@ import { Separator } from '../ui/separator';
 
 export const AdultCardSkeleton = () => {
   return (
-    <div className="w-[634px] p-5 space-y-4 h-[540px] mt-5 odd:mr-5 text-sm bg-accent rounded-lg">
+    <div className="w-[634px] md:w-full p-5 space-y-4 h-[540px] text-sm bg-accent rounded-lg">
       <div className="flex items-center flex-wrap space-x-4">
         <Skeleton className="w-48 h-6"></Skeleton>
         <Skeleton className="w-24 h-8 px-2 py-2 rounded-full"></Skeleton>
@@ -35,7 +35,7 @@ export const AdultCardSkeleton = () => {
 
 export const ProficiencyCardSkeleton = () => {
   return (
-    <div className="w-[634px] p-5 space-y-4 h-[480px] mt-5 odd:mr-5 text-sm bg-accent rounded-lg">
+    <div className="w-[634px] md:w-full p-5 space-y-4 h-[480px] text-sm bg-accent rounded-lg">
       <div className="flex items-center flex-wrap space-x-4">
         <Skeleton className="w-48 h-6"></Skeleton>
         <Skeleton className="w-24 h-8 px-2 py-2 rounded-full"></Skeleton>
@@ -65,7 +65,7 @@ export const ProficiencyCardSkeleton = () => {
 
 export const ExamsCardSkeleton = () => {
   return (
-    <div className="w-[440px] p-5 space-y-4 h-[210px] mt-5 odd:mr-5 text-sm bg-accent rounded-lg">
+    <div className="w-[440px] md:w-full p-5 space-y-4 h-[210px] text-sm bg-accent rounded-lg">
       <div className="flex items-center flex-wrap space-x-4">
         <Skeleton className="w-48 h-6"></Skeleton>
         <Skeleton className="w-24 h-8 px-2 py-2 rounded-full"></Skeleton>
@@ -83,7 +83,7 @@ export const ExamsCardSkeleton = () => {
 
 export const AdultMainCardSkeleton = () => {
   return (
-    <div className="ralative w-[410px] h-max flex flex-col space-y-6  odd:mr-4 mb-4 rounded-md bg-white py-7 px-12  text-sm">
+    <div className="ralative w-[410px] h-max flex flex-col space-y-6 lg:odd:mr-4 mb-4 rounded-md bg-white py-3 lg:py-7 px-3 lg:px-12 text-sm">
       <div className="flex flex-col space-y-5">
         <Skeleton className="w-20 h-4"></Skeleton>
         <Skeleton className="w-20 h-4"></Skeleton>
