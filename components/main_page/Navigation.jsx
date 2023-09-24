@@ -11,74 +11,72 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 import icons from '@/public/icons';
 import Image from 'next/image';
-
-const components = {
-  center: [
-    { label: 'Контактні дані', link: '#' },
-    { label: 'Новини', link: '#news' },
-  ],
-  courses: [
-    {
-      label: 'Англійська для дорослих',
-      link: '/adult',
-      description:
-        'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, perspiciatis?',
-    },
-    {
-      label: 'Для підлітків 13–17 років',
-      link: '/teenagers',
-      description:
-        'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, perspiciatis?',
-    },
-    {
-      label: 'Для дітей 6–12 років',
-      link: '/kids',
-      description:
-        'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, perspiciatis?',
-    },
-  ],
-  contacts: {
-    address: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, perspiciatis?',
-    mapLink: '#',
-    email: 'example@gmail.com',
-    messengers: [
-      {
-        title: 'Viber',
-        icon: icons.viber1,
-        href: 'viber://chat?number=+1234567890',
-      },
-      {
-        title: 'Telegram',
-        icon: icons.telegram1,
-        href: 'tg://resolve?domain=username',
-      },
-      {
-        title: 'Messenger',
-        icon: icons.messenger1,
-        href: 'fb-messenger://user-thread/1234567890',
-      },
-    ],
-    phoneNumbers: [
-      '+380 (44) 580 33 00',
-      '+380 (44) 580 33 00',
-      '+380 (44) 580 33 00',
-      '+380 (44) 580 33 00',
-    ],
-  },
-};
+import { useTranslations } from 'next-intl';
 
 const Navigation = () => {
-  const { contacts, center, courses } = components;
+  const t = useTranslations('main_header');
+
+  const components = {
+    center: [
+      { label: t('navigation.contact_data'), link: '#' },
+      { label: t('navigation.news'), link: '#news' },
+    ],
+    courses: [
+      {
+        label: t('navigation.courses_for_adult.title'),
+        link: '/adult',
+        description: t('navigation.courses_for_adult.description'),
+      },
+      {
+        label: t('navigation.courses_for_teenagers.title'),
+        link: '/teenagers',
+        description: t('navigation.courses_for_teenagers.description'),
+      },
+      {
+        label: t('navigation.courses_for_kids.title'),
+        link: '/kids',
+        description: t('navigation.courses_for_kids.description'),
+      },
+    ],
+    contacts: {
+      address: t('navigation.address'),
+      mapLink: '#',
+      email: 'example@gmail.com',
+      messengers: [
+        {
+          title: 'Viber',
+          icon: icons.viber1,
+          href: 'viber://chat?number=+1234567890',
+        },
+        {
+          title: 'Telegram',
+          icon: icons.telegram1,
+          href: 'tg://resolve?domain=username',
+        },
+        {
+          title: 'Messenger',
+          icon: icons.messenger1,
+          href: 'fb-messenger://user-thread/1234567890',
+        },
+      ],
+      phoneNumbers: [
+        '+380 (44) 580 33 00',
+        '+380 (44) 580 33 00',
+        '+380 (44) 580 33 00',
+        '+380 (44) 580 33 00',
+      ],
+    },
+  };
+  const { contacts, courses } = components;
 
   return (
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Обрати курс</NavigationMenuTrigger>
+          <NavigationMenuTrigger>{t('navigation.choose_course')}</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               {courses?.map(({ label, link, description }, index) => {
@@ -90,7 +88,7 @@ const Navigation = () => {
                           className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                           href={link}>
                           <p className="text-sm leading-tight font-bold text-red-500">
-                            Найбільш популярний
+                            {t('navigation.most_popular')}
                           </p>
                           <div className="mb-2 mt-4 text-lg font-medium">{label}</div>
                           <p className="text-sm leading-tight text-muted-foreground">
@@ -120,19 +118,22 @@ const Navigation = () => {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Звʼязатись з нами</NavigationMenuTrigger>
+          <NavigationMenuTrigger>{t('navigation.contact_us')}</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <div className="grid gap-3 p-4 w-[600px] md:grid-cols-3 lg:w-[800px]">
+            <div className="grid gap-3 p-4 w-[600px] md:grid-cols-3">
               <ul>
-                <ListItem href={contacts.mapLink} title="Адреса" label={contacts.address}>
+                <ListItem
+                  href={contacts.mapLink}
+                  title={t('navigation.address_title')}
+                  label={contacts.address}>
                   {contacts.address}
                 </ListItem>
-                <ListItem href={`mailto:${contacts.email}`} title="Email">
+                <ListItem href={`mailto:${contacts.email}`} title={t('navigation.email_title')}>
                   {contacts.email}
                 </ListItem>
               </ul>
               <ul>
-                <p className="text-sm font-medium leading-none">Телефони</p>
+                <p className="text-sm font-medium leading-none">{t('navigation.phones')}</p>
                 {contacts.phoneNumbers.map((item, index) => {
                   return (
                     <ListItem key={index} href={`tel:${item}`}>
@@ -142,7 +143,7 @@ const Navigation = () => {
                 })}
               </ul>
               <ul>
-                <p className="text-sm font-medium leading-none">Напишіть нам</p>
+                <p className="text-sm font-medium leading-none">{t('navigation.text_us')}</p>
                 {contacts.messengers.map((item, index) => {
                   return (
                     <ListItem key={index} href={item.href}>
@@ -162,13 +163,6 @@ const Navigation = () => {
               </ul>
             </div>
           </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Пройти тест онлайн
-            </NavigationMenuLink>
-          </Link>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>

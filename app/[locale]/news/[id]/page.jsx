@@ -1,7 +1,7 @@
 'use client';
 
-import { Header, SubscribeAction, Footer } from '@/components/index.js';
-import { RestNews, MainNewsItemContent } from '@/components/news';
+import { Header, SubscribeAction, Footer } from '@/components/main_page/index';
+import { RestNews, MainNewsItemContent } from '@/components/news/index';
 
 const News = ({ params: { id } }) => {
   return (

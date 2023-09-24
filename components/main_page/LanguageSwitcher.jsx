@@ -1,22 +1,38 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next-intl/link';
+import { usePathname } from 'next-intl/client';
+
+import { Button } from '@/components/ui/button';
+import {
+  DropdownMenu,
+  DropdownMenuItem,
+  DropdownMenuContent,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
 const LanguageSwitcher = () => {
-  const [language, setLanguage] = useState('ua');
-
-  const changeLanguage = (event) => {
-    setLanguage(event.target.value);
-  };
+  const pathname = usePathname();
 
   return (
-    <select
-      onChange={changeLanguage}
-      defaultValue="ua"
-      className="flex h-9 w-full items-center justify-evenly rounded-md hover:border hover:border-input bg-transparent p-1 text-sm hover:shadow-sm ring-offset-background focus:outline-none focus:ring-1 focus:ring-ring">
-      <option value="ua">UK</option>
-      <option value="en">EN</option>
-    </select>
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="outline">Lang</Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className="w-16 h-fit">
+        <DropdownMenuItem className="flex justify-center">
+          <Link href={pathname} locale="ua">
+            UK
+          </Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem className="flex justify-center">
+          <Link href={pathname} locale="en">
+            EN
+          </Link>
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 };
 

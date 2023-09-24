@@ -17,6 +17,7 @@ import {
 import { BsEye } from 'react-icons/bs';
 import { AiOutlineLike, AiFillLike } from 'react-icons/ai';
 import { Button } from '@/components/ui/button';
+import { Skeleton } from '@/components/ui/skeleton';
 
 const SubscribeSocial = ({ item, instagram = false }) => {
   return (
@@ -24,7 +25,7 @@ const SubscribeSocial = ({ item, instagram = false }) => {
       {instagram ? <FaInstagram size={40} /> : <FaYoutube size={40} />}
       <a
         href={instagram ? item?.socialLink?.instagram : item?.socialLink?.youtube}
-        className="text-2xl">
+        className="text-xl sm:text-2xl w-min sm:w-max min-w-[170px]">
         Subscribe to our {instagram ? 'instagram' : 'youtube channel'}
       </a>
     </div>
@@ -66,83 +67,133 @@ const MainNewsItemContent = ({ itemId }) => {
 
   return (
     <section className="w-full">
-      <div className="pt-20 max-w-[700px] h-max mx-auto flex flex-col space-y-8">
+      <div className="pt-20 pb-10 px-5 max-w-[700px] h-max mx-auto flex flex-col space-y-8">
         <div className="flex w-full space-x-4 text-sm text-[#A7A7A7]">
           <Link href="/">Головна</Link> <span className="mx-1">&#707;</span>
           <Link href="/news">Новини</Link> <span className="mx-1">&#707;</span>
-          <p className="truncate">{newsItem?.title}</p>
+          {isLoading ? (
+            <Skeleton className="w-full h-8"></Skeleton>
+          ) : (
+            <p className="line-clamp-2" title={newsItem?.title}>
+              {newsItem?.title}
+            </p>
+          )}
         </div>
-        <h1 className="text-4xl my-10">{newsItem?.title}</h1>
-        <AspectRatio ratio={16 / 9}>
-          <Image src={newsItem?.image} alt="some image for news" fill />
-        </AspectRatio>
-        <div className="flex justify-between">
-          <div className="flex space-x-10 text-sm text-[#798595] items-center">
-            <p>{newsItem?.date}</p>
+
+        {isLoading ? (
+          <Skeleton className="w-full h-24"></Skeleton>
+        ) : (
+          <h1 className="text-2xl lg:text-4xl my-10 text-justify">{newsItem?.title}</h1>
+        )}
+
+        {isLoading ? (
+          <Skeleton className="w-full h-[370px]"></Skeleton>
+        ) : (
+          <AspectRatio ratio={16 / 9}>
+            <Image src={newsItem?.image} alt="some image for news" fill />
+          </AspectRatio>
+        )}
+
+        <div className="flex flex-col space-y-5 sm:space-y-0 sm:flex-row justify-start sm:justify-between">
+          <div className="flex space-x-10 text-sm text-[#798595] justify-between sm:justify-start items-center">
+            {isLoading ? <Skeleton className="w-20 h-5"></Skeleton> : <p>{newsItem?.date}</p>}
             <p className="inline-flex items-center">
-              <BsEye className="mx-3" /> {newsItem?.views}
+              <BsEye className="mx-3" />{' '}
+              {isLoading ? <Skeleton className="w-5 h-4"></Skeleton> : newsItem?.views}
             </p>
           </div>
-          <div className="flex space-x-4">
+          <div className="flex justify-evenly space-x-4">
             <SocialLinks item={newsItem} />
           </div>
         </div>
-        <div className="flex flex-col space-y-4">
-          {newsItem?.content?.header?.map((item, index) => {
-            return (
-              <p key={index + 1} className="text-xl">
-                {item}
-              </p>
-            );
-          })}
-          <SubscribeSocial item={newsItem} />
-        </div>
-        <h1 className="text-4xl my-10">{newsItem?.content?.subtitleOne?.subtitle}</h1>
-        <div className="flex flex-col space-y-4 text-xl">
-          {newsItem?.content?.subtitleOne?.content?.map((item, index) => {
-            return index === 1 ? (
-              <div key={index + 1} className="bg=[#FFF9F5] p-5 border-l-4 border-l-[#FF9649]">
-                {item}
-              </div>
-            ) : (
-              <p key={index + 1}>{item}</p>
-            );
-          })}
-        </div>
-        <div className="flex flex-col space-y-4 text-xl">
-          {newsItem?.content?.subtitleTwo?.content?.map((rowItem, index) => {
-            if (typeof rowItem === 'object') {
-              if (rowItem.list) {
-                return (
-                  <ul key={index + 1} className="space-y-4">
-                    {rowItem.list.map((listItem, liIndex) => (
-                      <li key={liIndex + 1} className="px-10">
-                        {listItem}
-                      </li>
-                    ))}
-                  </ul>
-                );
-              } else if (rowItem.highlight) {
-                return (
-                  <div
-                    key={index + 1}
-                    className="flex items-center bg-[#FFF9F5] p-5 border-l-4 border-l-[#FF9649]">
-                    {rowItem.highlight}
+        {error ? (
+          <p className="w-full text-xl text-center">{error}</p>
+        ) : (
+          <div className="flex flex-col space-y-4">
+            {isLoading
+              ? Array.from({ length: 2 }, (_, i) => i + 1).map((_, id) => {
+                  return <Skeleton key={id} className="w-full h-32"></Skeleton>;
+                })
+              : newsItem?.content?.header?.map((item, index) => {
+                  return (
+                    <p key={index + 1} className="text-xl text-justify">
+                      {item}
+                    </p>
+                  );
+                })}
+            <SubscribeSocial item={newsItem} />
+          </div>
+        )}
+        <h1 className="text-2xl md:text-4xl my-10">
+          {isLoading ? (
+            <Skeleton className="w-9/12 h-16"></Skeleton>
+          ) : (
+            newsItem?.content?.subtitleOne?.subtitle
+          )}
+        </h1>
+
+        <div className="flex flex-col space-y-4 text-xl text-justify">
+          {isLoading
+            ? Array.from({ length: 4 }, (_, i) => i + 1).map((_, id) => {
+                return <Skeleton key={id} className="w-full h-32"></Skeleton>;
+              })
+            : newsItem?.content?.subtitleOne?.content?.map((item, index) => {
+                return index === 1 ? (
+                  <div key={index + 1} className="bg=[#FFF9F5] p-5 border-l-4 border-l-[#FF9649]">
+                    {item}
                   </div>
+                ) : (
+                  <p key={index + 1}>{item}</p>
                 );
-              }
-            } else {
-              return <p key={index + 1}>{rowItem}</p>;
-            }
-          })}
+              })}
+        </div>
+
+        <div className="flex flex-col space-y-4 text-xl text-justify">
+          {isLoading
+            ? Array.from({ length: 4 }, (_, i) => i + 1).map((_, id) => {
+                return <Skeleton key={id} className="w-full h-32"></Skeleton>;
+              })
+            : newsItem?.content?.subtitleTwo?.content?.map((rowItem, index) => {
+                if (typeof rowItem === 'object') {
+                  if (rowItem.list) {
+                    return (
+                      <ul key={index + 1} className="space-y-4">
+                        {rowItem.list.map((listItem, liIndex) => (
+                          <li key={liIndex + 1} className="px-10">
+                            {listItem}
+                          </li>
+                        ))}
+                      </ul>
+                    );
+                  } else if (rowItem.highlight) {
+                    return (
+                      <div
+                        key={index + 1}
+                        className="flex items-center bg-[#FFF9F5] p-5 border-l-4 border-l-[#FF9649]">
+                        {rowItem.highlight}
+                      </div>
+                    );
+                  }
+                } else {
+                  return <p key={index + 1}>{rowItem}</p>;
+                }
+              })}
           <SubscribeSocial item={newsItem} instagram="true" />
         </div>
-        <div className="flex flex-col space-y-4 text-xl">
-          {newsItem?.content?.footer?.map((item, index) => {
-            return <p key={index + 1}>{item}</p>;
-          })}
-        </div>
-        <div className="flex space-x-8">
+        {error ? (
+          <p className="w-full text-xl text-center">{error}</p>
+        ) : (
+          <div className="flex flex-col space-y-4 text-xl text-justify">
+            {isLoading
+              ? Array.from({ length: 3 }, (_, i) => i + 1).map((_, id) => {
+                  return <Skeleton key={id} className="w-full h-32"></Skeleton>;
+                })
+              : newsItem?.content?.footer?.map((item, index) => {
+                  return <p key={index + 1}>{item}</p>;
+                })}
+          </div>
+        )}
+        <div className="flex justify-evenly sm:justify-between space-x-8">
           <Button variant="ghost" type="button" onClick={likesHandler}>
             {like ? <AiFillLike size={30} /> : <AiOutlineLike size={30} />}
           </Button>

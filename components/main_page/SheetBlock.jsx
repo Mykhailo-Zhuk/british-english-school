@@ -9,17 +9,19 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet';
 import icons from '@/public/icons';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const listOfLinks = [
-  { title: 'Обрати курс', path: '#courses' },
-  { title: 'Про компанію', path: 'about' },
-  { title: 'Новини', path: '#news' },
-  { title: 'Контакти', path: '#contacts' },
-];
-
 const SheetBlock = () => {
+  const t = useTranslations('sheet');
+
+  const listOfLinks = [
+    { title: t('course'), path: '#courses' },
+    { title: t('about'), path: 'about' },
+    { title: t('news'), path: '#news' },
+    { title: t('contact'), path: '#contacts' },
+  ];
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -27,15 +29,15 @@ const SheetBlock = () => {
       </SheetTrigger>
       <SheetContent>
         <SheetHeader>
-          <SheetTitle className="text-xl p-2">Menu</SheetTitle>
+          <SheetTitle className="text-xl p-2">{t('menu')}</SheetTitle>
         </SheetHeader>
         <ul className="flex flex-col space-y-2 mt-16">
           {listOfLinks.map((elem, index) => {
             return (
               <SheetClose key={index} asChild>
-                <Link href={`/${elem?.path}`}>
+                <Link href={`/${elem.path}`}>
                   <li className="text-xl text-muted-foreground hover:bg-accent p-2 rounded-lg">
-                    {elem?.title}
+                    {elem.title}
                   </li>
                 </Link>
               </SheetClose>

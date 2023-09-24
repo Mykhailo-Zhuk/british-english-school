@@ -25,10 +25,25 @@ export const OthersNewsSkeleton = () => {
 export const NewsItemsSkeleton = ({ id }) => {
   return (
     <div
-      className={`${id === 1 || id === 2 ? 'w-1/2' : 'w-1/3'} h-max p-5 hover:bg-accent space-y-3`}>
-      <Skeleton className="w-full h-96 bg-accent rounded-md object-cover"></Skeleton>
+      className={`${
+        id === 1 || id === 2 ? 'w-full md:w-1/2' : 'w-full md:w-1/3'
+      } h-max p-5 hover:bg-accent space-y-3`}>
+      <Skeleton className="w-full h-48 md:h-96 bg-accent rounded-md object-cover"></Skeleton>
       <Skeleton className="w-16 h-4"></Skeleton>
       <Skeleton className="w-full h-4"></Skeleton>
+    </div>
+  );
+};
+
+export const RestNewsSkeleton = ({ id }) => {
+  return (
+    <div
+      className={`${
+        id === '1' || id === '2' ? 'w-full md:w-1/2' : 'w-full md:w-1/3'
+      } h-max p-5 min-w-[300px] max-w-[400px] hover:bg-accent rounded-lg flex flex-col space-y-2`}>
+      <Skeleton className="h-48 w-60"></Skeleton>
+      <Skeleton className="h-4 w-24"></Skeleton>
+      <Skeleton className="h-8 w-48"></Skeleton>
     </div>
   );
 };

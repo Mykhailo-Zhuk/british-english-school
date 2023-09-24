@@ -1,3 +1,7 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
+
 import {
   CourseCards,
   FormatOfLearning,
@@ -18,7 +22,7 @@ import {
   Carousel,
 } from '@/components/main_page/index';
 
-export default function Home() {
+const Home = () => {
   return (
     <main className="flex min-h-screen flex-col items-center justify-start mx-auto">
       {/* Header */}
@@ -79,4 +83,5 @@ export default function Home() {
       <Footer />
     </main>
   );
-}
+};
+export default Home;

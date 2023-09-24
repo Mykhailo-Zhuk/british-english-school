@@ -22,7 +22,7 @@ const Header = () => {
             </Link>
           </h3>
         </div>
-        <div className="hidden md:visible">
+        <div className="hidden md:flex">
           <Navigation />
         </div>
         <div className="flex space-x-2 items-center">

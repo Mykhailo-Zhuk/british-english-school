@@ -7,12 +7,15 @@ import { ScrollArea } from '../../ui/scroll-area';
 import { ScrollAreaScrollbar } from '@radix-ui/react-scroll-area';
 import useHttp from '@/hooks/useHttp';
 import Image from 'next/image';
-import { LatestNewsSkeleton, OthersNewsSkeleton } from '../../skeletons/NewsSkeleton';
+import { LatestNewsSkeleton, OthersNewsSkeleton } from '../../skeletons/NewsSkeletons';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
-const LatestNews = ({ latest }) => {
+const LatestNews = ({ latest, goToItem }) => {
   return (
-    <div className="w-full max-w-[420px] p-3 hover:bg-accent rounded-lg">
+    <div
+      className="w-full max-w-[420px] p-3 hover:bg-accent rounded-lg cursor-pointer"
+      onClick={() => goToItem(latest?.id)}>
       <AspectRatio ratio={16 / 11}>
         <Image src={latest?.image} alt="the latest news" className="rounded-md object-cover" />
       </AspectRatio>
@@ -24,9 +27,11 @@ const LatestNews = ({ latest }) => {
   );
 };
 
-const OthersNews = ({ other }) => {
+const OthersNews = ({ other, goToItem }) => {
   return (
-    <div className="flex flex-col md:flex-row space-y-5 w-full md:w-96 h-max md:h-36 p-3 md:space-x-5 hover:bg-accent rounded-lg">
+    <div
+      className="flex flex-col md:flex-row space-y-5 w-full md:w-96 h-max md:h-36 p-3 md:space-x-5 hover:bg-accent rounded-lg cursor-pointer"
+      onClick={() => goToItem(other?.id)}>
       <div className="w-full md:w-1/2">
         <AspectRatio ratio={23 / 16}>
           <Image src={other?.image} alt="others news" className="rounded-md object-cover" />
@@ -45,6 +50,11 @@ const OthersNews = ({ other }) => {
 const News = () => {
   const [newsList, setNewsList] = useState([]);
   const { sendRequest, error, isLoading } = useHttp();
+  const router = useRouter();
+
+  const goToItemHandler = (id) => {
+    router.push(`/news/${id}`);
+  };
 
   useEffect(() => {
     sendRequest({ url: 'news' }, setNewsList.bind(null));
@@ -62,7 +72,7 @@ const News = () => {
           </Button>
         </div>
 
-        {newsList.length === 0 && !isLoading ? (
+        {newsList.length === 0 && !isLoading && !error ? (
           <p className="w-full text-xl text-center p-8">Немає жодних новин</p>
         ) : null}
 
@@ -71,7 +81,11 @@ const News = () => {
         ) : (
           <div className="grid lg:grid-cols-[1fr_2fr] grid-cols-1 h-max md:space-x-5">
             <div className="w-full flex justify-center space-x-6">
-              {isLoading ? <LatestNewsSkeleton /> : <LatestNews latest={latest} />}
+              {isLoading ? (
+                <LatestNewsSkeleton />
+              ) : (
+                <LatestNews latest={latest} goToItem={goToItemHandler} />
+              )}
             </div>
 
             <div className="w-full">
@@ -82,7 +96,9 @@ const News = () => {
                         return <OthersNewsSkeleton key={id} />;
                       })
                     : others?.map((item, index) => {
-                        return <OthersNews key={index + 1} other={item} />;
+                        return (
+                          <OthersNews key={index + 1} other={item} goToItem={goToItemHandler} />
+                        );
                       })}
                 </div>
                 <ScrollAreaScrollbar orientation="vertical" />

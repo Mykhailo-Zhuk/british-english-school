@@ -1,0 +1,35 @@
+{
+  "main_header": {
+    "navigation": {
+      "address_title": "Address",
+      "email_title": "Email",
+      "choose_course": "Choose course",
+      "most_popular": "Most popular",
+      "contact_us": "Contact with us",
+      "phones": "Phones",
+      "text_us": "Text to us",
+      "contact_data": "Contacts",
+      "news": "News",
+      "courses_for_adult": {
+        "title": "English for adult",
+        "description": ""
+      },
+      "courses_for_teenagers": {
+        "title": "English for teenagers",
+        "description": "Lorem ipsum dolor sit amet, eam pericula corrumpit ne, sit volutpat sententiae neglegentur in. Has viris nonumes apeirian id. Dolor fuisset interesset ut eos"
+      },
+      "courses_for_kids": {
+        "title": "English for kids",
+        "description": "Lorem ipsum dolor sit amet, eam pericula corrumpit ne, sit volutpat sententiae neglegentur in. Has viris nonumes apeirian id. Dolor fuisset interesset ut eos"
+      },
+      "address": "Lorem ipsum dolor sit amet, eam pericula corrumpit ne, sit volutpat sententiae neglegentur in."
+    }
+  },
+  "sheet": {
+    "menu": "Menu",
+    "course": "Choose course",
+    "about": "About Us",
+    "news": "News",
+    "contact": "Contacts"
+  }
+}
