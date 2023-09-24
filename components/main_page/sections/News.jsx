@@ -58,7 +58,7 @@ const News = () => {
 
   useEffect(() => {
     sendRequest({ url: 'news' }, setNewsList.bind(null));
-  }, []);
+  }, [sendRequest]);
 
   const [latest, ...others] = newsList;
 

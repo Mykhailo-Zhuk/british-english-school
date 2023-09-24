@@ -58,7 +58,7 @@ const MainNewsItemContent = ({ itemId }) => {
 
   useEffect(() => {
     sendRequest({ url: `news/${itemId}` }, setNewsItem.bind(null));
-  }, []);
+  }, [sendRequest, itemId]);
 
   const likesHandler = () => {
     sendRequest({ url: `news/${itemId}`, method: 'put' });

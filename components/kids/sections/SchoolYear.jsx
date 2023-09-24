@@ -10,7 +10,7 @@ const SchoolYear = () => {
 
   useEffect(() => {
     sendRequest({ url: 'courses/kids/schedule' }, setCoursesSchedule.bind(null));
-  }, []);
+  }, [sendRequest]);
 
   return (
     <section className="w-full">
@@ -66,10 +66,8 @@ const SchoolYear = () => {
                           </p>
                           {age?.courses?.map((course, index) => {
                             return (
-                              <p>
-                                <Link key={index} href={course.link}>
-                                  {course.title}
-                                </Link>
+                              <p key={index}>
+                                <Link href={course.link}>{course.title}</Link>
                               </p>
                             );
                           })}

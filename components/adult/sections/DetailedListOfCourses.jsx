@@ -15,7 +15,7 @@ const DetailedListOfCourses = () => {
 
   useEffect(() => {
     sendRequest({ url: 'courses/adult/details' }, setCourses.bind(null));
-  }, []);
+  }, [sendRequest]);
 
   return (
     <section className="w-full">

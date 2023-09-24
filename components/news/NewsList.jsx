@@ -15,7 +15,7 @@ const NewsList = () => {
 
   useEffect(() => {
     sendRequest({ url: 'news' }, setNewsList.bind(null));
-  }, []);
+  }, [sendRequest]);
 
   const itemsPerPage = 8;
   const totalPages = Math.ceil(newsList?.length / itemsPerPage);

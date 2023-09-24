@@ -47,7 +47,7 @@ const Testimonials = () => {
 
   useEffect(() => {
     sendRequest({ url: 'testimonials' }, setTestimonials.bind(null));
-  }, []);
+  }, [sendRequest]);
 
   return (
     <section className="w-full bg-[#f5f5f5]" id="testimonials">

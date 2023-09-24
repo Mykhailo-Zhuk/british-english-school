@@ -13,7 +13,7 @@ const RestNews = ({ itemId }) => {
 
   useEffect(() => {
     sendRequest({ url: 'news' }, setNewsItems.bind(null));
-  }, []);
+  }, [sendRequest]);
 
   const getIdHandler = (id) => {
     router.replace(`${id}`);

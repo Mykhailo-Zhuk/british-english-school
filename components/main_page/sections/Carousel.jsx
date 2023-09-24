@@ -14,7 +14,7 @@ const Carousel = () => {
 
   useEffect(() => {
     sendRequest({ url: 'carousel' }, setItems.bind(null));
-  }, []);
+  }, [sendRequest]);
 
   const settings = {
     dots: true,

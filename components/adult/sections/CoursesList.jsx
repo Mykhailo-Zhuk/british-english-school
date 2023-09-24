@@ -71,7 +71,7 @@ const CoursesList = ({ url }) => {
 
   useEffect(() => {
     sendRequest({ url }, setFilteredCourses.bind(null));
-  }, []);
+  }, [url, sendRequest]);
 
   const filteredCoursesHandler = (data) => {
     setFilterCriteria(data);
