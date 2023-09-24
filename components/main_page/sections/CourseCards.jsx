@@ -45,7 +45,7 @@ const CourseCards = ({ title, link, value }) => {
         <ScrollArea className="h-max w-[94vw] md:w-full rounded-md">
           <div className="flex space-x-5 my-3 flex-nowrap w-[94vw] overflow-auto">
             {error ? (
-              <p className="w-full text-xl text-center p-8">{error}</p>
+              <p className="text-xl text-center p-8">{error}</p>
             ) : (
               filteredList?.map((item, id) => {
                 return <CardItem key={id} courses={item} />;
@@ -59,7 +59,7 @@ const CourseCards = ({ title, link, value }) => {
               : null}
 
             {!filteredList?.length && !error ? (
-              <p className="w-full text-xl text-center p-8">We have no courses</p>
+              <p className="text-xl text-center p-8">We have no courses</p>
             ) : null}
           </div>
           <ScrollAreaScrollbar orientation="horizontal" />

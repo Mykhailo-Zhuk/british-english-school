@@ -16,7 +16,7 @@ const TestActionRow = () => {
             програми підійдуть саме вам!
           </p>
         </div>
-        <div className="w-full lg:w-max flex items-center flex-shrink-0">
+        <div className="w-full md:w-max flex items-center flex-shrink-0">
           <Button size="lg" className="text-base w-48">
             Пройти тест
           </Button>
