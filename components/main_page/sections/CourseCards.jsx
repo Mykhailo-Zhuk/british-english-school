@@ -10,18 +10,18 @@ import { Skeleton } from '../../ui/skeleton';
 import Link from 'next/link';
 import CourseCardSkeleton from '@/components/skeletons/CourseCardSkeleton';
 import { useTranslations } from 'next-intl';
-import { usePathname } from 'next/navigation';
+// import { usePathname } from 'next/navigation';
 
 const CourseCards = ({ title, link, value }) => {
   const [courses, setCourses] = useState([]);
   const { sendRequest, error, isLoading } = useHttp();
   const t = useTranslations('course_cards');
 
-  const pathname = usePathname();
-  const calcURL = pathname.includes('en') ? 'en/courses' : 'courses';
+  // const pathname = usePathname();
+  // const calcURL = pathname.includes('en') ? 'en/courses' : 'courses';
 
   useEffect(() => {
-    sendRequest({ url: calcURL }, setCourses.bind(null));
+    sendRequest({ url: 'courses' /*calcURL*/ }, setCourses.bind(null));
   }, []);
 
   const filteredList = courses[value];

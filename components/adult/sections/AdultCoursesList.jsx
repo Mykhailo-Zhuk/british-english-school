@@ -9,16 +9,13 @@ import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import icons from '@/public/icons/adult';
 import { useTranslations } from 'next-intl';
-import { usePathname } from 'next/navigation';
+// import { usePathname } from 'next/navigation';
 
 const AdultCoursesList = () => {
   const [courses, setCourses] = useState([]);
   const { sendRequest, error, isLoading } = useHttp();
   const [currentPage, setCurrentPage] = useState(1);
   const t = useTranslations('adult_courses_list');
-
-  const pathname = usePathname();
-  const calcURL = pathname.includes('en') ? 'en/courses' : 'courses';
 
   const itemsPerPage = 8;
   const totalPages = Math.ceil(courses?.adult?.length / itemsPerPage);
@@ -35,8 +32,11 @@ const AdultCoursesList = () => {
 
   const currentPageItems = courses?.adult?.slice(startIndex, endIndex);
 
+  // const pathname = usePathname();
+  // const calcURL = pathname.includes('en') ? 'en/courses' : 'courses';
+
   useEffect(() => {
-    sendRequest({ url: calcURL }, setCourses.bind(null));
+    sendRequest({ url: 'courses' /* calcURL */ }, setCourses.bind(null));
   }, [sendRequest]);
 
   return (

@@ -9,18 +9,18 @@ import {
   ExamsCardSkeleton,
 } from '@/components/skeletons/AdultCoursesSkeleton';
 import { useTranslations } from 'next-intl';
-import { usePathname } from 'next/navigation';
+// import { usePathname } from 'next/navigation';
 
 const DetailedListOfCourses = () => {
   const [courses, setCourses] = useState([]);
   const { sendRequest, error, isLoading } = useHttp();
   const t = useTranslations('detailed_list_of_courses');
 
-  const pathname = usePathname();
-  const calcURL = pathname.includes('en') ? 'en/courses/adult/details' : 'courses/adult/details';
+  // const pathname = usePathname();
+  // const calcURL = pathname.includes('en') ? 'en/courses/adult/details' : 'courses/adult/details';
 
   useEffect(() => {
-    sendRequest({ url: calcURL }, setCourses.bind(null));
+    sendRequest({ url: 'courses/adult/details' /*calcURL*/ }, setCourses.bind(null));
   }, [sendRequest]);
 
   return (

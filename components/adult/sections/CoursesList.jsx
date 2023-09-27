@@ -6,7 +6,7 @@ import Image from 'next/image';
 import icons from '@/public/icons/adult';
 import { AdultMainCardSkeleton } from '@/components/skeletons/AdultCoursesSkeleton';
 import { useTranslations } from 'next-intl';
-import { usePathname } from 'next/navigation';
+// import { usePathname } from 'next/navigation';
 
 const CoursesList = ({ url }) => {
   const [filteredCourses, setFilteredCourses] = useState([]);
@@ -72,12 +72,12 @@ const CoursesList = ({ url }) => {
 
   const currentPageItems = filtered?.slice(startIndex, endIndex);
 
-  const pathname = usePathname();
-  const calcURL = pathname.includes('en') ? `en/${url}` : url;
+  // const pathname = usePathname();
+  // const calcURL = pathname.includes('en') ? `en/${url}` : url;
 
   useEffect(() => {
-    sendRequest({ url: calcURL }, setFilteredCourses.bind(null));
-  }, [calcURL, sendRequest]);
+    sendRequest({ url /* calcURL */ }, setFilteredCourses.bind(null));
+  }, [url /* calcURL */, sendRequest]);
 
   const filteredCoursesHandler = (data) => {
     setFilterCriteria(data);

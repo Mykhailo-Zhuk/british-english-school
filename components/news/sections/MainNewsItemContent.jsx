@@ -19,7 +19,7 @@ import { AiOutlineLike, AiFillLike } from 'react-icons/ai';
 import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
 import { useTranslations } from 'next-intl';
-import { usePathname } from 'next/navigation';
+// import { usePathname } from 'next/navigation';
 
 const SubscribeSocial = ({ item }) => {
   const t = useTranslations('news_page');
@@ -61,11 +61,11 @@ const MainNewsItemContent = ({ itemId }) => {
   const { sendRequest, error, isLoading } = useHttp();
   const t = useTranslations('news_page');
 
-  const pathname = usePathname();
-  const calcURL = pathname.includes('en') ? `en/news/${itemId}` : `news/${itemId}`;
+  // const pathname = usePathname();
+  // const calcURL = pathname.includes('en') ? `en/news/${itemId}` : `news/${itemId}`;
 
   useEffect(() => {
-    sendRequest({ url: calcURL }, setNewsItem.bind(null));
+    sendRequest({ url: `news/${itemId}` /*calcURL*/ }, setNewsItem.bind(null));
   }, [sendRequest, itemId]);
 
   const likesHandler = () => {

@@ -58,11 +58,11 @@ const News = () => {
     router.push(`/news/${id}`);
   };
 
-  const pathname = usePathname();
-  const calcURL = pathname.includes('en') ? 'en/news' : 'news';
+  // const pathname = usePathname();
+  // const calcURL = pathname.includes('en') ? 'en/news' : 'news';
 
   useEffect(() => {
-    sendRequest({ url: calcURL }, setNewsList.bind(null));
+    sendRequest({ url: 'news' /*calcURL*/ }, setNewsList.bind(null));
   }, [sendRequest]);
 
   const [latest, ...others] = newsList;

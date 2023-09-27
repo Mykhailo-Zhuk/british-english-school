@@ -5,7 +5,7 @@ import { NewsItem } from '../index';
 import { ScrollAreaScrollbar } from '@radix-ui/react-scroll-area';
 import { usePathname, useRouter } from 'next/navigation';
 import { RestNewsSkeleton } from '@/components/skeletons/NewsSkeletons';
-import { useTranslations } from 'next-intl';
+// import { useTranslations } from 'next-intl';
 
 const RestNews = ({ itemId }) => {
   const [newsItems, setNewsItems] = useState([]);
@@ -13,11 +13,11 @@ const RestNews = ({ itemId }) => {
   const router = useRouter();
   const t = useTranslations('news_page');
 
-  const pathname = usePathname();
-  const calcURL = pathname.includes('en') ? 'en/news' : 'news';
+  // const pathname = usePathname();
+  // const calcURL = pathname.includes('en') ? 'en/news' : 'news';
 
   useEffect(() => {
-    sendRequest({ url: calcURL }, setNewsItems.bind(null));
+    sendRequest({ url: 'news' /*calcURL*/ }, setNewsItems.bind(null));
   }, [sendRequest]);
 
   const getIdHandler = (id) => {

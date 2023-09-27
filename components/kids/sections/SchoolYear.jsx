@@ -3,7 +3,7 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 import useHttp from '@/hooks/useHttp';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+// import { usePathname } from 'next/navigation';
 import { Fragment, useEffect, useState } from 'react';
 
 const SchoolYear = () => {
@@ -11,11 +11,11 @@ const SchoolYear = () => {
   const { sendRequest, error, isLoading } = useHttp();
   const t = useTranslations('school_year');
 
-  const pathname = usePathname();
-  const calcURL = pathname.includes('en') ? 'en/courses/kids/schedule' : 'courses/kids/schedule';
+  // const pathname = usePathname();
+  // const calcURL = pathname.includes('en') ? 'en/courses/kids/schedule' : 'courses/kids/schedule';
 
   useEffect(() => {
-    sendRequest({ url: calcURL }, setCoursesSchedule.bind(null));
+    sendRequest({ url: 'courses/kids/schedule' /*calcURL*/ }, setCoursesSchedule.bind(null));
   }, [sendRequest]);
 
   return (

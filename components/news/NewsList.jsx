@@ -17,11 +17,11 @@ const NewsList = () => {
   const router = useRouter();
   const t = useTranslations('news_page');
 
-  const pathname = usePathname();
-  const calcURL = pathname.includes('en') ? 'en/news' : 'news';
+  // const pathname = usePathname();
+  // const calcURL = pathname.includes('en') ? 'en/news' : 'news';
 
   useEffect(() => {
-    sendRequest({ url: calcURL }, setNewsList.bind(null));
+    sendRequest({ url: 'news' /*calcURL*/ }, setNewsList.bind(null));
   }, [sendRequest]);
 
   const itemsPerPage = 8;
