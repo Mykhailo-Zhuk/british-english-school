@@ -8,11 +8,17 @@ import { CardItem, CourseCardSkeleton } from '../../main_page/index';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import icons from '@/public/icons/adult';
+import { useTranslations } from 'next-intl';
+import { usePathname } from 'next/navigation';
 
 const AdultCoursesList = () => {
   const [courses, setCourses] = useState([]);
   const { sendRequest, error, isLoading } = useHttp();
   const [currentPage, setCurrentPage] = useState(1);
+  const t = useTranslations('adult_courses_list');
+
+  const pathname = usePathname();
+  const calcURL = pathname.includes('en') ? 'en/courses' : 'courses';
 
   const itemsPerPage = 8;
   const totalPages = Math.ceil(courses?.adult?.length / itemsPerPage);
@@ -30,14 +36,14 @@ const AdultCoursesList = () => {
   const currentPageItems = courses?.adult?.slice(startIndex, endIndex);
 
   useEffect(() => {
-    sendRequest({ url: 'courses' }, setCourses.bind(null));
+    sendRequest({ url: calcURL }, setCourses.bind(null));
   }, [sendRequest]);
 
   return (
     <section className="w-full">
       <div className="py-10 lg:py-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-5 px-2">
-        <h1 className="text-2xl lg:text-4xl px-3">Курси англійської для дорослих</h1>
-        <p className="text-xl px-3">від А1 (Beginner) до C2 (Proficiency)</p>
+        <h1 className="text-2xl lg:text-4xl px-3">{t('title')}</h1>
+        <p className="text-xl px-3">{t('subtitle')}</p>
 
         <ScrollArea className="h-max max-h-[1700px] w-full rounded-md">
           <div className="flex my-2 xl:grid xl:grid-cols-4 xl:gap-2 flex-nowrap">
@@ -66,7 +72,7 @@ const AdultCoursesList = () => {
               height={18}
               className="mr-3"
             />
-            Показати більше груп
+            {t('more')}
           </Button>
         </div>
       </div>

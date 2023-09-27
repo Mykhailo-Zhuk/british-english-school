@@ -8,21 +8,27 @@ import {
   ProficiencyCardSkeleton,
   ExamsCardSkeleton,
 } from '@/components/skeletons/AdultCoursesSkeleton';
+import { useTranslations } from 'next-intl';
+import { usePathname } from 'next/navigation';
 
 const DetailedListOfCourses = () => {
   const [courses, setCourses] = useState([]);
   const { sendRequest, error, isLoading } = useHttp();
+  const t = useTranslations('detailed_list_of_courses');
+
+  const pathname = usePathname();
+  const calcURL = pathname.includes('en') ? 'en/courses/adult/details' : 'courses/adult/details';
 
   useEffect(() => {
-    sendRequest({ url: 'courses/adult/details' }, setCourses.bind(null));
+    sendRequest({ url: calcURL }, setCourses.bind(null));
   }, [sendRequest]);
 
   return (
     <section className="w-full">
       <div className="py-10 lg:py-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-6 px-5">
-        <h1 className="text-2xl lg:text-4xl">Які курси ми пропонуємо?</h1>
+        <h1 className="text-2xl lg:text-4xl">{t('title')}</h1>
         <div className="flex flex-col space-y-6">
-          <h1 className="text-xl lg:text-3xl">Курси англійської для дорослих</h1>
+          <h1 className="text-xl lg:text-3xl">{t('adult')}</h1>
           <div className="flex flex-wrap md:grid md:grid-cols-2 xl:grid-cols-3 gap-5">
             {isLoading
               ? Array.from({ length: 6 }, (_, i) => i + 1).map((_, id) => {
@@ -40,7 +46,7 @@ const DetailedListOfCourses = () => {
           </div>
         </div>
         <div className="flex flex-col space-y-6">
-          <h1 className="text-xl lg:text-3xl">Програми для вашого професійного розвитку</h1>
+          <h1 className="text-xl lg:text-3xl">{t('dev_program')}</h1>
           <div className="flex flex-wrap md:grid md:grid-cols-2 xl:grid-cols-3 gap-5">
             {isLoading
               ? Array.from({ length: 2 }, (_, i) => i + 1).map((_, id) => {
@@ -58,7 +64,7 @@ const DetailedListOfCourses = () => {
           </div>
         </div>
         <div className="flex flex-col space-y-6">
-          <h1 className="text-xl lg:text-3xl">Курси з підготовки до міжнародних іспитів</h1>
+          <h1 className="text-xl lg:text-3xl">{t('external_exam')}</h1>
           <div className="flex flex-wrap md:grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {isLoading
               ? Array.from({ length: 2 }, (_, i) => i + 1).map((_, id) => {

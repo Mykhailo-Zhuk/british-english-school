@@ -9,13 +9,19 @@ import useHttp from '@/hooks/useHttp';
 import { Skeleton } from '../../ui/skeleton';
 import Link from 'next/link';
 import CourseCardSkeleton from '@/components/skeletons/CourseCardSkeleton';
+import { useTranslations } from 'next-intl';
+import { usePathname } from 'next/navigation';
 
 const CourseCards = ({ title, link, value }) => {
   const [courses, setCourses] = useState([]);
   const { sendRequest, error, isLoading } = useHttp();
+  const t = useTranslations('course_cards');
+
+  const pathname = usePathname();
+  const calcURL = pathname.includes('en') ? 'en/courses' : 'courses';
 
   useEffect(() => {
-    sendRequest({ url: 'courses' }, setCourses.bind(null));
+    sendRequest({ url: calcURL }, setCourses.bind(null));
   }, []);
 
   const filteredList = courses[value];
@@ -25,25 +31,21 @@ const CourseCards = ({ title, link, value }) => {
       <div className="py-10 px-2 sm:px-5 flex flex-col h-max w-full max-w-[1320px] mx-auto ">
         <div className="h-max inline-flex justify-between items-center px-3">
           <p className="text-sm md:text-xl">
-            {isLoading ? (
-              <Skeleton className="w-48 md:w-64 h-8 rounded-lg" />
-            ) : (
-              `Англійська для ${title}`
-            )}
+            {isLoading ? <Skeleton className="w-48 md:w-64 h-8 rounded-lg" /> : title}
           </p>
           <Link href={value}>
             <Button variant="secondary">
               {isLoading ? (
-                <Skeleton className="w-32 h-8 rounded-lg  md:block hidden" />
+                <Skeleton className="w-32 h-8 rounded-lg md:block hidden" />
               ) : (
-                <span className="md:block hidden">{`Всі курси для ${link}`}</span>
+                <span className="md:block hidden mx-2">{link}</span>
               )}
               &#707;
             </Button>
           </Link>
         </div>
-        <ScrollArea className="h-max w-[94vw] md:w-full rounded-md">
-          <div className="flex space-x-5 my-3 flex-nowrap w-[94vw] overflow-auto">
+        <ScrollArea className="h-max w-full rounded-md">
+          <div className="flex space-x-2 my-3 w-full">
             {error ? (
               <p className="text-xl text-center p-8">{error}</p>
             ) : (
@@ -59,7 +61,7 @@ const CourseCards = ({ title, link, value }) => {
               : null}
 
             {!filteredList?.length && !error ? (
-              <p className="text-xl text-center p-8">We have no courses</p>
+              <p className="text-xl text-center p-8">{t('error')}</p>
             ) : null}
           </div>
           <ScrollAreaScrollbar orientation="horizontal" />

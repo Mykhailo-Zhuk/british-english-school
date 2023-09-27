@@ -8,24 +8,29 @@ import { Button } from '@/components/ui/button';
 import { Form, FormField, FormItem, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { toast } from '@/components/ui/use-toast';
-
-const FormSchema = z.object({
-  email: z.string().email({
-    message: 'Введіть коректну адресу електронної пошти.',
-  }),
-});
+import { useTranslations } from 'next-intl';
 
 const SubscribeInput = () => {
+  const t = useTranslations('subscribe');
+
+  const FormSchema = z.object({
+    email: z.string().email({
+      message: t('error.email'),
+    }),
+  });
+
   const form = useForm({
     resolver: zodResolver(FormSchema),
   });
 
   const onSubmit = (data) => {
     toast({
-      title: 'Ви підписалися на оновлення.',
+      title: t('notification'),
       description: (
         <div className="mt-2 w-[340px] rounded-md">
-          <p className="text-black text-base">Ваш email: {data.email}.</p>
+          <p className="text-black text-base">
+            {t('email')}: {data.email}.
+          </p>
         </div>
       ),
     });
@@ -57,7 +62,7 @@ const SubscribeInput = () => {
           type="submit"
           size="lg"
           className="text-sm text-white subscribe-action-btn sm:h-16 w-full sm:w-auto">
-          Підписатися
+          {t('subscribe')}
         </Button>
       </form>
     </Form>

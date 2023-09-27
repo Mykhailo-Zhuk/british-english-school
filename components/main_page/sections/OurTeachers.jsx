@@ -1,28 +1,29 @@
+import { useTranslations } from 'next-intl';
 import { AspectRatio } from '../../ui/aspect-ratio';
-import { Button } from '../../ui/button';
 import { TeacherSkill } from '../index';
 
-const skillsLeft = [
-  { label: 'Professional', description: 'постійно вдосконалюють свої навички' },
-  { label: 'Experienced', description: 'із досвідом викладання від 3 років' },
-  {
-    label: 'Qualified',
-    description:
-      'мають міжнародні викладацькі кваліфікації: CELTA, DELTA, CELT-P, CELT-S, IHCYLT, TYLEC, TKT',
-  },
-];
-
-const skillsRight = [
-  { label: 'Unique', description: 'проходять суворий відбір та регулярний моніторинг' },
-  { label: 'Equipped', description: 'володіють всіма кращими методиками' },
-  { label: 'Universal', description: 'ведуть різні програми та вікові групи офлайн та онлайн' },
-];
-
 const OurTeachers = () => {
+  const t = useTranslations('our_teachers');
+
+  const skillsLeft = [
+    { label: t('professional_label'), description: t('professional_desc') },
+    { label: t('experienced_label'), description: t('experienced_desc') },
+    {
+      label: t('qualified_label'),
+      description: t('qualified_desc'),
+    },
+  ];
+
+  const skillsRight = [
+    { label: t('unique_label'), description: t('unique_desc') },
+    { label: t('equipped_label'), description: t('equipped_desc') },
+    { label: t('universal_label'), description: t('universal_desc') },
+  ];
+
   return (
     <section className="w-full">
       <div className="py-10 px-5 md:py-20 max-w-[1320px] mx-auto flex flex-col space-y-12">
-        <h1 className="text-2xl md:text-3xl text-left">Наші викладачі</h1>
+        <h1 className="text-2xl md:text-3xl text-left">{t('our_teacher')}</h1>
         <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-6">
           <div className="w-full md:w-1/3 flex flex-col space-y-8">
             {skillsLeft.map((item, index) => {

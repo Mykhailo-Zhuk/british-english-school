@@ -1,3 +1,5 @@
+'use client';
+
 import useHttp from '@/hooks/useHttp';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
@@ -5,16 +7,21 @@ import NewsItem from './NewsItem';
 import { NewsItemsSkeleton } from '../skeletons/NewsSkeletons';
 import { Button } from '../ui/button';
 import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from 'react-icons/bs';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 
 const NewsList = () => {
   const [newsList, setNewsList] = useState([]);
   const { sendRequest, error, isLoading } = useHttp();
   const [currentPage, setCurrentPage] = useState(1);
   const router = useRouter();
+  const t = useTranslations('news_page');
+
+  const pathname = usePathname();
+  const calcURL = pathname.includes('en') ? 'en/news' : 'news';
 
   useEffect(() => {
-    sendRequest({ url: 'news' }, setNewsList.bind(null));
+    sendRequest({ url: calcURL }, setNewsList.bind(null));
   }, [sendRequest]);
 
   const itemsPerPage = 8;
@@ -45,10 +52,10 @@ const NewsList = () => {
     <section className="w-full">
       <div className="pt-20 pb-10 lg:pb-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-6 px-5">
         <div className="flex w-max space-x-4 text-sm text-[#A7A7A7]">
-          <Link href="/">Головна</Link> <span className="mx-1">&#707;</span>
-          <p>Новини</p>
+          <Link href="/">{t('main')}</Link> <span className="mx-1">&#707;</span>
+          <p>{t('title')}</p>
         </div>
-        <h1 className="text-2xl lg:text-4xl">Новини</h1>
+        <h1 className="text-2xl lg:text-4xl">{t('title')}</h1>
         <div className="flex flex-col md:flex-row space-y-5 md:space-y-0 md:flex-wrap">
           {error && <p className="w-full text-center text-3xl p-4">{error}</p>}
 
@@ -62,7 +69,7 @@ const NewsList = () => {
               return <NewsItem key={item.id} getId={getIdHandler} news={item} />;
             })
           ) : (
-            <p className="w-full text-center text-xl p-4">News not found</p>
+            <p className="w-full text-center text-xl p-4">{t('error')}</p>
           )}
           <div className="flex items-center justify-center w-full">
             {/* Pagination controls */}

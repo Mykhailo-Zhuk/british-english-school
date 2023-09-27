@@ -1,26 +1,26 @@
-import { AspectRatio } from '@/components/ui/aspect-ratio';
+'use client';
 import images from '@/public/images';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
-const content = [
-  {
-    title: 'Фідбеки від вчителя',
-    description:
-      'Індивідуальний фідбек містить інформацію про те, що проходили під час навчання, кількість пропусків, коментарі до виконання домашніх завдань, результати тестів та рекомендації від викладача',
-  },
-  {
-    title: 'Персональний менеджер',
-    description:
-      "Безпека дітей для нас дуже важлива. Ми зв'яжемося з вами у разі, якщо дитина пропускає заняття без попередження або виходить раніше",
-  },
-  {
-    title: 'Батьківські збори',
-    description:
-      'Двічі на рік — восени та навесні — ми проводимо батьківські зібрання, на яких наша команда ділиться успіхами у навчанні дітей, і де можна задати питання академічному директору',
-  },
-];
-
 const BenefitsOfKidCourse = () => {
+  const t = useTranslations('benefits_kids');
+
+  const content = [
+    {
+      title: t('feedback'),
+      description: t('feedback_desc'),
+    },
+    {
+      title: t('manager'),
+      description: t('manager_desc'),
+    },
+    {
+      title: t('parents'),
+      description: t('parents_desc'),
+    },
+  ];
+
   return (
     <section className="w-full">
       <div className="py-10 md:py-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-12 px-5">
@@ -29,14 +29,9 @@ const BenefitsOfKidCourse = () => {
             <Image src={images.parents} alt="parents" />
           </div>
           <div className="w-full md:w-8/12 flex flex-col space-y-3">
-            <h1 className="text-2xl md:text-3xl">Регулярна комунікація з батьками</h1>
-            <p className="text-xl text-justify">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis veniam modi earum
-              tenetur voluptate hic?
-            </p>
-            <p className="text-xl text-justify">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, enim?
-            </p>
+            <h1 className="text-2xl md:text-3xl">{t('title')}</h1>
+            <p className="text-xl text-justify">{t('first_subtitle')}</p>
+            <p className="text-xl text-justify">{t('second_subtitle')}</p>
           </div>
         </div>
         <div className="flex flex-col md:flex-row space-y-5 md:space-y-0 md:space-x-5 p-2">

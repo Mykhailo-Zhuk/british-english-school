@@ -1,47 +1,50 @@
-import React from 'react';
+'use client';
+
 import icons from '@/public/icons/adult';
 import Image from 'next/image';
-
-const contentToRender = [
-  {
-    value: '4000+',
-    description: 'студентів пройшли навчання за рік',
-  },
-  {
-    value: '80+',
-    description: 'кваліфікованих викладачів',
-  },
-  {
-    value: '14 років',
-    description: 'успішно навчаємо англійській мові',
-  },
-  {
-    value: '25',
-    description: 'навчальних програм для різних цілей і рівнів',
-  },
-  {
-    icon: icons.people,
-    description: 'Підготовчий центр Cambridge English',
-  },
-  {
-    icon: icons.document,
-    description: 'Строгий контроль якості навчання',
-  },
-  {
-    icon: icons.web,
-    description: 'Міжнародні стандарти навчання',
-  },
-  {
-    icon: icons.chat,
-    description: 'Персональний менеджер у кожного студента',
-  },
-];
+import { useTranslations } from 'next-intl';
 
 const WhyWeAreTrusted = () => {
+  const t = useTranslations('why_we_are_trusted');
+
+  const contentToRender = [
+    {
+      value: '4000+',
+      description: t('amount_of_students'),
+    },
+    {
+      value: '80+',
+      description: t('teachers'),
+    },
+    {
+      value: `14 ${t('years')}`,
+      description: t('years_of_teaching'),
+    },
+    {
+      value: '25',
+      description: t('programs'),
+    },
+    {
+      icon: icons.people,
+      description: t('center'),
+    },
+    {
+      icon: icons.document,
+      description: t('strict'),
+    },
+    {
+      icon: icons.web,
+      description: t('standarts'),
+    },
+    {
+      icon: icons.chat,
+      description: t('menager'),
+    },
+  ];
   return (
     <section className="w-full bg-accent">
       <div className="py-10 lg:py-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-6 px-5">
-        <h1 className="text-2xl lg:text-4xl text-center lg:text-left">Чому нам довіряють</h1>
+        <h1 className="text-2xl lg:text-4xl text-center lg:text-left">{t('title')}</h1>
         <div className="flex flex-col md:flex-row md:flex-wrap">
           {contentToRender?.map((item, index) => {
             return (

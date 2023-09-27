@@ -25,11 +25,409 @@
       "address": "Lorem ipsum dolor sit amet, eam pericula corrumpit ne, sit volutpat sententiae neglegentur in."
     }
   },
+
+  "top_choose_group": {
+    "title": "English courses in Lviv by British English",
+    "english_for_adult": "English for adult",
+    "english_for_teenagers": "English for teenagers",
+    "english_for_kids": "English for kids",
+    "choose_group": "Please choose group",
+    "search_group": "Seaching...",
+    "notification": "You choice:",
+    "no_group": "Group not found.",
+    "pick_group": "Pick group"
+  },
+
+  "top_statistic": {
+    "students": "students per academic year",
+    "teachers": "certified teachers",
+    "duration": "we teach English",
+    "duration_item": "14 years",
+    "license": "License",
+    "license_source": "Official training center №52374"
+  },
+
+  "course_cards": {
+    "adult_title": "English for adults",
+    "adult_link": "All courses for adults",
+    "teenagers_title": "English for teenagers 13–17 years old",
+    "teenagers_link": "All courses for teenagers",
+    "kids_title": "English for kids 6–12 years old",
+    "kids_link": "All courses for kids",
+    "error": "Courses not found"
+  },
+
+  "how_to_sign": {
+    "first": {
+      "title": "Application",
+      "action": "Leave a request",
+      "description": "Fill out the application below and our managers will contact you",
+      "description_kids": "We will tell you about the training and answer all your questions."
+    },
+    "second": {
+      "title": "Level test",
+      "description": "Take our online test to determine your level",
+      "description_one": "Children aged 6-10 are tested by teachers, the date and time are agreed upon during the consultation.",
+      "description_two": "Children aged 11-12 can take the test online:",
+      "action": "Take the test",
+      "action_kids": "Determining the level"
+    },
+
+    "third": {
+      "description": "We will offer training program options and select a convenient class schedule",
+      "description_kids": "Our managers will help you choose the best course for your child.",
+      "action": "Selecting a program",
+      "action_kids": "Choosing a course"
+    },
+    "fourth": {
+      "description": "You will get access to your personal account, where you will have all the information about the course and your progress in learning",
+      "description_kids": "It remains to wait for the start date of the course, and the child can start studying!",
+      "action": "Start of classes",
+      "action_kids": "Training"
+    },
+    "how_to_sign": "How do I sign up for an English course?",
+    "how_to_sign_kids": "How do I enroll my child in English?"
+  },
+
+  "group_form": {
+    "let_choose": "Let us find a group for you!",
+    "error": {
+      "firstName": "The name must be at least 2 characters long.",
+      "email": "Enter a valid email address.",
+      "phoneNumber": "Enter the correct phone number.",
+      "agree": "You need to agree to the terms and conditions."
+    },
+    "notification": {
+      "title": "The following data has been saved:",
+      "name": "Name",
+      "email": "Еmail",
+      "phoneNumber": "Phone number",
+      "message": "Your message"
+    },
+    "enter_email": "Enter your email",
+    "enter_phoneNumber": "Enter your phone number",
+    "enter_message": "Enter your message",
+    "agree_personal": "Consent to the processing of personal data",
+    "sending": "Sending...",
+    "leave_request": "Leave a request"
+  },
+
   "sheet": {
     "menu": "Menu",
     "course": "Choose course",
     "about": "About Us",
     "news": "News",
     "contact": "Contacts"
+  },
+
+  "format_of_learning": {
+    "title": "English courses in 2 formats",
+    "subtitle": "English for children at our center is taught in small groups of 8 or 10 students",
+    "online": "Online",
+    "online_description": "Classes in online groups are held in the format of Zoom conferences using a permanent link that is valid for your group",
+    "offline": "Offline",
+    "offline_description": "If you want to attend English courses in Kyiv, we invite you to our center at 13/2-b Yaroslaviv Val Street."
+  },
+
+  "how_take_place": {
+    "title": "How classes are held at our English language school",
+    "only_english": "Only English",
+    "two_times": "2–3 times per week",
+    "ten_students": "In a group of 8 or 10 students",
+    "lessons": "Classes 90, 135 or 180 minutes",
+    "native_speakers": "Ukrainian teachers and native speakers",
+    "online": "Online via Zoom or offline at our center",
+    "adaptive": "Programs adapted to the age and goals of students",
+    "reviewed": "Based on proven textbooks and author's materials"
+  },
+
+  "our_teachers": {
+    "our_teacher": "Our teachers",
+    "professional_label": "Professional",
+    "professional_desc": "constantly improve their skills",
+    "experienced_label": "Experienced",
+    "experienced_desc": "with at least 3 years of teaching experience",
+    "qualified_label": "Qualified",
+    "qualified_desc": "have international teaching qualifications: CELTA, DELTA, CELT-P, CELT-S, IHCYLT, TYLEC, TKT",
+    "unique_label": "Unique",
+    "unique_desc": "undergo strict selection and regular monitoring",
+    "equipped_label": "Equipped",
+    "equipped_desc": "have all the best techniques",
+    "universal_label": "Universal",
+    "universal_desc": "run different programs and age groups offline and online"
+  },
+
+  "test_action": {
+    "free_test": "Free online English test",
+    "desc": "Want to find out your level right now? Take our test and find out which training programs are right for you!",
+    "run_test": "Take the test"
+  },
+
+  "why_is_best": {
+    "title": "Why British School is the best English language school",
+    "program": "Large selection of training programs",
+    "program_desc": "English Language Improvement Program, Spoken English, Exam Preparation, EIT Preparation, Business and Legal English courses and our other programs",
+    "missed_classes": "Making up missed classes",
+    "missed_classes_desc": "In case of missing 3 or more classes, we will organize free practice with a teacher for you",
+    "control": "Monitoring learning progress",
+    "control_desc": "It is important to us that our English courses bring you real results. That's why we conduct placement tests after each module and send regular feedback to parents in our children's and teenage groups.",
+    "speaking_club": "Speaking clubs",
+    "speaking_club_desc": "On Saturdays and Sundays, you can attend our specialized speaking clubs on various topics for free",
+    "menager": "Personal manager",
+    "menager_desc": "Each student is assigned a personal manager to whom you can ask any questions about your English course",
+    "space": "Educational space in the center of Kyiv",
+    "space_desc": "It is very convenient to get to us - we are located 5 minutes from the Zoloti Vorota metro station"
+  },
+  "reviews": { "title": "Reviews", "error": "Testimonials not found" },
+
+  "contacts": { "title": "How to contact us?" },
+
+  "news": { "title": "News", "all": "All news", "error": "News not found" },
+
+  "subscribe": {
+    "title": "Subscribe to the newsletter",
+    "subtitle": "Vocabulary, tips and articles on learning English",
+    "error": { "email": "Enter a valid email address." },
+    "email": "Your email",
+    "notification": "You've signed up for updates.",
+    "subscribe": "Subscribe"
+  },
+
+  "footer": {
+    "student": "To the student",
+    "education_center": "Our educational center",
+    "courses": "English language courses",
+    "contact": "Contacts",
+    "maps": "Show on Google Maps",
+    "official": "2009-2023 Official training center in Ukraine, license #52374",
+    "agreement": "Training agreement",
+    "contact_data": "Contact details",
+    "news": "News",
+    "adults": "English for adults",
+    "teenagers": "For teenagers aged 13-17",
+    "kids": "For children 6-12 years old",
+    "address": "Kyiv, 01054, Ukraine, 13/2-B Yaroslaviv Val St., office 39. The nearest metro station is Zoloti Vorota"
+  },
+
+  "choose_adult_group": {
+    "main": "Home",
+    "adult": "English for adults",
+    "desc_first": "These words and letters have been altered by addition or deletion, so intentionally making its meaning meaningless, it is not true, correct or understandable Latin anymore.",
+    "desc_second": "These words and letters have been altered by addition or deletion, so intentionally making its meaning meaningless, it is not true, correct or understandable Latin anymore.",
+    "desc_third": "These words and letters have been altered by addition or deletion, so intentionally making its meaning meaningless, it is not true, correct or understandable Latin anymore.",
+    "find": "Find a group"
+  },
+
+  "courses_list": {
+    "error": "Courses not found",
+    "minutes": "in 60 minutes",
+    "module": "per module",
+    "currency": "UAH",
+    "appointment": "Make an appointment",
+    "more": "Show more groups",
+    "notification": "You have selected the following parameters to search for:",
+    "type": "Course type",
+    "program": "Course program",
+    "place": "Location",
+    "time": "Class time",
+    "teacher": "Teacher",
+    "search": "Search",
+    "reset": "Reset filters"
+  },
+
+  "adult_courses_list": {
+    "title": "English courses for adults",
+    "subtitle": "from A1 (Beginner) to C2 (Proficiency)",
+    "more": "Show more groups"
+  },
+
+  "how_we_learn": {
+    "title": "How do we teach English?",
+    "subtitle_first": "Classes in English only",
+    "first_desc": "In a professional context, it is often the case that private or corporate clients of Corder publish a publication that will be made and presented with the actual content still not ready.",
+    "subtitle_second": "Different teaching methods",
+    "second_desc": "In a professional context, it is often the case that private or corporate clients of Corder publish a publication that will be made and presented with the actual content still not ready.",
+    "footer": "In a professional context, it is often the case that private or corporate clients of Corder publish a publication that will be made and presented with the actual content still not ready. Think of a press blog that is filled with content hourly on the day it will go live."
+  },
+
+  "benefits": {
+    "title": "Advantages of studying with us",
+    "main_desc": "Most of its text consists of sections 1.10.32-3 from Cicero's De finibus bonorum in malorum (on the boundaries of good and evil; finibus can be translated as goals).",
+    "online": "Online",
+    "online_desc": "Most of his text consists of sections 1.10.32-3 from Cicero",
+    "offline": "Offline",
+    "offline_desc": "Most of his text consists of sections 1.10.32-3 from Cicero",
+    "benefit_first": "However, reviewers tend to be distracted by the clear content",
+    "benefit_second": "However, reviewers tend to be distracted by the clear content",
+    "benefit_third": "However, reviewers tend to be distracted by the clear content",
+    "benefit_forth": "However, reviewers tend to be distracted by the clear content"
+  },
+
+  "books_to_learn": {
+    "title": "What textbooks do we use?",
+    "desc_first": "These words and letters have been altered by addition or deletion, so intentionally making its meaning meaningless, it is not true, correct or understandable Latin anymore.",
+    "desc_second": "These words and letters have been altered by addition or deletion, so intentionally making its meaning meaningless, it is not true, correct or understandable Latin anymore.",
+    "list": {
+      "first": "Richard McClintock",
+      "first_desc": "These words and letters have been altered by addition or deletion, so intentionally making its meaning meaningless, it is not true, correct or understandable Latin anymore.",
+      "second": "Richard McClintock",
+      "second_desc": "These words and letters have been altered by addition or deletion, so intentionally making its meaning meaningless, it is not true, correct or understandable Latin anymore.",
+      "third": "Richard McClintock",
+      "third_desc": "These words and letters have been altered by addition or deletion, so intentionally making its meaning meaningless, it is not true, correct or understandable Latin anymore."
+    }
+  },
+
+  "who_will_teach": {
+    "title": "Who will teach you?",
+    "skill_first": "These words and letters have been altered by addition or deletion, so intentionally making its meaning meaningless, it is not true, correct or understandable Latin anymore.",
+    "skill_second": "These words and letters have been altered by addition or deletion, so intentionally making its meaning meaningless, it is not true, correct or understandable Latin anymore.",
+    "skill_third": "These words and letters have been altered by addition or deletion, so intentionally making its meaning meaningless, it is not true, correct or understandable Latin anymore.",
+    "skill_forth": "These words and letters have been altered by addition or deletion, so intentionally making its meaning meaningless, it is not true, correct or understandable Latin anymore. These are words and letters that have been changed by adding or deleting"
+  },
+
+  "detailed_list_of_courses": {
+    "title": "What courses do we offer?",
+    "adult": "English courses for adults",
+    "dev_program": "Programs for your professional development",
+    "details": "Read more",
+    "external_exam": "Courses to prepare for international exams"
+  },
+
+  "why_we_are_trusted": {
+    "title": "Why we are trusted",
+    "amount_of_students": "students were trained in a year",
+    "teachers": "qualified teachers",
+    "years_of_teaching": "we successfully teach English",
+    "years": "years",
+    "programs": "training programs for different purposes and levels",
+    "center": "British English Preparatory Center",
+    "strict": "Strict quality control of training",
+    "standarts": "International training standards",
+    "menager": "Each student has a personal manager"
+  },
+
+  "choose_kids_group": {
+    "main": "Home",
+    "title": "English courses for children",
+    "desc_first": "These words and letters have been altered by addition or deletion, so intentionally making its meaning meaningless, it is not true, correct or understandable Latin anymore.",
+    "desc_second": "These words and letters have been altered by addition or deletion, so intentionally making its meaning meaningless, it is not true, correct or understandable Latin anymore.",
+    "desc_third": "These words and letters have been altered by addition or deletion, so intentionally making its meaning meaningless, it is not true, correct or understandable Latin anymore.",
+    "error": {
+      "phoneNumber": "The format is incorrect. Use the sample +380 (44) 580 33 00",
+      "email": "The format is incorrect. Use the sample example@gmail.com"
+    },
+    "save": "Your data is saved",
+    "callback": "We will contact you shortly",
+    "choose_group": "Find a group",
+    "leave_contacts": "Leave your contacts",
+    "phone": "Phone",
+    "or": "or",
+    "cancel": "Cancel",
+    "send": "Send",
+    "email": "Email"
+  },
+
+  "range_of_ages": {
+    "title": "Age categories",
+    "years": "years",
+    "top_first_desc": "These words and letters have been altered by addition or deletion, so intentionally making its meaning meaningless, it is not true, correct or understandable Latin anymore.",
+    "top_second_desc": "These words and letters have been altered by addition or deletion, so intentionally making its meaning meaningless, it is not true, correct or understandable Latin anymore.",
+    "first_subtitle": "Vocabulary, tips and articles on learning English",
+    "middle_first_desc": "These words and letters have been altered by addition or deletion, so intentionally making its meaning meaningless, it is not true, correct or understandable Latin anymore.",
+    "middle_second_desc": "These words and letters have been altered by addition or deletion, so intentionally making its meaning meaningless, it is not true, correct or understandable Latin anymore.",
+    "second_subtitle": "Vocabulary, tips and articles on learning English",
+    "end_first_desc": "These words and letters have been altered by addition or deletion, so intentionally making its meaning meaningless, it is not true, correct or understandable Latin anymore.",
+    "end_second_desc": "These words and letters have been altered by addition or deletion, so intentionally making its meaning meaningless, it is not true, correct or understandable Latin anymore."
+  },
+
+  "school_year": {
+    "title": "School year",
+    "first_desc": "In a professional context, it is often the case that private or corporate clients of Corder publish a publication that will be made and presented with the actual content still not ready.",
+    "second_desc": "These words and letters have been altered by addition or deletion, so intentionally making its meaning meaningless, it is not true, correct or understandable Latin anymore.",
+    "error": "Courses not found",
+    "years": "years"
+  },
+
+  "how_take_place_kids": {
+    "title": "How will your child study?",
+    "first_desc": "These are words and letters that have been altered by adding or deleting, so deliberately making its meaning meaningless",
+    "second_desc": "These are words and letters that have been altered by adding or deleting, so deliberately making its meaning meaningless",
+    "programs": "Flexible programs",
+    "programs_desc": "These are words and letters that have been altered by adding or deleting, so deliberately making its meaning meaningless",
+    "interactive": "An interactive approach",
+    "interactive_desc": "These are words and letters that have been altered by adding or deleting, so deliberately making its meaning meaningless",
+    "materials": "Training materials",
+    "materials_desc": "These are words and letters that have been altered by adding or deleting, so deliberately making its meaning meaningless",
+    "support": "Support and implementation",
+    "support_desc": "These are words and letters that have been altered by adding or deleting, so deliberately making its meaning meaningless"
+  },
+
+  "benefits_kids": {
+    "title": "Regular communication with parents",
+    "first_subtitle": "Vocabulary, tips and articles on learning English",
+    "second_subtitle": "Vocabulary, tips and articles on learning English",
+    "feedback": "Feedback from the teacher",
+    "feedback_desc": "Individual feedback contains information about the classes, the number of absences, comments on homework, test results, and recommendations from the teacher",
+    "manager": "Personal manager",
+    "manager_desc": "The safety of children is very important to us. We will contact you if your child misses a class without notice or leaves early",
+    "parents": "Parents' meetings",
+    "parents_desc": "Twice a year - in the fall and spring - we hold parent meetings where our team shares our children's academic success and where you can ask questions to the academic director"
+  },
+
+  "choose_teenagers_group": {
+    "main": "Home",
+    "title": "English for teenagers and schoolchildren",
+    "first_desc": "In a professional context, it is often the case that private or corporate clients of Corder publish a publication that will be made and presented with the actual content still not ready.",
+    "second_desc": "These are words and letters that have been altered by adding or deleting, so deliberately making its meaning meaningless",
+    "third_desc": "These words and letters have been altered by addition or deletion, so intentionally making its meaning meaningless, it is not true, correct or understandable Latin anymore."
+  },
+
+  "program_description": {
+    "title": "Program for teenagers and schoolchildren (13-17 years old)",
+    "subtitle": "New level + preparation for Cambridge exams according to the level:",
+    "month": "months",
+    "month_desc": "These are words and letters that have been altered by adding or deleting, so deliberately making its meaning meaningless",
+    "month_subdesc": "In a professional context, it is often the case that private or corporate clients of Corder publish a publication that will be made and presented with the actual content still not ready.",
+    "feedback": "Parents receive feedback",
+    "feedback_desc": "In a professional context, it is often the case that private or corporate clients of Corder publish a publication that will be made and presented with the actual content still not ready.",
+    "features": "We take into account age peculiarities",
+    "features_desc": "In a professional context, it is often the case that private or corporate clients of Corder publish a publication that will be made and presented with the actual content still not ready.",
+    "schedule": "Convenient schedule",
+    "schedule_desc": "In a professional context, it is often the case that private or corporate clients of Corder publish a publication that will be made and presented with the actual content still not ready.",
+    "speaking_club": "Free conversation and grammar clubs",
+    "speaking_club_desc": "In a professional context, it is often the case that private or corporate clients of Corder publish a publication that will be made and presented with the actual content still not ready."
+  },
+
+  "exams_you_need": {
+    "title": "What exams do I need to take and when?",
+    "school": "Secondary schools",
+    "class": "class",
+    "deep_school": "Schools with in-depth language learning",
+    "desc": "In a professional context, it is often the case that private or corporate clients of Corder publish a publication that will be made and presented with the actual content still not ready."
+  },
+
+  "prepare_to_hmt": {
+    "title": "Preparing for NMT",
+    "first_desc": "In a professional context, it is often the case that private or corporate clients of Corder publish a publication that will be made and presented with the actual content still not ready.",
+    "second_desc": "These are words and letters that have been altered by adding or deleting, so deliberately making its meaning meaningless",
+    "third_desc": "This course is designed to provide thorough preparation for the NMT, including a detailed analysis of the exam structure, all types of tasks, and the development of the skills necessary to successfully pass the NMT in English.",
+    "first_question": "How do the classes go?",
+    "first_answer": "1 time per week for 90 minutes",
+    "second_question": "In what format?",
+    "second_answer": "Online and offline",
+    "third_question": "How many students are in the group?",
+    "third_answer": "Up to 12 (online) and up to 10 (offline)",
+    "forth_question": "What level?",
+    "forth_answer": "B1 (Pre Intermediate), B1+ (Intermediate), B2 (Upper Intermediate)",
+    "fifth_question": "How to study?",
+    "fifth_answer": "The course can be taken either separately or in parallel with an English course for teenagers"
+  },
+
+  "news_page": {
+    "title": "News",
+    "main": "Home",
+    "error": "News not found",
+    "instagram": "Subscribe to our instagram",
+    "rest": "Other news"
   }
 }

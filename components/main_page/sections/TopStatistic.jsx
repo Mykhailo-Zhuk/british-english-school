@@ -1,11 +1,17 @@
-const statistics = [
-  { label: '4000+', title: 'студентів за навчальний рік' },
-  { label: '70+', title: 'сертифікованих викладачів' },
-  { label: '14 років', title: 'навчаємо англійської' },
-  { label: 'Ліцензія', title: 'Офіційний підготовчий центр №52374' },
-];
+'use client';
+
+import { useTranslations } from 'next-intl';
 
 const TopStatistic = () => {
+  const t = useTranslations('top_statistic');
+
+  const statistics = [
+    { label: '4000+', title: t('students') },
+    { label: '70+', title: t('teachers') },
+    { label: t('duration_item'), title: t('duration') },
+    { label: t('license'), title: t('license_source') },
+  ];
+
   return (
     <section className="statistic-gradient w-full">
       <div className="py-20 px-5 max-w-[1320px] mx-auto h-max flex flex-col space-y-6 md:space-y-0 md:flex-row md:space-x-2">

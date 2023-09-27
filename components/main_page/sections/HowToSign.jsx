@@ -1,45 +1,37 @@
+import { useTranslations } from 'next-intl';
 import { Button } from '../../ui/button';
 
 const HowToSign = ({ kids = false }) => {
+  const t = useTranslations('how_to_sign');
+
   const context = [
     {
       id: '1',
-      title: 'Заявка',
-      description: [
-        "Заповніть заявку нижче, і наші менеджери зв'яжуться з вами",
-        kids && 'Ми розповімо, як проходить навчання, і відповімо на всі ваші запитання.',
-      ],
-      action: 'Залишити заявку',
+      title: t('first.title'),
+      description: [t('first.description'), kids && t('first.description_kids')],
+      action: t('first.action'),
       path: 'request',
     },
     {
       id: '2',
-      title: 'Тест рівня',
+      title: t('second.title'),
       description: [
-        !kids && 'Пройдіть наш онлайн-тест на визначення рівня',
-        kids && 'Дітей 6–10 років тестують викладачі, дату та час узгоджуємо при консультації.',
-        kids && 'Діти 11–12 років можуть пройти тестування онлайн:',
+        !kids && t('second.description'),
+        kids && t('second.description_one'),
+        kids && t('second.description_two'),
       ],
-      action: kids ? 'Визначення рівня' : 'Пройти тест',
+      action: kids ? t('second.action_kids') : t('second.action'),
       path: kids ? 'kids/test' : 'test',
     },
     {
       id: '3',
-      title: kids ? 'Вибір курсу' : 'Вибір програми',
-      description: [
-        kids
-          ? 'Наші менеджери допоможуть підібрати найкращий курс для вашої дитини.'
-          : 'Ми запропонуємо варіанти навчальних програм і підберемо зручний графік занять',
-      ],
+      title: kids ? t('third.action_kids') : t('third.action'),
+      description: [kids ? t('third.description_kids') : t('third.description')],
     },
     {
       id: '4',
-      title: kids ? 'Навчання' : 'Початок занять',
-      description: [
-        kids
-          ? 'Залишилося зачекати дати початку курсу, і дитина може починати навчання!'
-          : 'Ви отримаєте доступ в особистий кабінет, де буде вся інформація про курс та ваш прогрес у навчанні',
-      ],
+      title: kids ? t('fourth.action_kids') : t('fourth.action'),
+      description: [kids ? t('fourth.description_kids') : t('fourth.description')],
     },
   ];
 
@@ -47,7 +39,7 @@ const HowToSign = ({ kids = false }) => {
     <section className="how-to-sign w-full">
       <div className="py-10 lg:py-20 h-max w-full max-w-[1320px] mx-auto flex flex-col">
         <h1 className="w-full md:w-1/2 rounded-full p-5 text-2xl bg-accent text-black text-center">
-          {kids ? 'Як записати дитину на англійську?' : 'Як записатися на курси англійської мови?'}
+          {kids ? t('how_to_sign_kids') : t('how_to_sign')}
         </h1>
         <div className="flex flex-col md:flex-row md:space-x-4">
           <div className="w-full lg:1/2 xl:w-2/5 lg:mx-5">

@@ -9,7 +9,8 @@ import useHttp from '@/hooks/useHttp';
 import Image from 'next/image';
 import { LatestNewsSkeleton, OthersNewsSkeleton } from '../../skeletons/NewsSkeletons';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 
 const LatestNews = ({ latest, goToItem }) => {
   return (
@@ -51,13 +52,17 @@ const News = () => {
   const [newsList, setNewsList] = useState([]);
   const { sendRequest, error, isLoading } = useHttp();
   const router = useRouter();
+  const t = useTranslations('news');
 
   const goToItemHandler = (id) => {
     router.push(`/news/${id}`);
   };
 
+  const pathname = usePathname();
+  const calcURL = pathname.includes('en') ? 'en/news' : 'news';
+
   useEffect(() => {
-    sendRequest({ url: 'news' }, setNewsList.bind(null));
+    sendRequest({ url: calcURL }, setNewsList.bind(null));
   }, [sendRequest]);
 
   const [latest, ...others] = newsList;
@@ -66,14 +71,14 @@ const News = () => {
     <section className="w-full" id="news">
       <div className="py-10 md:py-20 max-w-[1320px] h-max px-5 max-h-[700px] mx-auto flex flex-col lg:space-x-12">
         <div className="flex justify-between">
-          <h3 className="text-2xl">Новини</h3>
+          <h3 className="text-2xl">{t('title')}</h3>
           <Button variant="link" className="text-sm hover:text-[#AA4965]">
-            <Link href={'news'}>Усі новини</Link>
+            <Link href={'news'}>{t('all')}</Link>
           </Button>
         </div>
 
         {newsList.length === 0 && !isLoading && !error ? (
-          <p className="w-full text-xl text-center p-8">Немає жодних новин</p>
+          <p className="w-full text-xl text-center p-8">{t('error')}</p>
         ) : null}
 
         {error ? (

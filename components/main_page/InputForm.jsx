@@ -10,25 +10,27 @@ import { Input } from '@/components/ui/input';
 import { toast } from '@/components/ui/use-toast';
 import { Checkbox } from '../ui/checkbox';
 import useHttp from '@/hooks/useHttp';
-
-const FormSchema = z.object({
-  username: z.string().min(2, {
-    message: "Ім'я повинно мати не менше 2 символів.",
-  }),
-  email: z.string().email({
-    message: 'Введіть коректну адресу електронної пошти.',
-  }),
-  phoneNumber: z.string().regex(/^\+?\d{9,15}$/, {
-    message: 'Введіть коректний номер телефону.',
-  }),
-  message: z.string(),
-  agree: z.boolean().refine((value) => value, {
-    message: 'Потрібно погодитися з умовами.',
-  }),
-});
+import { useTranslations } from 'next-intl';
 
 const InputForm = () => {
   const { sendRequest, error, isLoading } = useHttp();
+  const t = useTranslations('group_form');
+
+  const FormSchema = z.object({
+    username: z.string().min(2, {
+      message: t('error.firstName'),
+    }),
+    email: z.string().email({
+      message: t('error.email'),
+    }),
+    phoneNumber: z.string().regex(/^\+?\d{9,15}$/, {
+      message: t('error.phoneNumber'),
+    }),
+    message: z.string(),
+    agree: z.boolean().refine((value) => value, {
+      message: t('error.agree'),
+    }),
+  });
 
   const form = useForm({
     resolver: zodResolver(FormSchema),
@@ -39,12 +41,13 @@ const InputForm = () => {
 
   const onSubmit = (data) => {
     toast({
-      title: 'Збережено наступні дані:',
+      title: t('notification.title'),
       description: (
         <div className="mt-2 w-[340px] rounded-md">
           <p className="text-black text-base">
-            Ім'я: {data.username}; Еmail: {data.email}; Номер телефону: {data.phoneNumber}; Ваше
-            повідомлення: {data.message}, {data.personal}
+            {t('notification.name')}: {data.username}; {t('notification.email')}: {data.email};{' '}
+            {t('notification.phoneNumber')}: {data.phoneNumber}; {t('notification.message')}:{' '}
+            {data.message}, {data.personal}
           </p>
         </div>
       ),
@@ -66,7 +69,7 @@ const InputForm = () => {
           name="username"
           render={({ field }) => (
             <FormItem>
-              <Input placeholder="Ім'я" {...field} className="px-4 py-3" />
+              <Input placeholder={t('notification.name')} {...field} className="px-4 py-3" />
               <FormMessage />
             </FormItem>
           )}
@@ -76,7 +79,7 @@ const InputForm = () => {
           name="email"
           render={({ field }) => (
             <FormItem className="flex flex-col">
-              <Input {...field} type="email" id="email" placeholder="Введіть email" />
+              <Input {...field} type="email" id="email" placeholder={t('enter_email')} />
               <FormMessage />
             </FormItem>
           )}
@@ -86,7 +89,7 @@ const InputForm = () => {
           name="phoneNumber"
           render={({ field }) => (
             <FormItem className="flex flex-col">
-              <Input {...field} type="tel" id="phoneNumber" placeholder="Введіть номер телефону" />
+              <Input {...field} type="tel" id="phoneNumber" placeholder={t('enter_phoneNumber')} />
               <FormMessage />
             </FormItem>
           )}
@@ -99,7 +102,7 @@ const InputForm = () => {
               <textarea
                 {...field}
                 id="message"
-                placeholder="Введіть повідомлення"
+                placeholder={t('enter_message')}
                 className="border rounded p-2"
               />
               <FormMessage />
@@ -113,14 +116,14 @@ const InputForm = () => {
             <FormItem className="flex flex-col">
               <div className="flex space-x-2 items-center">
                 <Checkbox checked={field.value} onCheckedChange={field.onChange} />
-                <FormLabel>Згода на обробку персональних даних</FormLabel>
+                <FormLabel>{t('agree_personal')}</FormLabel>
               </div>
               <FormMessage />
             </FormItem>
           )}
         />
         <Button type="submit" className="w-full text-lg">
-          {isLoading ? 'Надсилаю...' : 'Залишити заявку'}
+          {isLoading ? t('sending') : t('leave_request')}
         </Button>
       </form>
     </Form>

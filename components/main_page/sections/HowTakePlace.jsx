@@ -1,25 +1,26 @@
 import { AspectRatio } from '../../ui/aspect-ratio';
 import icons from '@/public/icons';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
-const list = [
-  'Лише англійською',
-  '2–3 рази на тиждень',
-  'У групі 8 чи 10 студентів',
-  'Заняття 90, 135 чи 180 хв',
-  'Українські викладачі та носії мови',
-  'Онлайн через Zoom або офлайн в нашому центрі',
-  'Програми адаптовані під вік та цілі студентів',
-  'За перевіреними підручниками та авторськими матеріалами',
-];
-
 const HowTakePlace = () => {
+  const t = useTranslations('how_take_place');
+
+  const list = [
+    t('only_english'),
+    t('two_times'),
+    t('ten_students'),
+    t('lessons'),
+    t('native_speakers'),
+    t('online'),
+    t('adaptive'),
+    t('reviewed'),
+  ];
+
   return (
     <section className="bg-[#F8F8FA] w-full">
       <div className="py-10 md:py-20 px-5 max-w-[1320px] mx-auto flex flex-col space-y-14">
-        <h1 className="text-left text-2xl md:text-3xl">
-          Як проходять заняття в нашій школі англійської мови
-        </h1>
+        <h1 className="text-left text-2xl md:text-3xl">{t('title')}</h1>
         <div className="flex flex-col md:flex-row space-y-6 md:space-x-6">
           <ul className="w-full md:w-1/2 flex flex-col space-y-4">
             {list.map((item, index) => {

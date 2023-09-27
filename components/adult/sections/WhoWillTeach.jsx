@@ -1,17 +1,7 @@
+'use client';
+
 import { AspectRatio } from '@/components/ui/aspect-ratio';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import React from 'react';
-
-const skills = [
-  'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas sapiente eum vel minima recusandae in vitae omnis nesciunt quis accusantium.',
-  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit sunt, architecto neque sed maxime necessitatibus quaerat ratione accusantium, tempore sequi enim tenetur porro quod! Quas ratione voluptate corrupti aliquid minima.',
-];
-
-const skillsWithBorder = [
-  'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas sapiente eum vel minima recusandae in vitae omnis nesciunt quis accusantium.',
-  'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut enim explicabo eum commodi dolorem tempore modi, impedit eos velit eveniet corporis rem non, porro molestiae autem. Non vero repudiandae fuga! Assumenda facilis fuga culpa explicabo id distinctio maiores vero neque!',
-];
+import { useTranslations } from 'next-intl';
 
 const TeacherSkill = ({ item }) => {
   return (
@@ -23,11 +13,16 @@ const TeacherSkill = ({ item }) => {
 };
 
 const WhoWillTeach = () => {
+  const t = useTranslations('who_will_teach');
+
+  const skills = [t('skill_first'), t('skill_second')];
+
+  const skillsWithBorder = [t('skill_third'), t('skill_forth')];
   return (
     <section className="w-full">
       <div className="py-10 lg:py-20 flex flex-col h-max w-full max-w-[1320px] mx-auto space-y-7 px-5">
         <div className="h-max inline-flex justify-between items-center">
-          <p className="text-2xl lg:text-4xl mr-1">Хто вас навчатиме?</p>
+          <p className="text-2xl lg:text-4xl mr-1">{t('title')}</p>
         </div>
         <div className="flex flex-col space-y-6 md:flex-row md:space-x-6 md:space-y-0">
           <div className="w-full md:w-1/2">

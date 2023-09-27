@@ -1,42 +1,36 @@
-import { AspectRatio } from '@/components/ui/aspect-ratio';
-import React from 'react';
+'use client';
 
-const content = [
-  { question: 'Як проходять заняття?', answer: '1 раз на тиждень по 90 хвилин' },
-  { question: 'У якому форматі?', answer: 'Онлайн та офлайн' },
-  { question: 'Скільки студентів у групі?', answer: 'До 12 (онлайн) та до 10 (офлайн)' },
-  {
-    question: 'Який рівень?',
-    answer: 'B1 (Pre Intermediate), B1+ (Intermediate), B2 (Upper Intermediate)',
-  },
-  {
-    question: 'Як вчитися?',
-    answer: 'Курс можна проходити як окремо, так і паралельно з курсом англійської для підлітків',
-  },
-];
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { useTranslations } from 'next-intl';
 
 const PrepareToHMT = () => {
+  const t = useTranslations('prepare_to_hmt');
+
+  const content = [
+    { question: t('first_question'), answer: t('first_answer') },
+    { question: t('second_question'), answer: t('second_answer') },
+    { question: t('third_question'), answer: t('third_answer') },
+    {
+      question: t('forth_question'),
+      answer: t('forth_answer'),
+    },
+    {
+      question: t('fifth_question'),
+      answer: t('fifth_answer'),
+    },
+  ];
+
   return (
     <section className="w-full">
       <div className="py-10 ld:py-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-6 px-5">
-        <h1 className="text-2xl lg:text-4xl">Підготовка до НМТ</h1>
+        <h1 className="text-2xl lg:text-4xl">{t('title')}</h1>
         <div className="flex flex-col space-y-10 md:space-y-0 md:flex-row md:space-x-20 pb-10">
           <div className="w-full lg:w-3/5 flex flex-col space-y-2">
-            <p className="text-2xl max-w-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque optio adipisci,
-              impedit, asperiores eius incidunt magni, ea quasi itaque aliquid iusto debitis.
-            </p>
-            <p className="text-2xl max-w-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque optio adipisci,
-              impedit, asperiores eius incidunt magni, ea quasi itaque aliquid iusto debitis.
-            </p>
+            <p className="text-2xl max-w-lg">{t('first_desc')}</p>
+            <p className="text-2xl max-w-lg">{t('second_desc')}</p>
           </div>
           <div className="w-full lg:w-2/5 flex items-center justify-left">
-            <p className="text-xl max-w-md pl-5 border-l-4 border-l-[#A14669]">
-              Цей курс розраховано на ґрунтовну підготовку до НМТ, він включає в себе детальний
-              розбір структури іспиту, усіх типів завдань, пропрацювання навичок, необхідних для
-              успішного складання НМТ з англійської мови.
-            </p>
+            <p className="text-xl max-w-md pl-5 border-l-4 border-l-[#A14669]">{t('third_desc')}</p>
           </div>
         </div>
         <div className="flex flex-col space-y-10 lg:flex-row lg:space-x-10 lg:space-y-0">

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Image from 'next/image';
 import icons from '@/public/icons/adult';
 import { Button } from '../ui/button';
+import { useTranslations } from 'next-intl';
 
 const Condition = ({ condition }) => {
   const { label, value } = condition;
@@ -27,6 +28,7 @@ const Condition = ({ condition }) => {
 
 const AdultDetailedCard = ({ course }) => {
   const { title, status, conditions, description, include } = course;
+  const t = useTranslations('detailed_list_of_courses');
 
   return (
     <div className="w-full p-5 space-y-4 h-max text-sm bg-white rounded-lg">
@@ -81,7 +83,7 @@ const AdultDetailedCard = ({ course }) => {
       </ul>
 
       <Button size="lg" className="bg-[#A14669] text-base float-left">
-        Детальніше &#707;
+        {t('details')} &#707;
       </Button>
     </div>
   );

@@ -26,41 +26,42 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { toast } from '@/components/ui/use-toast';
-
-const FormSchema = z.object({
-  phoneNumber: z.string().min(9, {
-    message: 'Невірний формат. Використайте зразок +380 (44) 580 33 00',
-  }),
-  email: z
-    .string()
-    .email({
-      message: 'Невірний формат. Використайте зразок example@gmail.com',
-    })
-    .optional(),
-});
+import { useTranslations } from 'next-intl';
 
 const ContactForm = () => {
+  const t = useTranslations('choose_kids_group');
+
+  const FormSchema = z.object({
+    phoneNumber: z.string().min(9, {
+      message: t('error.phoneNumber'),
+    }),
+    email: z
+      .string()
+      .email({
+        message: t('error.email'),
+      })
+      .optional(),
+  });
   const form = useForm({
     resolver: zodResolver(FormSchema),
   });
 
   const onSubmit = (data) => {
     toast({
-      title: 'Ваші дані збережено',
-      description: "Ми найближчим часом зв'яжемось з Вами",
+      title: t('save'),
+      description: t('callback'),
     });
-    console.log(data);
   };
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
         <Button variant="outline" className="text-lg text-white bg-[#A14669] h-16 w-52 float-left">
-          Підібрати групу
+          {t('choose_group')}
         </Button>
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>Залиште свої контакти</AlertDialogTitle>
+          <AlertDialogTitle>{t('leave_contacts')}</AlertDialogTitle>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-2">
               <FormField
@@ -68,11 +69,11 @@ const ContactForm = () => {
                 name="phoneNumber"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Телефон</FormLabel>
+                    <FormLabel>{t('phone')}</FormLabel>
                     <FormControl>
                       <Input placeholder="+380 (44) 580 33 00" {...field} />
                     </FormControl>
-                    <FormDescription>або</FormDescription>
+                    <FormDescription>{t('or')}</FormDescription>
                     <FormMessage />
                   </FormItem>
                 )}
@@ -82,7 +83,7 @@ const ContactForm = () => {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Email</FormLabel>
+                    <FormLabel>{t('email')}</FormLabel>
                     <FormControl>
                       <Input placeholder="example@gmail.com" {...field} />
                     </FormControl>
@@ -91,9 +92,9 @@ const ContactForm = () => {
                 )}
               />
               <div className="flex justify-center">
-                <AlertDialogCancel className="mx-2">Скасувати</AlertDialogCancel>
+                <AlertDialogCancel className="mx-2">{t('cancel')}</AlertDialogCancel>
                 <AlertDialogAction className="mx-2" type="submit">
-                  Надіслати
+                  {t('send')}
                 </AlertDialogAction>
               </div>
             </form>

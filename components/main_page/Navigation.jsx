@@ -82,7 +82,7 @@ const Navigation = () => {
               {courses?.map(({ label, link, description }, index) => {
                 if (index === 0) {
                   return (
-                    <li key={index} className="row-span-3">
+                    <li key={index} className="row-span-2">
                       <NavigationMenuLink asChild>
                         <a
                           className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
@@ -128,7 +128,7 @@ const Navigation = () => {
                   label={contacts.address}>
                   {contacts.address}
                 </ListItem>
-                <ListItem href={`mailto:${contacts.email}`} title={t('navigation.email_title')}>
+                <ListItem href={`mailto:${contacts.email}`} title="Email">
                   {contacts.email}
                 </ListItem>
               </ul>

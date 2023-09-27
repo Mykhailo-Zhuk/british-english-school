@@ -21,6 +21,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '../ui/colla
 import { CaretSortIcon } from '@radix-ui/react-icons';
 import { RadioGroup, RadioGroupItem } from '../ui/radio-group';
 import { Skeleton } from '../ui/skeleton';
+import { useTranslations } from 'next-intl';
 
 const filter = z.object({
   type: z.enum([
@@ -59,6 +60,7 @@ const FilterForm = ({ filterList, isLoading, error, filteredCoursesHandler }) =>
   const [isOpenTime, setIsOpenTime] = useState(true);
   const [isOpenTeacher, setIsOpenTeacher] = useState(true);
   const { type, program, format, time, teacher } = filterList;
+  const t = useTranslations('courses_list');
 
   const form = useForm({
     resolver: zodResolver(FormSchema),
@@ -98,7 +100,7 @@ const FilterForm = ({ filterList, isLoading, error, filteredCoursesHandler }) =>
     const filterSelectedFields = selectedOptions.map((item) => item.label).join(', ');
 
     toast({
-      title: 'Ви обрали наступні параменти для пошуку:',
+      title: t('notification'),
       description: (
         <p className="mt-2 w-[340px] rounded-md bg-slate-950 p-4 text-white h-max">
           {filterSelectedFields}
@@ -123,7 +125,7 @@ const FilterForm = ({ filterList, isLoading, error, filteredCoursesHandler }) =>
                 onOpenChange={setIsOpenType}
                 className="w-full space-y-2">
                 <div className="flex items-center justify-between space-x-4 px-1">
-                  <FormLabel>Тип курса</FormLabel>
+                  <FormLabel>{t('type')}</FormLabel>
                   <CollapsibleTrigger asChild>
                     <Button variant="ghost" size="sm">
                       <CaretSortIcon className="h-4 w-4" />
@@ -163,7 +165,7 @@ const FilterForm = ({ filterList, isLoading, error, filteredCoursesHandler }) =>
                 onOpenChange={setIsOpenProgram}
                 className="w-full space-y-2">
                 <div className="flex items-center justify-between space-x-4 px-1 mb-4">
-                  <FormLabel className="text-base">Програма курсу</FormLabel>
+                  <FormLabel className="text-base">{t('program')}</FormLabel>
                   <CollapsibleTrigger asChild>
                     <Button variant="ghost" size="sm">
                       <CaretSortIcon className="h-4 w-4" />
@@ -222,7 +224,7 @@ const FilterForm = ({ filterList, isLoading, error, filteredCoursesHandler }) =>
                 onOpenChange={setIsOpenFormat}
                 className="w-full space-y-2">
                 <div className="flex items-center justify-between space-x-4 px-1 mb-4">
-                  <FormLabel className="text-base">Місце проведення</FormLabel>
+                  <FormLabel className="text-base">{t('place')}</FormLabel>
                   <CollapsibleTrigger asChild>
                     <Button variant="ghost" size="sm">
                       <CaretSortIcon className="h-4 w-4" />
@@ -280,7 +282,7 @@ const FilterForm = ({ filterList, isLoading, error, filteredCoursesHandler }) =>
                 onOpenChange={setIsOpenTime}
                 className="w-full space-y-2">
                 <div className="flex items-center justify-between space-x-4 px-1 mb-4">
-                  <FormLabel className="text-base">Час занять</FormLabel>
+                  <FormLabel className="text-base">{t('time')}</FormLabel>
                   <CollapsibleTrigger asChild>
                     <Button variant="ghost" size="sm">
                       <CaretSortIcon className="h-4 w-4" />
@@ -338,7 +340,7 @@ const FilterForm = ({ filterList, isLoading, error, filteredCoursesHandler }) =>
                 onOpenChange={setIsOpenTeacher}
                 className="w-full space-y-2">
                 <div className="flex items-center justify-between space-x-4 px-1 mb-4">
-                  <FormLabel className="text-base">Викладач</FormLabel>
+                  <FormLabel className="text-base">{t('teacher')}</FormLabel>
                   <CollapsibleTrigger asChild>
                     <Button variant="ghost" size="sm">
                       <CaretSortIcon className="h-4 w-4" />
@@ -385,9 +387,9 @@ const FilterForm = ({ filterList, isLoading, error, filteredCoursesHandler }) =>
             </FormItem>
           )}
         />
-        <Button type="submit">Пошук</Button>
+        <Button type="submit">{t('search')}</Button>
         <Button variant="link" onClick={() => form.reset()}>
-          Скинути фільтри
+          {t('reset')}
         </Button>
       </form>
     </Form>

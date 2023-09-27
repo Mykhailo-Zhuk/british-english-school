@@ -1,8 +1,8 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next-intl/link';
 import { usePathname } from 'next-intl/client';
+import { IoLanguage } from 'react-icons/io5';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -18,7 +18,9 @@ const LanguageSwitcher = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline">Lang</Button>
+        <Button variant="outline">
+          <IoLanguage size={18} />
+        </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-16 h-fit">
         <DropdownMenuItem className="flex justify-center">

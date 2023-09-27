@@ -1,31 +1,23 @@
 import Link from 'next/link';
 import { AspectRatio } from '../../ui/aspect-ratio';
 import { ContactForm } from '@/components/features';
+import { useTranslations } from 'next-intl';
 
 const ChooseKidsGroup = () => {
+  const t = useTranslations('choose_kids_group');
   return (
     <section className="w-full">
       <div className="pt-20 pb-10 lg:pb-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-14 px-5">
         <div className="flex w-max space-x-4 text-sm text-[#A7A7A7]">
-          <Link href="/">Головна</Link> <span className="mx-1">&#707;</span>
-          <p>Курси англійської для дітей</p>
+          <Link href="/">{t('main')}</Link> <span className="mx-1">&#707;</span>
+          <p>{t('title')}</p>
         </div>
-        <h1 className="text-2xl lg:text-4xl">Курси англійської для дітей</h1>
+        <h1 className="text-2xl lg:text-4xl">{t('title')}</h1>
         <div className="flex flex-col space-y-5 lg:flex-row lg:space-x-4 lg:space-y-0">
           <div className="flex flex-col space-y-5 w-full lg:w-1/2">
-            <p className="text-xl">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente quidem asperiores
-              veritatis vel rem cumque nam amet totam iure quisquam?
-            </p>
-            <p className="text-xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum maiores labore porro
-              sapiente natus id odio dolore cum? Totam, harum.
-            </p>
-            <p className="text-xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita doloremque incidunt
-              ex saepe iste recusandae corporis totam? Totam, temporibus cumque, possimus voluptatum
-              non nulla beatae laboriosam blanditiis, tenetur natus consectetur.
-            </p>
+            <p className="text-xl">{t('desc_first')}</p>
+            <p className="text-xl">{t('desc_second')}</p>
+            <p className="text-xl">{t('desc_third')}</p>
             <ContactForm />
           </div>
           <div className="w-full lg:w-1/2">

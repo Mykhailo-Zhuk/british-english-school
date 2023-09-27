@@ -18,15 +18,19 @@ import { BsEye } from 'react-icons/bs';
 import { AiOutlineLike, AiFillLike } from 'react-icons/ai';
 import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
+import { useTranslations } from 'next-intl';
+import { usePathname } from 'next/navigation';
 
-const SubscribeSocial = ({ item, instagram = false }) => {
+const SubscribeSocial = ({ item }) => {
+  const t = useTranslations('news_page');
+
   return (
     <div className="flex space-x-5 youtube_link items-center justify-center rounded-lg py-4">
-      {instagram ? <FaInstagram size={40} /> : <FaYoutube size={40} />}
+      <FaInstagram size={40} />
       <a
-        href={instagram ? item?.socialLink?.instagram : item?.socialLink?.youtube}
+        href={item?.socialLink?.instagram}
         className="text-xl sm:text-2xl w-min sm:w-max min-w-[170px]">
-        Subscribe to our {instagram ? 'instagram' : 'youtube channel'}
+        {t('instagram')}
       </a>
     </div>
   );
@@ -55,9 +59,13 @@ const MainNewsItemContent = ({ itemId }) => {
   const [newsItem, setNewsItem] = useState([]);
   const [like, setLike] = useState(false);
   const { sendRequest, error, isLoading } = useHttp();
+  const t = useTranslations('news_page');
+
+  const pathname = usePathname();
+  const calcURL = pathname.includes('en') ? `en/news/${itemId}` : `news/${itemId}`;
 
   useEffect(() => {
-    sendRequest({ url: `news/${itemId}` }, setNewsItem.bind(null));
+    sendRequest({ url: calcURL }, setNewsItem.bind(null));
   }, [sendRequest, itemId]);
 
   const likesHandler = () => {
@@ -69,8 +77,8 @@ const MainNewsItemContent = ({ itemId }) => {
     <section className="w-full">
       <div className="pt-20 pb-10 px-5 max-w-[700px] h-max mx-auto flex flex-col space-y-8">
         <div className="flex w-full space-x-4 text-sm text-[#A7A7A7]">
-          <Link href="/">Головна</Link> <span className="mx-1">&#707;</span>
-          <Link href="/news">Новини</Link> <span className="mx-1">&#707;</span>
+          <Link href="/">{t('main')}</Link> <span className="mx-1">&#707;</span>
+          <Link href="/news">{t('title')}</Link> <span className="mx-1">&#707;</span>
           {isLoading ? (
             <Skeleton className="w-full h-8"></Skeleton>
           ) : (
@@ -121,7 +129,6 @@ const MainNewsItemContent = ({ itemId }) => {
                     </p>
                   );
                 })}
-            <SubscribeSocial item={newsItem} />
           </div>
         )}
         <h1 className="text-2xl md:text-4xl my-10">

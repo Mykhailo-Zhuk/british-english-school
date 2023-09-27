@@ -2,6 +2,7 @@
 
 import { Separator } from '../ui/separator';
 import { Button } from '../ui/button';
+import { useTranslations } from 'next-intl';
 
 const AdultMainCard = ({ course }) => {
   const {
@@ -18,6 +19,8 @@ const AdultMainCard = ({ course }) => {
     price_per_module,
   } = course;
 
+  const t = useTranslations('courses_list');
+
   return (
     <div className="relative w-full max-w-[410px] h-max flex flex-col space-y-4 lg:odd:mr-4 mb-4 rounded-md bg-white py-3 md:py-7 px-3 md:px-7 lg:px-12 text-sm">
       {due && (
@@ -33,7 +36,9 @@ const AdultMainCard = ({ course }) => {
       <h1 className="text-2xl text-left my-2">{program.title}</h1>
       <div className="flex flex-col text-left">
         <p>{description.title}</p>
-        <p>Викладач {teacher.name}</p>
+        <p>
+          {t('teacher')} {teacher.name}
+        </p>
         <p>{start_date.title}</p>
       </div>
       <div className="text-left px-4 py-1 bg-[#EBF7F6] border-l-4 border-[#36A8A0] rounded-sm">
@@ -54,19 +59,23 @@ const AdultMainCard = ({ course }) => {
       {price_per_hour && <Separator />}
       {price_per_hour && (
         <div className="flex justify-between w-3/4">
-          <p>за 60 хв</p>
-          <p>{price_per_hour} грн</p>
+          <p>{t('minutes')}</p>
+          <p>
+            {price_per_hour} {t('currency')}
+          </p>
         </div>
       )}
       {price_per_module && (
         <div className="flex justify-between w-3/4">
-          <p>за модуль</p>
-          <p className="text-xl">{price_per_module} грн</p>
+          <p>{t('module')}</p>
+          <p className="text-xl">
+            {price_per_module} {t('currency')}
+          </p>
         </div>
       )}
       <Separator className="mt-10" />
       <Button variant="ghost" className="text-xl text-[#8F3F6F]">
-        Записатись
+        {t('appointment')}
       </Button>
     </div>
   );

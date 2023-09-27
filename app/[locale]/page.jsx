@@ -23,6 +23,8 @@ import {
 } from '@/components/main_page/index';
 
 const Home = () => {
+  const t = useTranslations('course_cards');
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-start mx-auto">
       {/* Header */}
@@ -38,13 +40,13 @@ const Home = () => {
       <TopStatistic />
 
       {/* Courses cards for older students*/}
-      <CourseCards title="дорослих" link="дорослих" value="adult" />
+      <CourseCards title={t('adult_title')} link={t('adult_link')} value="adult" />
 
       {/* Courses cards for young students*/}
-      <CourseCards title="підлітків 13–17 років" link="підлітків" value="teenagers" />
+      <CourseCards title={t('teenagers_title')} link={t('teenagers_link')} value="teenagers" />
 
       {/* Courses cards for children*/}
-      <CourseCards title="дітей 6–12 років" link="дітей" value="kids" />
+      <CourseCards title={t('kids_title')} link={t('kids_link')} value="kids" />
 
       {/* How to sign section */}
       <HowToSign />

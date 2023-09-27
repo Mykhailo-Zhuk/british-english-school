@@ -7,10 +7,11 @@ import { ScrollAreaScrollbar } from '@radix-ui/react-scroll-area';
 import useHttp from '@/hooks/useHttp';
 import TestimonialsSkeleton from '../../skeletons/TestimonialsSkeleton';
 import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from 'react-icons/bs';
+import { useTranslations } from 'next-intl';
 
 const Testimonial = ({ username, content }) => {
   return (
-    <div className="bg-[#F8F8FA] rounded-xl w-[280px] md:w-[49%] p-6 space-y-2 mb-6 mr-6 overflow-auto">
+    <div className="bg-[#F8F8FA] rounded-xl w-full p-6 space-y-2 mb-6">
       <h3 className="text-xl">{username}</h3>
       <p className="text-base h-max text-justify">{content}</p>
     </div>
@@ -21,6 +22,7 @@ const Testimonials = () => {
   const [testimonials, setTestimonials] = useState([]);
   const { sendRequest, error, isLoading } = useHttp();
   const [currentPage, setCurrentPage] = useState(1);
+  const t = useTranslations('reviews');
 
   const itemsPerPage = 5;
   const totalPages = Math.ceil(testimonials?.length / itemsPerPage);
@@ -52,9 +54,9 @@ const Testimonials = () => {
   return (
     <section className="w-full bg-[#f5f5f5]" id="testimonials">
       <div className="py-10 md:py-20 px-5 md:px-10 max-w-[1320px] mx-auto flex flex-col space-y-8">
-        <h1 className="text-2xl md:text-3xl px-2 text-center md:text-left">Відгуки</h1>
+        <h1 className="text-2xl md:text-3xl px-2 text-center md:text-left">{t('title')}</h1>
         <ScrollArea className="max-h-[460px] md:max-h-[600px] w-full rounded-md">
-          <div className="flex w-full md:flex-col md:flex-wrap max-h-[460px] md:max-h-[600px] pt-4">
+          <div className="grid grid-cols-1 w-full md:grid-cols-2 max-h-[460px] gap-2 md:max-h-[600px] pt-4">
             {isLoading
               ? Array.from({ length: 6 }, (_, i) => i + 1).map((_, id) => {
                   return <TestimonialsSkeleton key={id} height={height[heightPicker(id)]} />;
@@ -72,7 +74,7 @@ const Testimonials = () => {
             )}
 
             {!currentPageItems.length && !error ? (
-              <p className="w-full text-xl text-center p-8">We have no testimonials</p>
+              <p className="w-full text-xl text-center p-8">{t('error')}</p>
             ) : null}
           </div>
           <ScrollAreaScrollbar orientation="horizontal" />
