@@ -37,7 +37,7 @@ const Carousel = () => {
   if (isLoading) return <CarouselSkeleton />;
 
   return (
-    <section className="w-full max-w-[1320px] mt-20 md:mt-14 h-[515px]">
+    <section className="w-full max-w-[1320px] mt-20 md:mt-14 h-[515px] px-2 overflow-hidden">
       <div className="carousel-container">
         <Slider {...settings}>
           {items?.map((item) => (

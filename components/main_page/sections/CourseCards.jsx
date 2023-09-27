@@ -30,9 +30,12 @@ const CourseCards = ({ title, link, value }) => {
     <section className="w-full" id="courses">
       <div className="py-10 px-2 sm:px-5 flex flex-col h-max w-full max-w-[1320px] mx-auto ">
         <div className="h-max inline-flex justify-between items-center px-3">
-          <p className="text-sm md:text-xl">
-            {isLoading ? <Skeleton className="w-48 md:w-64 h-8 rounded-lg" /> : title}
-          </p>
+          {isLoading ? (
+            <Skeleton className="w-48 md:w-64 h-8 rounded-lg" />
+          ) : (
+            <p className="text-sm md:text-xl">{title}</p>
+          )}
+
           <Link href={value}>
             <Button variant="secondary">
               {isLoading ? (
