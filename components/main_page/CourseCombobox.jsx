@@ -61,7 +61,7 @@ const CourseCombobox = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="lg:space-x-6 space-y-6 lg:space-y-0 flex flex-col p-5 lg:flex-row">
+        className="xl:space-x-6 space-y-6 xl:space-y-0 flex flex-col items-center p-5 xl:flex-row">
         <FormField
           control={form.control}
           name="group"

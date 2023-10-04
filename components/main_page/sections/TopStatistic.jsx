@@ -14,7 +14,7 @@ const TopStatistic = () => {
 
   return (
     <section className="bg-gradient-to-r from-[#eff5fe] to-[#fcf5f7] dark:from-slate-700 dark:to-slate-800 w-full">
-      <div className="py-20 px-5 max-w-[1320px] mx-auto h-max flex flex-col space-y-6 md:space-y-0 md:flex-row md:space-x-2  dark:text-slate-400">
+      <div className="py-10 md:py-20 px-5 max-w-[1320px] mx-auto h-max flex flex-col space-y-6 md:space-y-0 md:flex-row md:space-x-2  dark:text-slate-400">
         {statistics?.map((elem, index) => {
           return (
             <div

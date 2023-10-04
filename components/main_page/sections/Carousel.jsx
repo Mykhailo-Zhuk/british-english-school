@@ -30,7 +30,7 @@ const Carousel = () => {
 
   if (error)
     return (
-      <p className="w-full h-[515px] flex items-center justify-center text-2xl mt-20 md:mt-14 p-4">
+      <p className="w-full min-h-[300px] flex items-center justify-center text-2xl pb-4 pt-20 px-2">
         {error}
       </p>
     );
@@ -38,13 +38,18 @@ const Carousel = () => {
   if (isLoading) return <CarouselSkeleton />;
 
   return (
-    <section className="w-full max-w-[1320px] mt-20 md:mt-14 h-[515px] px-2 overflow-hidden">
+    <section className="w-full max-w-[1320px] pb-5 pt-20 px-10">
       <div className="carousel-container">
         <Slider {...settings}>
           {items?.map((item) => (
-            <div key={item?.id} className="carousel-item p-4 rounded-lg">
-              <AspectRatio ratio={16 / 6}>
-                <Image src={item?.content} alt={`carousel-${item.id}`} fill />
+            <div key={item?.id} className="carousel-item p-4 h-full">
+              <AspectRatio ratio={16 / 9}>
+                <Image
+                  src={item?.content}
+                  alt={`carousel-${item.id}`}
+                  className="rounded-md"
+                  fill
+                />
               </AspectRatio>
             </div>
           ))}
