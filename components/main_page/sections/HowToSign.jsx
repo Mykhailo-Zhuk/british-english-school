@@ -44,9 +44,9 @@ const HowToSign = ({ kids = false }) => {
         <h1 className="w-full md:w-1/2 rounded-full p-5 text-2xl bg-accent text-black dark:bg-slate-700 dark:text-slate-400 text-center">
           {kids ? t('how_to_sign_kids') : t('how_to_sign')}
         </h1>
-        <div className="flex flex-col md:flex-row md:space-x-4">
-          <div className="w-full lg:1/2 xl:w-2/5 lg:mx-5 mt-3">
-            <AspectRatio ratio={16 / 9}>
+        <div className="flex flex-col space-y-5 md:space-y-0 md:flex-row md:space-x-4">
+          <div className="w-full lg:1/2 xl:w-2/5 mt-8 px-5">
+            <AspectRatio ratio={16 / 11}>
               <Image src={images.first} alt="how to sign" className="rounded-lg" />
             </AspectRatio>
           </div>
