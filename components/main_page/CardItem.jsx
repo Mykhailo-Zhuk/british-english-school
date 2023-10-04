@@ -31,9 +31,9 @@ const CardItem = ({ courses }) => {
                 <p>{item?.title}</p>
 
                 {isObject(item?.label) ? (
-                  Object.values(item?.label).map((el) => {
+                  Object.values(item?.label).map((el, index) => {
                     return (
-                      <p className="inline-flex items-center">
+                      <p key={index} className="inline-flex items-center">
                         {el === 'Онлайн' || el === 'Online' ? (
                           <span className="text-[#4295F3] mx-1">⬤</span>
                         ) : (
