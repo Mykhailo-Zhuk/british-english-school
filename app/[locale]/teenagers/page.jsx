@@ -2,24 +2,14 @@
 
 import React from 'react';
 import {
-  GroupForm,
   Header,
-  HowToSign,
   Testimonials,
   Contacts,
   News,
   SubscribeAction,
   Footer,
 } from '@/components/main_page/index';
-import {
-  BenefitsOfCourse,
-  BooksToLearn,
-  CoursesList,
-  DetailedListOfCourses,
-  HowWeLearn,
-  WhoWillTeach,
-  WhyWeAreTrusted,
-} from '@/components/adult/index';
+import { CoursesList } from '@/components/adult/index';
 import {
   ChooseTeenagersGroup,
   PrepareToHMT,
@@ -29,7 +19,7 @@ import {
 
 const Kids = () => {
   return (
-    <section className="flex min-h-screen flex-col items-center justify-start mx-auto bg-[#F8F8FA]">
+    <section className="flex min-h-screen flex-col items-center justify-start mx-auto bg-[#F8F8FA] dark:bg-slate-800 dark:text-slate-400">
       {/* Header */}
       <Header />
 

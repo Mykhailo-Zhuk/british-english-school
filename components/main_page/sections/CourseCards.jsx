@@ -27,7 +27,7 @@ const CourseCards = ({ title, link, value }) => {
   const filteredList = courses[value];
 
   return (
-    <section className="w-full" id="courses">
+    <section className="w-full dark:text-slate-400" id="courses">
       <div className="py-10 px-2 sm:px-5 flex flex-col h-max w-full max-w-[1320px] mx-auto ">
         <div className="h-max inline-flex justify-between items-center px-3">
           {isLoading ? (
@@ -37,7 +37,7 @@ const CourseCards = ({ title, link, value }) => {
           )}
 
           <Link href={value}>
-            <Button variant="secondary">
+            <Button variant="secondary" className="dark:bg-slate-700 dark:text-slate-400">
               {isLoading ? (
                 <Skeleton className="w-32 h-8 rounded-lg md:block hidden" />
               ) : (
@@ -50,7 +50,7 @@ const CourseCards = ({ title, link, value }) => {
         <ScrollArea className="h-max w-full rounded-md">
           <div className="flex space-x-2 my-3 w-full">
             {error ? (
-              <p className="text-xl text-center p-8">{error}</p>
+              <p className="text-xl text-center py-8 px-96">{error}</p>
             ) : (
               filteredList?.map((item, id) => {
                 return <CardItem key={id} courses={item} />;
@@ -64,7 +64,7 @@ const CourseCards = ({ title, link, value }) => {
               : null}
 
             {!filteredList?.length && !error ? (
-              <p className="text-xl text-center p-8">{t('error')}</p>
+              <p className="text-xl text-center p-8 px-96">{t('error')}</p>
             ) : null}
           </div>
           <ScrollAreaScrollbar orientation="horizontal" />

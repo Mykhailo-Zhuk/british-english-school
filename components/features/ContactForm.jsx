@@ -55,7 +55,9 @@ const ContactForm = () => {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
-        <Button variant="outline" className="text-lg text-white bg-[#A14669] h-16 w-52 float-left">
+        <Button
+          variant="outline"
+          className="text-lg text-white bg-[#A14669] dark:bg-slate-500 dark:text-slate-400 h-16 w-52 float-left">
           {t('choose_group')}
         </Button>
       </AlertDialogTrigger>

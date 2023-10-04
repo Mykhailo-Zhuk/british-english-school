@@ -113,7 +113,8 @@ const CoursesList = ({ url }) => {
             <Button
               variant="ghost"
               onClick={handleNextPage}
-              disabled={currentPageItems?.length === 0 || currentPage === totalPages}>
+              disabled={currentPageItems?.length === 0 || currentPage === totalPages}
+              className="dark:hover:bg-slate-500">
               <Image
                 src={icons.circle_arrow}
                 alt="circle arrow"

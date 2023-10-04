@@ -1,13 +1,15 @@
 'use client';
 
 import { AspectRatio } from '@/components/ui/aspect-ratio';
+import images from '@/public/images';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 const TeacherSkill = ({ item }) => {
   return (
-    <div className="relative w-full h-max min-h-[96px] flex-shrink-0 teachers-skills-border rounded-lg p-5 z-10">
-      <p className="text-base py-1 text-black">{item}</p>
-      <div className="absolute inset-1 bg-white rounded-lg -z-10" />
+    <div className="relative w-full h-max min-h-[96px] flex-shrink-0 bg-gradient-to-r from-[#dfeafd] to-[#fbebef] rounded-lg p-5 z-10">
+      <p className="text-base py-1 text-black dark:text-slate-400">{item}</p>
+      <div className="absolute inset-1 bg-white dark:bg-slate-700 rounded-lg -z-10" />
     </div>
   );
 };
@@ -26,8 +28,8 @@ const WhoWillTeach = () => {
         </div>
         <div className="flex flex-col space-y-6 md:flex-row md:space-x-6 md:space-y-0">
           <div className="w-full md:w-1/2">
-            <AspectRatio ratio={16 / 12} className="bg-accent rounded-lg">
-              Video
+            <AspectRatio ratio={16 / 12}>
+              <Image src={images.first} alt="who will teach media" className="rounded-lg" fill />
             </AspectRatio>
           </div>
           <div className="w-full md:w-1/2 space-y-4">

@@ -27,7 +27,9 @@ const Contacts = () => {
 
   const { email, messengers, phoneNumbers } = content;
   return (
-    <section className="w-full contacts-gradient" id="contacts">
+    <section
+      className="w-full bg-gradient-to-r from-[#dfeafd] to-[#fbebef] dark:from-slate-700 dark:to-slate-800 dark:text-slate-400"
+      id="contacts">
       <div className="py-10 md:py-20 px-5 max-w-[1320px] mx-auto flex flex-col space-y-6 lg:flex-row lg:space-x-6">
         <div className="w-full lg:w-1/2 flex flex-col items-center space-y-8">
           <h1 className="text-2xl md:text-3xl text-center md:text-left">{t('title')}</h1>
@@ -35,16 +37,16 @@ const Contacts = () => {
             <div className="w-full md:w-1/2 space-y-8">
               <div className="flex flex-col text-xl items-center md:items-start">
                 <h3 className="pb-2">Email</h3>
-                <Button variant="link" className="text-xl w-max px-0">
+                <Button variant="link" className="text-xl w-max px-0 dark:text-slate-400">
                   {email}
                 </Button>
               </div>
               <div className="text-xl flex flex-col space-y-2 items-center md:items-start">
-                <h3 className="pb-3">Телефони</h3>
+                <h3 className="pb-3">{t('phones')}</h3>
                 {phoneNumbers.map((item, index) => {
                   return (
                     <p key={index}>
-                      <Button variant="link" className="text-xl w-max px-0">
+                      <Button variant="link" className="text-xl w-max px-0 dark:text-slate-400">
                         {item}
                       </Button>
                     </p>
@@ -53,14 +55,14 @@ const Contacts = () => {
               </div>
             </div>
             <div className="w-full md:w-1/2 text-xl flex flex-col items-center md:items-start space-y-2">
-              <h3 className="pb-5">Месенджери</h3>
+              <h3 className="pb-5">{t('managers')}</h3>
               {messengers.map((item, index) => {
                 return (
                   <p key={index} className="inline-flex items-center">
                     <span>
                       <Image src={item.icon} alt={item.title} width={20} height={20} />
                     </span>
-                    <Button variant="link" className="text-xl">
+                    <Button variant="link" className="text-xl dark:text-slate-400">
                       {item.title}
                     </Button>
                   </p>

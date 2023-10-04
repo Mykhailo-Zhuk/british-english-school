@@ -1,6 +1,5 @@
 // Icons
 import arrowDown from './arrowDown.svg';
-import burger from './burger.svg';
 import square from './square.svg';
 import refresh from './refresh.svg';
 import viber from './viber.svg';
@@ -21,7 +20,6 @@ import email from './email.svg';
 
 export default {
   arrowDown,
-  burger,
   square,
   refresh,
   viber,

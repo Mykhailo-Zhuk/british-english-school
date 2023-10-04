@@ -3,13 +3,15 @@ import React from 'react';
 import { Button } from '../../ui/button';
 import { AspectRatio } from '../../ui/aspect-ratio';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import images from '@/public/images';
 
 const ChooseAdultGroup = () => {
   const t = useTranslations('choose_adult_group');
   return (
     <section className="w-full">
       <div className="pt-20 pb-10 lg:pb-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-14 px-5">
-        <div className="flex w-max space-x-4 text-sm text-[#A7A7A7]">
+        <div className="flex w-max space-x-4 text-sm text-[#A7A7A7] dark:text-slate-400">
           <Link href="/">{t('main')}</Link> <span className="mx-1">&#707;</span>
           <p>{t('adult')}</p>
         </div>
@@ -22,13 +24,18 @@ const ChooseAdultGroup = () => {
             <Button
               type="submit"
               size="lg"
-              className="text-lg text-white bg-[#A14669] h-16 w-52 float-left">
+              className="text-lg text-white bg-[#A14669] dark:bg-slate-500 dark:text-slate-400 h-16 w-52 float-left">
               {t('find')}
             </Button>
           </div>
           <div className="w-full md:w-1/2">
-            <AspectRatio ratio={16 / 9} className="bg-accent rounded-lg">
-              Video
+            <AspectRatio ratio={16 / 9}>
+              <Image
+                src={images.first}
+                alt="choose adult group media"
+                className="rounded-lg"
+                fill
+              />
             </AspectRatio>
           </div>
         </div>

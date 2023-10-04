@@ -7,6 +7,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import useHttp from '@/hooks/useHttp';
 import CarouselSkeleton from '@/components/skeletons/CarouselSkeleton';
+import Image from 'next/image';
 
 const Carousel = () => {
   const [items, setItems] = useState([]);
@@ -41,8 +42,10 @@ const Carousel = () => {
       <div className="carousel-container">
         <Slider {...settings}>
           {items?.map((item) => (
-            <div key={item?.id} className="carousel-item bg-gray-200 p-4 h-[515px] rounded-lg">
-              <AspectRatio ratio={16 / 6}>{item?.content}</AspectRatio>
+            <div key={item?.id} className="carousel-item p-4 rounded-lg">
+              <AspectRatio ratio={16 / 6}>
+                <Image src={item?.content} alt={`carousel-${item.id}`} fill />
+              </AspectRatio>
             </div>
           ))}
         </Slider>

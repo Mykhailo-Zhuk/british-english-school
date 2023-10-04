@@ -1,7 +1,9 @@
 'use client';
 
 import { AspectRatio } from '@/components/ui/aspect-ratio';
+import images from '@/public/images';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 const ProgramDescription = () => {
   const t = useTranslations('program_description');
@@ -51,7 +53,7 @@ const ProgramDescription = () => {
             </ul>
             <div className="flex flex-col space-y-3 md:flex-row md:space-x-3 md:space-y-0">
               <div className="flex flex-col space-y-3 items-center p-5">
-                <div className="rounded-full w-36 h-36 program_duration flex flex-col items-center justify-center leading-none text-white p-5">
+                <div className="rounded-full w-36 h-36 bg-gradient-to-r from-[#cf5657] to-[#8b3d70] dark:from-slate-700 dark:to-slate-800 dark:text-slate-400 flex flex-col items-center justify-center leading-none text-white p-5">
                   <p className="text-[90px]">9</p>
                   <p className="text-xl">{t('month')}</p>
                 </div>
@@ -61,8 +63,13 @@ const ProgramDescription = () => {
             </div>
           </div>
           <div className="w-full min-h-[160px] lg:w-1/2">
-            <AspectRatio ratio={16 / 9} className="rounded-sm bg-accent ">
-              Video
+            <AspectRatio ratio={16 / 9}>
+              <Image
+                src={images.second}
+                alt="program description media"
+                className="rounded-lg"
+                fill
+              />
             </AspectRatio>
           </div>
         </div>

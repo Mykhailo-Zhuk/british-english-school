@@ -42,7 +42,7 @@ const WhyWeAreTrusted = () => {
     },
   ];
   return (
-    <section className="w-full bg-accent">
+    <section className="w-full bg-accent dark:bg-slate-700">
       <div className="py-10 lg:py-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-6 px-5">
         <h1 className="text-2xl lg:text-4xl text-center lg:text-left">{t('title')}</h1>
         <div className="flex flex-col md:flex-row md:flex-wrap">
@@ -52,7 +52,7 @@ const WhyWeAreTrusted = () => {
                 key={index}
                 className="flex flex-col items-center lg:items-start space-y-2 p-5 w-full md:w-1/3">
                 {item?.value ? (
-                  <p className="text-4xl text-center lg:text-left">{item?.value}</p>
+                  <p className="text-4xl text-center lg:text-left text-[#5164AD]">{item?.value}</p>
                 ) : (
                   <Image src={item?.icon} alt="icon" width={40} height={40} />
                 )}

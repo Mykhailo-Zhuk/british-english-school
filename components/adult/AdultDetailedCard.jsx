@@ -31,7 +31,7 @@ const AdultDetailedCard = ({ course }) => {
   const t = useTranslations('detailed_list_of_courses');
 
   return (
-    <div className="w-full p-5 space-y-4 h-max text-sm bg-white rounded-lg">
+    <div className="w-full p-5 space-y-4 h-max text-sm bg-white dark:bg-slate-700 rounded-lg">
       <div className="flex items-center flex-wrap space-x-4">
         <h2 className="text-xl">{title}</h2>
         <p className={`${status?.bgColor} ${status?.textColor} text-sm px-2 py-2 rounded-full`}>
@@ -82,7 +82,9 @@ const AdultDetailedCard = ({ course }) => {
         })}
       </ul>
 
-      <Button size="lg" className="bg-[#A14669] text-base float-left">
+      <Button
+        size="lg"
+        className="bg-[#A14669] text-base float-left text-slate-400 dark:bg-slate-500">
         {t('details')} &#707;
       </Button>
     </div>

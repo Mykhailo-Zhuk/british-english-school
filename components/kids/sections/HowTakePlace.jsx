@@ -1,6 +1,9 @@
 'use client';
 
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+import images from '@/public/images';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 const HowTakePlace = () => {
   const t = useTranslations('how_take_place_kids');
@@ -30,10 +33,19 @@ const HowTakePlace = () => {
         <h1 className="text-2xl lg:text-4xl">{t('title')}</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-[minmax(0,_1fr),_minmax(0,_2fr)] md:space-x-10">
-          <div className="bg-white rounded-lg w-full p-6 space-y-3 text-base h-max">
+          <div className="bg-white dark:bg-slate-700 rounded-lg w-full p-6 space-y-3 text-base h-max">
             <p>{t('first_desc')}</p>
             <p>{t('second_desc')}</p>
-            <div className="bg-accent w-full min-h-[256px] mx-auto">Photo</div>
+            <div className="w-full min-h-[256px] mx-auto">
+              <AspectRatio ratio={16 / 10}>
+                <Image
+                  src={images.third}
+                  alt="how take place media"
+                  className="rounded-lg"
+                  fill
+                />
+              </AspectRatio>
+            </div>
           </div>
           <div className="flex flex-wrap p-6">
             {content.map((item, index) => {

@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { AspectRatio } from '../../ui/aspect-ratio';
 import { ContactForm } from '@/components/features';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import images from '@/public/images';
 
 const ChooseKidsGroup = () => {
   const t = useTranslations('choose_kids_group');
@@ -21,8 +23,8 @@ const ChooseKidsGroup = () => {
             <ContactForm />
           </div>
           <div className="w-full lg:w-1/2">
-            <AspectRatio ratio={16 / 9} className="bg-accent rounded-lg">
-              Video
+            <AspectRatio ratio={16 / 9}>
+              <Image src={images.first} alt="choose kids group media" className="rounded-lg" fill />
             </AspectRatio>
           </div>
         </div>

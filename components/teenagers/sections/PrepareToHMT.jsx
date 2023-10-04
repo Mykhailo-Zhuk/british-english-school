@@ -1,7 +1,9 @@
 'use client';
 
 import { AspectRatio } from '@/components/ui/aspect-ratio';
+import images from '@/public/images';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 const PrepareToHMT = () => {
   const t = useTranslations('prepare_to_hmt');
@@ -49,7 +51,9 @@ const PrepareToHMT = () => {
             </ul>
           </div>
           <div className="w-full lg:w-2/5 flex items-center justify-center">
-            <AspectRatio ratio={9 / 6} className="bg-accent rounded-lg"></AspectRatio>
+            <AspectRatio ratio={9 / 6}>
+              <Image src={images.first} alt="prepare to hmt media" className="rounded-lg" fill />
+            </AspectRatio>
           </div>
         </div>
       </div>

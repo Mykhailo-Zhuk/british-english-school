@@ -8,7 +8,7 @@ const NewsItem = ({ news, getId, fullList = true }) => {
     <div
       className={`${
         fullList && (news.id === '1' || news.id === '2') ? 'w-full md:w-1/2' : 'w-full md:w-1/3'
-      } h-max p-5 min-w-[300px] max-w-[400px] hover:bg-accent rounded-lg cursor-pointer flex flex-col space-y-2`}
+      } h-max p-5 min-w-[300px] max-w-[400px] hover:bg-accent dark:hover:bg-slate-700 rounded-lg cursor-pointer flex flex-col space-y-2`}
       onClick={() => getId(news.id)}>
       <AspectRatio ratio={14 / 9}>
         <Image src={news.image} alt="news" className="rounded-md object-cover" fill />

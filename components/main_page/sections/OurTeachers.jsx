@@ -1,6 +1,8 @@
 import { useTranslations } from 'next-intl';
 import { AspectRatio } from '../../ui/aspect-ratio';
 import { TeacherSkill } from '../index';
+import Image from 'next/image';
+import images from '@/public/images';
 
 const OurTeachers = () => {
   const t = useTranslations('our_teachers');
@@ -21,7 +23,7 @@ const OurTeachers = () => {
   ];
 
   return (
-    <section className="w-full">
+    <section className="w-full dark:text-slate-400">
       <div className="py-10 px-5 md:py-20 max-w-[1320px] mx-auto flex flex-col space-y-12">
         <h1 className="text-2xl md:text-3xl text-left">{t('our_teacher')}</h1>
         <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-6">
@@ -33,7 +35,9 @@ const OurTeachers = () => {
             })}
           </div>
           <div className="w-full md:w-1/3">
-            <AspectRatio ratio={15 / 16} className="bg-accent rounded-lg"></AspectRatio>
+            <AspectRatio ratio={15 / 16}>
+              <Image src={images.third} alt="our teachers media" className="rounded-lg" fill />
+            </AspectRatio>
           </div>
           <div className="w-full md:w-1/3 flex flex-col space-y-8">
             {skillsRight.map((item, index) => {

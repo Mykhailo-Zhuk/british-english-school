@@ -102,7 +102,7 @@ const FilterForm = ({ filterList, isLoading, error, filteredCoursesHandler }) =>
     toast({
       title: t('notification'),
       description: (
-        <p className="mt-2 w-[340px] rounded-md bg-slate-950 p-4 text-white h-max">
+        <p className="mt-2 w-[340px] rounded-md bg-slate-950 p-4 text-white dark:text-slate-400 h-max">
           {filterSelectedFields}
         </p>
       ),
@@ -127,7 +127,7 @@ const FilterForm = ({ filterList, isLoading, error, filteredCoursesHandler }) =>
                 <div className="flex items-center justify-between space-x-4 px-1">
                   <FormLabel>{t('type')}</FormLabel>
                   <CollapsibleTrigger asChild>
-                    <Button variant="ghost" size="sm">
+                    <Button variant="ghost" size="sm" className="dark:hover:bg-slate-400">
                       <CaretSortIcon className="h-4 w-4" />
                       <span className="sr-only">Toggle</span>
                     </Button>
@@ -167,7 +167,7 @@ const FilterForm = ({ filterList, isLoading, error, filteredCoursesHandler }) =>
                 <div className="flex items-center justify-between space-x-4 px-1 mb-4">
                   <FormLabel className="text-base">{t('program')}</FormLabel>
                   <CollapsibleTrigger asChild>
-                    <Button variant="ghost" size="sm">
+                    <Button variant="ghost" size="sm" className="dark:hover:bg-slate-400">
                       <CaretSortIcon className="h-4 w-4" />
                       <span className="sr-only">Toggle</span>
                     </Button>
@@ -226,7 +226,7 @@ const FilterForm = ({ filterList, isLoading, error, filteredCoursesHandler }) =>
                 <div className="flex items-center justify-between space-x-4 px-1 mb-4">
                   <FormLabel className="text-base">{t('place')}</FormLabel>
                   <CollapsibleTrigger asChild>
-                    <Button variant="ghost" size="sm">
+                    <Button variant="ghost" size="sm" className="dark:hover:bg-slate-400">
                       <CaretSortIcon className="h-4 w-4" />
                       <span className="sr-only">Toggle</span>
                     </Button>
@@ -284,7 +284,7 @@ const FilterForm = ({ filterList, isLoading, error, filteredCoursesHandler }) =>
                 <div className="flex items-center justify-between space-x-4 px-1 mb-4">
                   <FormLabel className="text-base">{t('time')}</FormLabel>
                   <CollapsibleTrigger asChild>
-                    <Button variant="ghost" size="sm">
+                    <Button variant="ghost" size="sm" className="dark:hover:bg-slate-400">
                       <CaretSortIcon className="h-4 w-4" />
                       <span className="sr-only">Toggle</span>
                     </Button>
@@ -342,7 +342,7 @@ const FilterForm = ({ filterList, isLoading, error, filteredCoursesHandler }) =>
                 <div className="flex items-center justify-between space-x-4 px-1 mb-4">
                   <FormLabel className="text-base">{t('teacher')}</FormLabel>
                   <CollapsibleTrigger asChild>
-                    <Button variant="ghost" size="sm">
+                    <Button variant="ghost" size="sm" className="dark:hover:bg-slate-400">
                       <CaretSortIcon className="h-4 w-4" />
                       <span className="sr-only">Toggle</span>
                     </Button>
@@ -387,8 +387,10 @@ const FilterForm = ({ filterList, isLoading, error, filteredCoursesHandler }) =>
             </FormItem>
           )}
         />
-        <Button type="submit">{t('search')}</Button>
-        <Button variant="link" onClick={() => form.reset()}>
+        <Button type="submit" className="dark:text-slate-400 dark:bg-slate-500">
+          {t('search')}
+        </Button>
+        <Button variant="link" onClick={() => form.reset()} className="dark:text-slate-400">
           {t('reset')}
         </Button>
       </form>

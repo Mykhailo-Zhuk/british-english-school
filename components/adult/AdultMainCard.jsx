@@ -22,9 +22,11 @@ const AdultMainCard = ({ course }) => {
   const t = useTranslations('courses_list');
 
   return (
-    <div className="relative w-full max-w-[410px] h-max flex flex-col space-y-4 lg:odd:mr-4 mb-4 rounded-md bg-white py-3 md:py-7 px-3 md:px-7 lg:px-12 text-sm">
+    <div className="relative w-full max-w-[410px] h-max flex flex-col space-y-4 lg:odd:mr-4 mb-4 rounded-md bg-white dark:bg-slate-700 py-3 md:py-7 px-3 md:px-7 lg:px-12 text-sm">
       {due && (
-        <div className="absolute top-0 right-0 w-max px-5 py-1 due_card text-white">{due}</div>
+        <div className="absolute top-0 right-0 w-max px-5 py-1 bg-gradient-to-r from-[#cf5657] to-[#ee7b40] rounded-tl-none rounded-tr-sm rounded-br-none rounded-bl-2xl text-white dark:from-slate-700 dark:to-slate-800 dark:text-slate-400">
+          {due}
+        </div>
       )}
       <p className="text-base text-left">
         <span className={`${format.id === 'online' ? 'text-[#4295F3]' : 'text-[#A14669]'} mr-2`}>
@@ -41,7 +43,7 @@ const AdultMainCard = ({ course }) => {
         </p>
         <p>{start_date.title}</p>
       </div>
-      <div className="text-left px-4 py-1 bg-[#EBF7F6] border-l-4 border-[#36A8A0] rounded-sm">
+      <div className="text-left px-4 py-1 bg-[#EBF7F6] dark:border-green-900 dark:bg-slate-600 border-l-4 border-[#36A8A0] rounded-sm">
         <p>{label}</p>
       </div>
       <div className="flex flex-col">
@@ -74,7 +76,9 @@ const AdultMainCard = ({ course }) => {
         </div>
       )}
       <Separator className="mt-10" />
-      <Button variant="ghost" className="text-xl text-[#8F3F6F]">
+      <Button
+        variant="ghost"
+        className="text-xl text-[#8F3F6F] dark:hover:bg-slate-800 dark:hover:text-slate-400">
         {t('appointment')}
       </Button>
     </div>

@@ -1,7 +1,9 @@
 import KidsCoursesScheduleSkeleton from '@/components/skeletons/KidsCoursesScheduleSkeleton';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import useHttp from '@/hooks/useHttp';
+import images from '@/public/images';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import Link from 'next/link';
 // import { usePathname } from 'next/navigation';
 import { Fragment, useEffect, useState } from 'react';
@@ -28,8 +30,8 @@ const SchoolYear = () => {
             <p className="text-xl">{t('second_desc')}</p>
           </div>
           <div className="w-full lg:w-1/2">
-            <AspectRatio ratio={16 / 9} className="bg-accent rounded-lg">
-              Video
+            <AspectRatio ratio={16 / 9}>
+              <Image src={images.first} alt="who will teach media" className="rounded-lg" fill />
             </AspectRatio>
           </div>
         </div>
@@ -48,10 +50,10 @@ const SchoolYear = () => {
                 return (
                   <div
                     key={index}
-                    className="bg-[#F4F6FD] p-2 lg:p-4 w-full md:w-1/2 space-y-5 rounded-lg">
+                    className="bg-[#F4F6FD] dark:bg-slate-700 p-2 lg:p-4 w-full md:w-1/2 space-y-5 rounded-lg">
                     <h1 className="text-2xl">
                       {item.type}
-                      <span className="py-1 px-2 bg-white mx-5 rounded-lg text-base">
+                      <span className="py-1 px-2 bg-white dark:bg-slate-700 mx-5 rounded-lg text-base">
                         {item.duration}
                       </span>
                     </h1>

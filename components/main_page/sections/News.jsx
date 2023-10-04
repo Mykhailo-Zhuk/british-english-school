@@ -15,7 +15,7 @@ import { useTranslations } from 'next-intl';
 const LatestNews = ({ latest, goToItem }) => {
   return (
     <div
-      className="w-full max-w-[420px] p-3 hover:bg-accent rounded-lg cursor-pointer"
+      className="w-full max-w-[420px] p-3 hover:bg-accent dark:hover:bg-slate-700 rounded-lg cursor-pointer"
       onClick={() => goToItem(latest?.id)}>
       <AspectRatio ratio={16 / 11}>
         <Image src={latest?.image} alt="the latest news" className="rounded-md object-cover" />
@@ -31,7 +31,7 @@ const LatestNews = ({ latest, goToItem }) => {
 const OthersNews = ({ other, goToItem }) => {
   return (
     <div
-      className="flex flex-col md:flex-row space-y-5 w-full md:w-96 h-max md:h-36 p-3 md:space-x-5 hover:bg-accent rounded-lg cursor-pointer"
+      className="flex flex-col md:flex-row space-y-5 w-full md:w-96 h-max md:h-36 p-3 md:space-x-5 hover:bg-accent dark:hover:bg-slate-700 rounded-lg cursor-pointer"
       onClick={() => goToItem(other?.id)}>
       <div className="w-full md:w-1/2">
         <AspectRatio ratio={23 / 16}>
@@ -68,11 +68,13 @@ const News = () => {
   const [latest, ...others] = newsList;
 
   return (
-    <section className="w-full" id="news">
+    <section className="w-full dark:text-slate-400" id="news">
       <div className="py-10 md:py-20 max-w-[1320px] h-max px-5 max-h-[700px] mx-auto flex flex-col lg:space-x-12">
         <div className="flex justify-between">
           <h3 className="text-2xl">{t('title')}</h3>
-          <Button variant="link" className="text-sm hover:text-[#AA4965]">
+          <Button
+            variant="link"
+            className="text-sm dark:text-slate-400 hover:text-[#AA4965] dark:hover:text-[#AA4965]">
             <Link href={'news'}>{t('all')}</Link>
           </Button>
         </div>

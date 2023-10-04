@@ -51,7 +51,7 @@ const NewsList = () => {
   return (
     <section className="w-full">
       <div className="pt-20 pb-10 lg:pb-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-6 px-5">
-        <div className="flex w-max space-x-4 text-sm text-[#A7A7A7]">
+        <div className="flex w-max space-x-4 text-sm text-[#A7A7A7] dark:text-slate-400">
           <Link href="/">{t('main')}</Link> <span className="mx-1">&#707;</span>
           <p>{t('title')}</p>
         </div>

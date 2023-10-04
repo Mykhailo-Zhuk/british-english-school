@@ -76,7 +76,7 @@ const MainNewsItemContent = ({ itemId }) => {
   return (
     <section className="w-full">
       <div className="pt-20 pb-10 px-5 max-w-[700px] h-max mx-auto flex flex-col space-y-8">
-        <div className="flex w-full space-x-4 text-sm text-[#A7A7A7]">
+        <div className="flex w-full space-x-4 text-sm text-[#A7A7A7] dark:text-slate-400">
           <Link href="/">{t('main')}</Link> <span className="mx-1">&#707;</span>
           <Link href="/news">{t('title')}</Link> <span className="mx-1">&#707;</span>
           {isLoading ? (

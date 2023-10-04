@@ -76,22 +76,24 @@ const Navigation = () => {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>{t('navigation.choose_course')}</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="dark:bg-slate-800 text-slate-500 dark:text-slate-400">
+            {t('navigation.choose_course')}
+          </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+            <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] dark:bg-slate-800">
               {courses?.map(({ label, link, description }, index) => {
                 if (index === 0) {
                   return (
                     <li key={index} className="row-span-2">
                       <NavigationMenuLink asChild>
                         <a
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted dark:from-slate-600 dark:to-slate-700 p-6 no-underline outline-none focus:shadow-md"
                           href={link}>
                           <p className="text-sm leading-tight font-bold text-red-500">
                             {t('navigation.most_popular')}
                           </p>
                           <div className="mb-2 mt-4 text-lg font-medium">{label}</div>
-                          <p className="text-sm leading-tight text-muted-foreground">
+                          <p className="text-sm leading-tight text-muted-foreground dark:text-slate-400">
                             {description}
                           </p>
                         </a>
@@ -103,7 +105,7 @@ const Navigation = () => {
                     <li key={index}>
                       <NavigationMenuLink asChild>
                         <a
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted dark:from-slate-600 dark:to-slate-700  p-6 no-underline outline-none focus:shadow-md"
                           href={link}>
                           <div className="mb-2 mt-4 text-lg font-medium">{label}</div>
                           <p className="text-sm leading-tight text-muted-foreground">
@@ -118,9 +120,11 @@ const Navigation = () => {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>{t('navigation.contact_us')}</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="dark:bg-slate-800 text-slate-500 dark:text-slate-400">
+            {t('navigation.contact_us')}
+          </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <div className="grid gap-3 p-4 w-[600px] md:grid-cols-3">
+            <div className="grid gap-3 p-4 w-[600px] md:grid-cols-3 dark:bg-slate-800 text-slate-500 dark:text-slate-400s">
               <ul>
                 <ListItem
                   href={contacts.mapLink}
@@ -142,7 +146,7 @@ const Navigation = () => {
                   );
                 })}
               </ul>
-              <ul>
+              <ul className="text-slate-500">
                 <p className="text-sm font-medium leading-none">{t('navigation.text_us')}</p>
                 {contacts.messengers.map((item, index) => {
                   return (
@@ -176,12 +180,14 @@ const ListItem = React.forwardRef(({ className, title, label, children, ...props
         <a
           ref={ref}
           className={cn(
-            'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
+            'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent dark:hover:bg-slate-400',
             className,
           )}
           {...props}>
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground" title={label}>
+          <div className="text-sm font-medium leading-none dark:from-slate-600">{title}</div>
+          <p
+            className="line-clamp-2 text-sm leading-snug text-muted-foreground dark:text-slate-600"
+            title={label}>
             {children}
           </p>
         </a>

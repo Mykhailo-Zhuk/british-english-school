@@ -83,7 +83,7 @@ export const ExamsCardSkeleton = () => {
 
 export const AdultMainCardSkeleton = () => {
   return (
-    <div className="ralative w-[410px] h-max flex flex-col space-y-6 lg:odd:mr-4 mb-4 rounded-md bg-white py-3 lg:py-7 px-3 lg:px-12 text-sm">
+    <div className="ralative w-[410px] h-max flex flex-col space-y-6 lg:odd:mr-4 mb-4 rounded-md bg-white dark:bg-slate-700 py-3 lg:py-7 px-3 lg:px-12 text-sm">
       <div className="flex flex-col space-y-5">
         <Skeleton className="w-20 h-4"></Skeleton>
         <Skeleton className="w-20 h-4"></Skeleton>
@@ -94,7 +94,7 @@ export const AdultMainCardSkeleton = () => {
         <Skeleton className="w-40 h-3"></Skeleton>
         <Skeleton className="w-40 h-3"></Skeleton>
       </div>
-      <div className="text-left px-4 py-1 bg-[#EBF7F6] border-l-4 border-[#36A8A0] rounded-sm">
+      <div className="text-left px-4 py-1 bg-[#EBF7F6] dark:border-green-900 dark:bg-slate-600 border-l-4 border-[#36A8A0] rounded-sm">
         <Skeleton className="w-full h-5"></Skeleton>
       </div>
       <div className="flex flex-col space-y-1">

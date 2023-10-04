@@ -180,7 +180,11 @@
   },
   "reviews": { "title": "Reviews", "error": "Testimonials not found" },
 
-  "contacts": { "title": "How to contact us?" },
+  "contacts": {
+    "title": "How to contact us?",
+    "managers": "Managers",
+    "phones": "Phones"
+  },
 
   "news": { "title": "News", "all": "All news", "error": "News not found" },
 
@@ -190,7 +194,8 @@
     "error": { "email": "Enter a valid email address." },
     "email": "Your email",
     "notification": "You've signed up for updates.",
-    "subscribe": "Subscribe"
+    "subscribe": "Subscribe",
+    "placeholder": "Enter your email"
   },
 
   "footer": {

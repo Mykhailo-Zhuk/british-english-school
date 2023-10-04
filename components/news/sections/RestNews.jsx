@@ -5,7 +5,7 @@ import { NewsItem } from '../index';
 import { ScrollAreaScrollbar } from '@radix-ui/react-scroll-area';
 import { usePathname, useRouter } from 'next/navigation';
 import { RestNewsSkeleton } from '@/components/skeletons/NewsSkeletons';
-// import { useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
 
 const RestNews = ({ itemId }) => {
   const [newsItems, setNewsItems] = useState([]);

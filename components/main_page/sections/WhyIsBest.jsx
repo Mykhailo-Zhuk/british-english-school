@@ -39,7 +39,7 @@ const WhyIsBest = () => {
     },
   ];
   return (
-    <section className="w-full">
+    <section className="w-full dark:text-slate-400">
       <div className="py-10 md:py-20 px-5 max-w-[1320px] mx-auto flex flex-col space-y-14">
         <h1 className="text-2xl md:text-3xl">{t('title')}</h1>
         <div className="flex md:justify-evenly flex-wrap space-y-6 text-justify">

@@ -25,7 +25,7 @@ import {
 
 const Adult = () => {
   return (
-    <section className="flex min-h-screen flex-col items-center justify-start mx-auto bg-[#F8F8FA]">
+    <section className="flex min-h-screen flex-col items-center justify-start mx-auto dark:bg-slate-800 dark:text-slate-400 bg-[#F8F8FA]">
       {/* Header */}
       <Header />
 

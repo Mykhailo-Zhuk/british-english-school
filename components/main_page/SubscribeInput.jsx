@@ -51,8 +51,8 @@ const SubscribeInput = () => {
                 {...field}
                 type="email"
                 id="email"
-                placeholder="Введіть свій email"
-                className="h-16 border-t-0 border-x-0 border-b-2 border-b-gray-400 hover:border-transparent focus-visible:outline-none focus:ring-transparent focus-visible:ring-transparent rounded-none text-white placeholder:text-gray-400"
+                placeholder={t('placeholder')}
+                className="h-16 border-t-0 border-x-0 border-b-2 border-b-slate-500 hover:border-transparent focus-visible:outline-none focus:ring-transparent focus-visible:ring-transparent rounded-none text-white dark:text-slate-400 placeholder:text-slate-400"
               />
               <FormMessage />
             </FormItem>
@@ -61,7 +61,7 @@ const SubscribeInput = () => {
         <Button
           type="submit"
           size="lg"
-          className="text-sm text-white subscribe-action-btn sm:h-16 w-full sm:w-auto">
+          className="text-sm text-white bg-gradient-to-r from-[#ee7b40] to-[#cf5657] dark:from-slate-800 dark:to-slate-700 dark:text-slate-400 sm:h-16 w-full sm:w-auto">
           {t('subscribe')}
         </Button>
       </form>

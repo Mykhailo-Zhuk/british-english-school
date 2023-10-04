@@ -40,24 +40,24 @@ const BenefitsOfCourse = () => {
             })}
           </ul>
           <div className="flex items-center justify-center">
-            <div className="p-6 w-96 h-max md:h-96 bg-[#E9EDFC] flex flex-col space-y-2 items-center rounded-lg">
-              <p className="text-xl text-center">{t('main_desc')}</p>
+            <div className="p-6 w-96 h-max md:h-96 bg-[#E9EDFC] dark:bg-slate-700 flex flex-col space-y-2 items-center rounded-lg">
+              <p className="text-md xl:text-xl text-center ">{t('main_desc')}</p>
               <Image src={images.memoji} width={200} height={178} alt="memoji" />
             </div>
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <div className="flex flex-col space-y-8 bg-white rounded-lg px-2 py-5 md:p-8">
+          <div className="flex flex-col space-y-8 bg-white dark:bg-slate-700 rounded-lg px-2 py-5 md:p-8">
             <h1 className="text-2xl lg:text-4xl">{t('online')}</h1>
-            <AspectRatio ratio={16 / 9} className="bg-accent rounded-lg">
-              Video
+            <AspectRatio ratio={16 / 9}>
+              <Image src={images.third} alt="online benefit media" className="rounded-lg" fill />
             </AspectRatio>
             <p className="text-base">{t('online_desc')}</p>
           </div>
-          <div className="flex flex-col space-y-8 bg-white rounded-lg px-2 py-5 md:p-8">
+          <div className="flex flex-col space-y-8 bg-white dark:bg-slate-700 rounded-lg px-2 py-5 md:p-8">
             <h1 className="text-2xl lg:text-4xl">{t('offline')}</h1>
-            <AspectRatio ratio={16 / 9} className="bg-accent rounded-lg">
-              Video
+            <AspectRatio ratio={16 / 9}>
+              <Image src={images.forth} alt="offline benefit media" className="rounded-lg" fill />
             </AspectRatio>
             <p className="text-base">{t('offline_desc')}</p>
           </div>

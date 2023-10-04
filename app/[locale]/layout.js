@@ -12,7 +12,7 @@ export const metadata = {
 };
 
 export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'ua' }];
+  return [{ locale: 'ua' }, { locale: 'en' }];
 }
 
 const RootLayout = async ({ children, params: { locale } }) => {
@@ -24,7 +24,7 @@ const RootLayout = async ({ children, params: { locale } }) => {
   }
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body className={inter.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}

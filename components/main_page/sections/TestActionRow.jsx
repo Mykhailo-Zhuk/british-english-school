@@ -7,7 +7,7 @@ const TestActionRow = () => {
   const t = useTranslations('test_action');
   return (
     <section className="w-full">
-      <div className="mt-20 py-10 md:py-5 px-14 max-w-[1320px] mx-auto h-max md:h-[240px] flex flex-col md:flex-row md:flex-shrink-0 bg-[#E9EDFC] rounded-xl space-y-4">
+      <div className="mt-20 py-10 md:py-5 px-14 max-w-[1320px] mx-auto h-max md:h-[240px] flex flex-col md:flex-row md:flex-shrink-0 bg-[#E9EDFC] dark:bg-slate-700 dark:text-slate-400 rounded-xl space-y-4">
         <div className="w-full md:w-9/12 lg:w-1/3 px-5 flex items-center">
           <Image src={images.banner_test} width={152} height={200} alt="banner test" />
         </div>
@@ -16,7 +16,7 @@ const TestActionRow = () => {
           <p className="text-lg lg:text-xl">{t('desc')}</p>
         </div>
         <div className="w-full md:w-max flex items-center flex-shrink-0">
-          <Button size="lg" className="text-base w-48">
+          <Button size="lg" className="text-base w-48 dark:bg-slate-800 dark:text-slate-400">
             {t('run_test')}
           </Button>
         </div>

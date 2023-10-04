@@ -46,7 +46,7 @@ const AdultCoursesList = () => {
         <p className="text-xl px-3">{t('subtitle')}</p>
 
         <ScrollArea className="h-max max-h-[1700px] w-full rounded-md">
-          <div className="flex my-2 xl:grid xl:grid-cols-4 xl:gap-2 flex-nowrap">
+          <div className="flex space-x-5 xl:space-x-0 my-2 xl:grid xl:grid-cols-4 xl:gap-5 flex-nowrap">
             {isLoading
               ? Array.from({ length: 6 }, (_, i) => i + 1).map((_, id) => {
                   return <CourseCardSkeleton key={id} />;
@@ -64,7 +64,11 @@ const AdultCoursesList = () => {
           <ScrollAreaScrollbar orientation="horizontal" />
         </ScrollArea>
         <div className="flex justify-center items-center">
-          <Button variant="ghost" onClick={handleNextPage} disabled={currentPage === totalPages}>
+          <Button
+            variant="ghost"
+            onClick={handleNextPage}
+            disabled={currentPage === totalPages}
+            className="dark:hover:bg-slate-500">
             <Image
               src={icons.circle_arrow}
               alt="circle arrow"

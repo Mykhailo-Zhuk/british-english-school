@@ -11,7 +11,7 @@ import { useTranslations } from 'next-intl';
 
 const Testimonial = ({ username, content }) => {
   return (
-    <div className="bg-[#F8F8FA] rounded-xl w-full p-6 space-y-2 mb-6">
+    <div className="bg-[#F8F8FA] dark:bg-slate-700 rounded-xl w-full p-6 space-y-2 mb-6">
       <h3 className="text-xl">{username}</h3>
       <p className="text-base h-max text-justify">{content}</p>
     </div>
@@ -52,7 +52,9 @@ const Testimonials = () => {
   }, [sendRequest]);
 
   return (
-    <section className="w-full bg-[#f5f5f5]" id="testimonials">
+    <section
+      className="w-full bg-[#f5f5f5] dark:bg-slate-800 dark:text-slate-400"
+      id="testimonials">
       <div className="py-10 md:py-20 px-5 md:px-10 max-w-[1320px] mx-auto flex flex-col space-y-8">
         <h1 className="text-2xl md:text-3xl px-2 text-center md:text-left">{t('title')}</h1>
         <ScrollArea className="max-h-[460px] md:max-h-[600px] w-full rounded-md">
@@ -84,8 +86,12 @@ const Testimonials = () => {
           <Button variant="ghost" onClick={handlePrevPage} disabled={currentPage === 1}>
             <BsFillArrowLeftCircleFill size={18} />
           </Button>
-          <span>{currentPage}</span>
-          <Button variant="ghost" onClick={handleNextPage} disabled={currentPage === totalPages}>
+          <span className="mx-2">{currentPage}</span>
+          <Button
+            variant="ghost"
+            onClick={handleNextPage}
+            disabled={currentPage === totalPages}
+            className="dark:hover:bg-slate-400">
             <BsFillArrowRightCircleFill size={18} />
           </Button>
         </div>

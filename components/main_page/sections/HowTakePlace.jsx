@@ -1,5 +1,6 @@
 import { AspectRatio } from '../../ui/aspect-ratio';
 import icons from '@/public/icons';
+import images from '@/public/images';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
@@ -18,7 +19,7 @@ const HowTakePlace = () => {
   ];
 
   return (
-    <section className="bg-[#F8F8FA] w-full">
+    <section className="bg-[#F8F8FA] dark:bg-slate-800 dark:text-slate-400 w-full">
       <div className="py-10 md:py-20 px-5 max-w-[1320px] mx-auto flex flex-col space-y-14">
         <h1 className="text-left text-2xl md:text-3xl">{t('title')}</h1>
         <div className="flex flex-col md:flex-row space-y-6 md:space-x-6">
@@ -35,8 +36,8 @@ const HowTakePlace = () => {
             })}
           </ul>
           <div className="w-full md:w-1/2">
-            <AspectRatio ratio={16 / 10} className="bg-accent rounded-lg">
-              Photo
+            <AspectRatio ratio={16 / 10}>
+              <Image src={images.first} alt="how take place media" className="rounded-lg" fill />
             </AspectRatio>
           </div>
         </div>

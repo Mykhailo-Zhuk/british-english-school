@@ -26,7 +26,7 @@ const Home = () => {
   const t = useTranslations('course_cards');
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-start mx-auto">
+    <main className="flex min-h-screen dark:bg-slate-800 flex-col items-center justify-start mx-auto">
       {/* Header */}
       <Header />
 

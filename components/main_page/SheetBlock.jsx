@@ -8,9 +8,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet';
-import icons from '@/public/icons';
+import { GiHamburgerMenu } from 'react-icons/gi';
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
 import Link from 'next/link';
 
 const SheetBlock = () => {
@@ -25,11 +24,11 @@ const SheetBlock = () => {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Image src={icons.burger} width={36} height={36} alt="burger" className="cursor-pointer" />
+        <GiHamburgerMenu size={24} className="cursor-pointer dark:hover:text-white" />
       </SheetTrigger>
-      <SheetContent>
+      <SheetContent className="dark:bg-slate-800">
         <SheetHeader>
-          <SheetTitle className="text-xl p-2">{t('menu')}</SheetTitle>
+          <SheetTitle className="text-xl p-2 dark:text-slate-400">{t('menu')}</SheetTitle>
         </SheetHeader>
         <ul className="flex flex-col space-y-2 mt-16">
           {listOfLinks.map((elem, index) => {

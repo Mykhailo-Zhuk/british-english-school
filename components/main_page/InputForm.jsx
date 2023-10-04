@@ -41,10 +41,10 @@ const InputForm = () => {
 
   const onSubmit = (data) => {
     toast({
-      title: t('notification.title'),
+      title: <p className="dark:text-slate-400">{t('notification.title')}</p>,
       description: (
-        <div className="mt-2 w-[340px] rounded-md">
-          <p className="text-black text-base">
+        <div className="mt-2 w-[340px] rounded-md dark:bg-slate-700">
+          <p className="text-black text-base dark:text-slate-400">
             {t('notification.name')}: {data.username}; {t('notification.email')}: {data.email};{' '}
             {t('notification.phoneNumber')}: {data.phoneNumber}; {t('notification.message')}:{' '}
             {data.message}, {data.personal}
@@ -63,13 +63,17 @@ const InputForm = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="w-full space-y-6 bg-white p-5 md:p-12 rounded-sm max-w-[526px]">
+        className="w-full space-y-6 bg-white dark:bg-slate-700 dark:text-slate-400 p-5 md:p-12 rounded-sm max-w-[526px]">
         <FormField
           control={form.control}
           name="username"
           render={({ field }) => (
             <FormItem>
-              <Input placeholder={t('notification.name')} {...field} className="px-4 py-3" />
+              <Input
+                placeholder={t('notification.name')}
+                {...field}
+                className="px-4 py-3 text-base dark:border-transparent dark:placeholder-slate-500"
+              />
               <FormMessage />
             </FormItem>
           )}
@@ -79,7 +83,13 @@ const InputForm = () => {
           name="email"
           render={({ field }) => (
             <FormItem className="flex flex-col">
-              <Input {...field} type="email" id="email" placeholder={t('enter_email')} />
+              <Input
+                {...field}
+                type="email"
+                id="email"
+                placeholder={t('enter_email')}
+                className="text-base dark:border-transparent dark:placeholder-slate-500"
+              />
               <FormMessage />
             </FormItem>
           )}
@@ -89,7 +99,13 @@ const InputForm = () => {
           name="phoneNumber"
           render={({ field }) => (
             <FormItem className="flex flex-col">
-              <Input {...field} type="tel" id="phoneNumber" placeholder={t('enter_phoneNumber')} />
+              <Input
+                {...field}
+                type="tel"
+                id="phoneNumber"
+                placeholder={t('enter_phoneNumber')}
+                className="text-base dark:border-transparent dark:placeholder-slate-500"
+              />
               <FormMessage />
             </FormItem>
           )}
@@ -103,7 +119,7 @@ const InputForm = () => {
                 {...field}
                 id="message"
                 placeholder={t('enter_message')}
-                className="border rounded p-2"
+                className="border rounded p-2 dark:border-transparent dark:focus:border-black dark:active:border-black dark:outline-none dark:bg-slate-700 dark:placeholder-slate-500"
               />
               <FormMessage />
             </FormItem>
@@ -116,13 +132,13 @@ const InputForm = () => {
             <FormItem className="flex flex-col">
               <div className="flex space-x-2 items-center">
                 <Checkbox checked={field.value} onCheckedChange={field.onChange} />
-                <FormLabel>{t('agree_personal')}</FormLabel>
+                <FormLabel className="dark:text-slate-500">{t('agree_personal')}</FormLabel>
               </div>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full text-lg">
+        <Button type="submit" className="w-full text-lg dark:bg-slate-800 dark:text-slate-500">
           {isLoading ? t('sending') : t('leave_request')}
         </Button>
       </form>

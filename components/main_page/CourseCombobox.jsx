@@ -113,7 +113,9 @@ const CourseCombobox = () => {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full md:w-[318px] py-3 h-[60px] flex-shrink-0 text-base">
+        <Button
+          type="submit"
+          className="w-full min-w-[175px] dark:bg-slate-800 max-w-[318px] py-3 h-[60px] text-base dark:text-slate-400">
           {t('pick_group')}
         </Button>
       </form>

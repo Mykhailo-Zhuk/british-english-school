@@ -3,6 +3,8 @@ import React from 'react';
 import { AspectRatio } from '../../ui/aspect-ratio';
 import { ContactForm } from '@/components/features';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import images from '@/public/images';
 
 const ChooseTeenagersGroup = () => {
   const t = useTranslations('choose_teenagers_group');
@@ -10,7 +12,7 @@ const ChooseTeenagersGroup = () => {
   return (
     <section className="w-full">
       <div className="pt-20 pb-10 lg:pb-20 max-w-[1320px] h-max mx-auto flex flex-col space-y-14 px-5">
-        <div className="flex w-full space-x-4 text-sm text-[#A7A7A7]">
+        <div className="flex w-full space-x-4 text-sm text-[#A7A7A7] dark:text-slate-400">
           <Link href="/">{t('main')}</Link> <span className="mx-1">&#707;</span>
           <p className="truncate" title={t('title')}>
             {t('title')}
@@ -25,8 +27,13 @@ const ChooseTeenagersGroup = () => {
             <ContactForm />
           </div>
           <div className="w-full lg:w-1/2">
-            <AspectRatio ratio={16 / 9} className="bg-accent rounded-lg">
-              Photo
+            <AspectRatio ratio={16 / 9}>
+              <Image
+                src={images.first}
+                alt="choose teenagers group media"
+                className="rounded-lg"
+                fill
+              />
             </AspectRatio>
           </div>
         </div>
